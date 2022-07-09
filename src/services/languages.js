@@ -2,7 +2,6 @@ const langChoices = [
   {
     id: 1,
     name: 'Spanish',
-    src: ''
   },
   {
     id: 2,
