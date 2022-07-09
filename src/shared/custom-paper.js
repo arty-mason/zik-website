@@ -3,8 +3,8 @@ import styled from "@emotion/styled";
 
 const CustomPaper = styled(Paper)({
   margin: "50px",
-  height: "50vh",
-  width: "50vw",
+  height: "45vh",
+  width: "45vw",
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "center",

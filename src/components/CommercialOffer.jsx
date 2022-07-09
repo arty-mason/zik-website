@@ -7,7 +7,13 @@ import CustomPaper from "../shared/custom-paper";
 const CommercialOffer = () => {
   return (
     <Grid container justifyContent="center">
-      <CustomPaper elevation={12}>
+      <CustomPaper
+        elevation={12}
+        sx={{
+          border: "1px solid #262626",
+          borderRadius: "10px",
+        }}
+      >
         <Typography variant="h4" component="h1">
           Коммерческое предложение
         </Typography>
