@@ -10,14 +10,17 @@ import React from "react";
 
 import reasons from "../services/reasons-to-choose";
 
+import { CustomText } from "./CommercialOffer";
+
 const WhyUs = () => {
   return (
-    <Box>
+    <Box elevation={10}>
       <Typography
         variant="h4"
         component="h1"
         marginBottom={3}
         textAlign="center"
+        color="#005b84"
       >
         Почему выбирают нас?
       </Typography>
@@ -25,7 +28,9 @@ const WhyUs = () => {
         elevation={15}
         sx={{
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent: "space-around",
+          border: "2px solid #262626",
+          borderRadius: "15px",
           "& > :not(style)": {
             m: 4,
             width: 400,
@@ -36,22 +41,39 @@ const WhyUs = () => {
         {reasons.map((reason) => {
           return (
             <Card
-              sx={{ maxWidth: 350, height: "400px", borderRadius: "10px" }}
+              key={reason.id}
+              sx={{
+                maxWidth: "400px",
+                height: "400px",
+                borderRadius: "10px",
+                backgroundColor: "#005b84",
+                border: "2px solid #262626",
+              }}
               elevation={15}
             >
               <CardContent>
-                <Typography marginBottom={3}> {reason.text}</Typography>
-                <CardMedia
-                  component="img"
-                  src={reason.img}
-                  alt={reason.name}
-                  sx={{
-                    height: "150px",
-                    width: "150px",
-                    objectFit: "scale-down",
-                    marginLeft: "25%",
-                  }}
-                />
+                <CustomText
+                  variant="body2"
+                  component="p"
+                  textAlign="center"
+                  fontSize="18px"
+                >
+                  {reason.text}
+                </CustomText>
+                <Box marginTop="5%" marginLeft="10%">
+                  <CardMedia
+                    component="img"
+                    src={reason.img}
+                    alt={reason.name}
+                    sx={{
+                      height: "35%",
+                      width: "35%",
+                      objectFit: "fill",
+                      marginLeft: "25%",
+                      color: "#fbaf1a",
+                    }}
+                  />
+                </Box>
               </CardContent>
             </Card>
           );

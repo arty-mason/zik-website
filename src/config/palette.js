@@ -3,6 +3,7 @@ import { createTheme } from "@mui/material";
 
 export const theme = createTheme({
   // Creating a reusable theme palette
+
   primary: {
     yellow: "#fbaf1a",
     blue: "#005b84",
@@ -13,5 +14,6 @@ export const theme = createTheme({
     green: "#44b651",
     red: "#877687",
   },
-}
-)
+},
+);
+

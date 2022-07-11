@@ -1,17 +1,27 @@
-import {
-  Box,
-  Card,
-  CardContent,
-  CardMedia,
-  Paper,
-  Typography,
-} from "@mui/material";
+import { Card, CardContent, CardMedia, Paper, Typography } from "@mui/material";
 import React from "react";
+import { CustomText } from "./CommercialOffer";
 
 const Experience = () => {
   return (
-    <Box marginTop={3}>
-      <Typography variant="h4" component="h1" textAlign="center">
+    <Paper
+      elevation={10}
+      sx={{
+        marginTop: "5em",
+        width: "98vw",
+        border: "1px solid black",
+      }}
+    >
+      <Typography
+        variant="h4"
+        component="h1"
+        sx={{
+          marginBottom: "10px",
+          color: "#005b84",
+          textAlign: "center",
+          marginTop: "15px",
+        }}
+      >
         Какой опыт мы имеем?
       </Typography>
       <Card
@@ -29,23 +39,31 @@ const Experience = () => {
               padding: "20px",
               borderRadius: "10px",
               border: "1px solid black",
+              backgroundColor: "#005b84",
             }}
           >
-            <Typography
-              variant="body2"
-              width="300px"
+            <CustomText
+              variant="p"
+              component="p"
+              width="600px"
+              height="270px"
+              fontFamily="Calibri"
+              textAlign="center"
               sx={{
-                margin: "20px",
+                px: "20px",
+                paddingBottom: "15px",
+                fontSize: "20px",
               }}
             >
-              В течение последних пяти лет наша компания обслуживает более 1000
-              лифтов на территории Украины, 62 дома мы обслуживаем, как
-              управляющая компания, больше 100 проданных и смонтированных лифтов
-              в новостройках и около 325 выполненных договоров по ремонту
-              лифтового оборудования, более 500 выполненных договоров с
-              учреждениями, которые финансируются государственным бюджетом
-              Украины.
-            </Typography>
+              В течение последних пяти лет наша компания: <br /> <br />
+              обслужила более 1000 лифтов на территории Украины; <br /> <br />
+              62 дома мы обслуживаем как управляющая компания; <br /> <br />
+              проданла и смонтировала больше 100 лифтов в новостройках и около и
+              выполнила около 325 контрактов по ремонту лифтового оборудования;
+              <br /> <br />
+              выполнила более 500 договоров с учреждениями, которые
+              финансируются государственным бюджетом Украины.
+            </CustomText>
           </Paper>
         </CardContent>
         <CardMedia
@@ -53,13 +71,15 @@ const Experience = () => {
           image="http://www.hoistway.com.ua/wp-content/uploads/2020/02/bak%C4%B1m-onakasansor.com_.png"
           alt="Lift service"
           sx={{
-            height: "300px",
-            width: "300px",
+            height: "350px",
+            width: "350px",
             objectFit: "scale-down",
+            borderRadius: "15px",
+            border: "1px solid black",
           }}
         />
       </Card>
-    </Box>
+    </Paper>
   );
 };
 

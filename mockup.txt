@@ -68,54 +68,47 @@ const NavBar = () => {
             smDown
             ///The enclosed content will be hidden on given resolution or lower
           >
-            <Box
-              sx={{
-                flexGrow: 1,
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              {pages.map((page) => {
-                return (
-                  <Box
-                    key={page.id}
+            {pages.map((page) => {
+              return (
+                <Box
+                  key={page.id}
+                  sx={{
+                    marginRight: "30px",
+                    display: "flex",
+                    juistifyContent: "center",
+                    alignItems: "center",
+                    flexShrink: "1",
+
+                    maxWidth: {
+                      md: "260px",
+                      lg: "300px",
+                      xl: "475px",
+                    },
+                  }}
+                >
+                  <Button
+                    color="inherit"
+                    component={Link}
+                    to={page.to}
                     sx={{
-                      marginRight: "30px",
-                      display: "flex",
-                      juistifyContent: "center",
-                      alignItems: "center",
-                      flexShrink: "1",
-                      maxWidth: {
-                        md: "260px",
-                        lg: "300px",
-                        xl: "475px",
-                      },
+                      my: 2,
+                      color: "#fbaf1a",
+                      display: "block",
+                      border: "1px solid #fbaf1a",
                     }}
                   >
-                    <Button
-                      color="inherit"
-                      component={Link}
-                      to={page.to}
-                      sx={{
-                        my: 2,
-                        color: "#fbaf1a",
-                        display: "block",
-                        border: "1px solid #fbaf1a",
-                      }}
+                    <Typography
+                      variant="text"
+                      component="div"
+                      color="#fbaf1a"
+                      textAlign="center"
                     >
-                      <Typography
-                        variant="text"
-                        component="div"
-                        color="#fbaf1a"
-                        textAlign="center"
-                      >
-                        {page.name}
-                      </Typography>
-                    </Button>
-                  </Box>
-                );
-              })}
-            </Box>
+                      {page.name}
+                    </Typography>
+                  </Button>
+                </Box>
+              );
+            })}
           </Hidden>
           <Hidden
             smUp
