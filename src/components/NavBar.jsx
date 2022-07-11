@@ -137,7 +137,7 @@ const NavBar = () => {
                 to={page.to}
                 sx={{
                   my: 2,
-                  border: "1px solid #262626",
+                  border: `1px solid ${Colors.Grey}`,
                   width: {
                     xs: "50vw",
                     sm: "30vw",
