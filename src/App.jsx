@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import { ThemeProvider } from "@mui/material";
 import { Routes, Route, Navigate } from "react-router-dom";
+import { logAnalyticsEvent } from "./services/firebase";
 
 // import { theme } from "./config/palette";
 import theme from "./config/theme";
@@ -13,6 +15,10 @@ import FacilityService from "./pages/FacilityService";
 import Template from "./pages/Template";
 
 function App() {
+  useEffect(() => {
+    logAnalyticsEvent("Page rendered");
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <NavBar />
