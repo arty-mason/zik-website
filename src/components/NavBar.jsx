@@ -22,6 +22,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import Popover from "./Popover";
 import pages from "../services/pages";
 import languages from "../services/languages";
+import { Colors } from "../config/design-config";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -35,8 +36,8 @@ const NavBar = () => {
         width: "100vw",
         marginTop: -1,
         marginLeft: -1,
-        backgroundColor: "#005b84",
-        border: "2px solid #262626",
+        backgroundColor: Colors.Blue,
+        border: `2px solid ${Colors.Grey}`,
       }}
     >
       <Container maxWidth="xl">
@@ -47,8 +48,7 @@ const NavBar = () => {
         >
           <IconButton
             sx={{
-              display: { xs: "block", md: "none" },
-              color: "#fbaf1a",
+              color: Colors.Yellow,
             }}
           >
             <MenuIcon
@@ -82,56 +82,7 @@ const NavBar = () => {
             />
             {/*   </Typography> */}
           </Button>
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { md: "flex", xs: "none" },
-              justifyContent: "flex-end",
-            }}
-          >
-            {pages.map((page) => (
-              <Box
-                key={page.id}
-                sx={{
-                  display: "flex",
-                  juistifyContent: "space-between",
-                  alignItems: "center",
-                  flexShrink: "1",
-                  marginLeft: "10px",
-                }}
-              >
-                <Button
-                  color="inherit"
-                  component={Link}
-                  to={page.to}
-                  sx={{
-                    my: 2,
-                    color: "#fbaf1a",
-                    border: "1px solid #fbaf1a",
-                    width: {
-                      md: "70%",
-                      lg: "85%",
-                      xl: "100%",
-                    },
-                    height: {
-                      md: "72%",
-                      lg: "65%",
-                      xl: "55%",
-                    },
-                  }}
-                >
-                  <Typography
-                    variant="text"
-                    component="div"
-                    color="#fbaf1a"
-                    textAlign="center"
-                  >
-                    {page.name}
-                  </Typography>
-                </Button>
-              </Box>
-            ))}
-          </Box>
+
           <Popover>
             {languages.map((lang) => (
               //Iterating through language array using .map function
@@ -202,7 +153,7 @@ const NavBar = () => {
                 <Typography
                   variant="text"
                   component="div"
-                  color="#262626"
+                  color={Colors.Grey}
                   textAlign="center"
                 >
                   {page.name}
