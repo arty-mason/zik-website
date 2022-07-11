@@ -13,7 +13,6 @@ import {
   ListItem,
   Typography,
   Button,
-  Hidden,
   List,
 } from "@mui/material";
 
@@ -37,7 +36,7 @@ const NavBar = () => {
         marginTop: -1,
         marginLeft: -1,
         backgroundColor: "#005b84",
-        border: "1px solid #262626",
+        border: "2px solid #262626",
       }}
     >
       <Container maxWidth="xl">
@@ -46,96 +45,107 @@ const NavBar = () => {
           disableGutters
           ///Disabling gutter padding left from Toolbar
         >
+          <IconButton
+            sx={{
+              display: { xs: "block", md: "none" },
+              color: "#fbaf1a",
+            }}
+          >
+            <MenuIcon
+              onClick={() => setOpen(true)}
+              ///Firing callback to set the open state to "true" by clicking on the burger menu (opens the menu)
+            />
+          </IconButton>
           <Button
             // The place for the logo
+            sx={{
+              marginRight: { md: "none", xs: "auto" },
+              marginLeft: { md: "none", xs: "auto" },
+            }}
             color="inherit"
             component={Link}
             to="/home"
-            sx={{
-              display: { md: "flex", xs: "none" },
-            }}
           >
-            <Typography
+            {/*   <Typography
               color="#fbaf1a"
               border="1px solid #fbaf1a"
               px="7px"
               py="4px"
             >
-              ZiK
-            </Typography>
+              ZiK */}
+            <img
+              src={require("../img/zikLogoBlue.jpg")}
+              ///Importing logo from the folder
+              alt="Zik logo"
+              height="35px"
+              width="55px"
+            />
+            {/*   </Typography> */}
           </Button>
-          <Hidden
-            smDown
-            ///The enclosed content will be hidden on given resolution or lower
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { md: "flex", xs: "none" },
+              justifyContent: "flex-end",
+            }}
           >
-            <Box
-              sx={{
-                flexGrow: 1,
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              {pages.map((page) => {
-                return (
-                  <Box
-                    key={page.id}
-                    sx={{
-                      marginRight: "30px",
-                      display: "flex",
-                      juistifyContent: "center",
-                      alignItems: "center",
-                      flexShrink: "1",
-                      maxWidth: {
-                        md: "260px",
-                        lg: "300px",
-                        xl: "475px",
-                      },
-                    }}
+            {pages.map((page) => (
+              <Box
+                key={page.id}
+                sx={{
+                  display: "flex",
+                  juistifyContent: "space-between",
+                  alignItems: "center",
+                  flexShrink: "1",
+                  marginLeft: "10px",
+                }}
+              >
+                <Button
+                  color="inherit"
+                  component={Link}
+                  to={page.to}
+                  sx={{
+                    my: 2,
+                    color: "#fbaf1a",
+                    border: "1px solid #fbaf1a",
+                    width: {
+                      md: "70%",
+                      lg: "85%",
+                      xl: "100%",
+                    },
+                    height: {
+                      md: "72%",
+                      lg: "65%",
+                      xl: "55%",
+                    },
+                  }}
+                >
+                  <Typography
+                    variant="text"
+                    component="div"
+                    color="#fbaf1a"
+                    textAlign="center"
                   >
-                    <Button
-                      color="inherit"
-                      component={Link}
-                      to={page.to}
-                      sx={{
-                        my: 2,
-                        color: "#fbaf1a",
-                        display: "block",
-                        border: "1px solid #fbaf1a",
-                      }}
-                    >
-                      <Typography
-                        variant="text"
-                        component="div"
-                        color="#fbaf1a"
-                        textAlign="center"
-                      >
-                        {page.name}
-                      </Typography>
-                    </Button>
-                  </Box>
-                );
-              })}
-            </Box>
-          </Hidden>
-          <Hidden
-            smUp
-            ///The enclosed content will be hidden on given resolution or higher
-          >
-            <IconButton>
-              <MenuIcon
-                onClick={() => setOpen(true)}
-                ///Firing callback to set the open state to "true" by clicking on the burger menu (opens the menu)
-              />
-            </IconButton>
-          </Hidden>
+                    {page.name}
+                  </Typography>
+                </Button>
+              </Box>
+            ))}
+          </Box>
           <Popover>
             {languages.map((lang) => (
               //Iterating through language array using .map function
-              <Box key={lang.id}>
+              <Box
+                key={lang.id}
+                ///Rendering each language in a button, using id as a key
+              >
                 <Button>
-                  {/* Rendering each language in a button, using id as a key */}
-                  <Typography>{lang.name}</Typography>
-                  {/* Rendering the language name in each button */}
+                  <Typography>
+                    {
+                      lang.name
+                      ///Rendering the language name in each button
+                    }
+                  </Typography>
                 </Button>
               </Box>
             ))}
@@ -176,15 +186,23 @@ const NavBar = () => {
                 to={page.to}
                 sx={{
                   my: 2,
-                  color: "#fbaf1a",
-                  display: "block",
-                  border: "1px solid #fbaf1a",
+                  border: "1px solid #262626",
+                  width: {
+                    xs: "50vw",
+                    sm: "30vw",
+                    ///Adapting the box width to smaller screen resolution
+                  },
+                  height: {
+                    xs: "13vh",
+                    sm: "13vh",
+                    ///Adapting the box height to smaller screen resolution
+                  },
                 }}
               >
                 <Typography
                   variant="text"
                   component="div"
-                  color="#fbaf1a"
+                  color="#262626"
                   textAlign="center"
                 >
                   {page.name}

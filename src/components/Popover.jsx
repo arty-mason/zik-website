@@ -19,7 +19,7 @@ export default function BasicPopover(props) {
 
   return (
     <div>
-      <Button aria-describedby={id} onClick={handleClick} width="50px">
+      <Button aria-describedby={id} onClick={handleClick} width="30px">
         <LanguageIcon sx={{ color: "#fbaf1a" }} />
       </Button>
       <Popover
