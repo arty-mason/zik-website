@@ -3,12 +3,7 @@ import React from "react";
 import { Grid, Typography } from "@mui/material";
 
 import CustomPaper from "../shared/custom-paper";
-import styled from "@emotion/styled";
-
-export const CustomText = styled(Typography)({
-  marginBottom: "10px",
-  color: "#fbaf1a",
-});
+import CustomText from "../shared/custom-text";
 
 const CommercialOffer = () => {
   return (
@@ -16,7 +11,6 @@ const CommercialOffer = () => {
       // className="animate__animated animate__flip"
       container
       justifyContent="center"
-      sx={{ marginLeft: "-10px", width: "100vw" }}
     >
       <CustomPaper
         elevation={12}

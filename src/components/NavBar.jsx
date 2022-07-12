@@ -58,7 +58,6 @@ const NavBar = () => {
             />
             <Typography
               sx={{
-                marginLeft: "10px",
                 color: theme.palette.primary.light,
                 fontSize: "18px",
                 display: { sm: "block", xs: "none" },
@@ -152,7 +151,7 @@ const NavBar = () => {
                     ///Adapting the box width to smaller screen resolution
                   },
                   height: {
-                    xs: "10vh",
+                    xs: "11vh",
                     sm: "12vh",
                     ///Adapting the box height to smaller screen resolution
                     md: "10vh",

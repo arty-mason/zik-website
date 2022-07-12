@@ -1,6 +1,6 @@
 import { Card, CardContent, CardMedia, Paper, Typography } from "@mui/material";
 import React from "react";
-import { CustomText } from "./CommercialOffer";
+import CustomText from "../shared/custom-text";
 
 const Experience = () => {
   return (

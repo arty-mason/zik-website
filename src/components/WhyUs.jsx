@@ -10,7 +10,7 @@ import React from "react";
 
 import reasons from "../services/reasons-to-choose";
 
-import { CustomText } from "./CommercialOffer";
+import CustomText from "../shared/custom-text";
 
 const WhyUs = () => {
   return (
