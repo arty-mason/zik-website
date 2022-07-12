@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@mui/material";
 import { Routes, Route, Navigate } from "react-router-dom";
 
-import theme from "./config/theme";
+import { theme } from "./config/color-config";
 
 import NavBar from "./components/NavBar";
 import Wrapper from "./components/Wrapper";
@@ -17,15 +17,14 @@ function App() {
       <NavBar />
       <Wrapper>
         <Routes>
-          {/* <Route path="template" element={<Template />} /> */}
           <Route path="home" element={<Home />} />
           <Route path="construct" element={<ConstructAndInstall />} />
           <Route path="elevator" element={<ElevatorInstall />} />
           <Route path="facility" element={<FacilityService />} />
           <Route path="*" element={<Navigate to="home" replace={true} />} />
         </Routes>
-        <Footer />
       </Wrapper>
+      <Footer />
     </ThemeProvider>
   );
 }

@@ -33,12 +33,14 @@ const NavBar = () => {
   return (
     <AppBar
       ///The navbar itself
+      disableGutters
       position="sticky"
       sx={{
-        width: "98vw",
+        marginLeft: "-8px",
+        marginTop: "-8px",
+        width: "99vw",
         backgroundColor: "white",
         border: `2px solid ${Colors.Grey.dark}`,
-        borderRadius: "20px",
       }}
     >
       <Container maxWidth="xl">
