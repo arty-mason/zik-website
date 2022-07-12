@@ -61,6 +61,7 @@ const NavBar = () => {
                 marginLeft: "10px",
                 color: theme.palette.primary.light,
                 fontSize: "18px",
+                display: { sm: "block", xs: "none" },
               }}
             >
               Наши услуги
@@ -80,8 +81,8 @@ const NavBar = () => {
               src={require("../img/zikLogoBlue.jpg")}
               ///Importing logo from the folder
               alt="Zik logo"
-              height="35px"
-              width="55px"
+              height="65px"
+              width="90px"
             />
           </Button>
           <Popover>
@@ -146,14 +147,15 @@ const NavBar = () => {
                   backgroundColor: theme.palette.primary.dark,
                   borderRadius: "30px",
                   width: {
-                    xs: "50vw",
+                    xs: "70vw",
                     sm: "30vw",
                     ///Adapting the box width to smaller screen resolution
                   },
                   height: {
-                    xs: "13vh",
-                    sm: "13vh",
+                    xs: "10vh",
+                    sm: "12vh",
                     ///Adapting the box height to smaller screen resolution
+                    md: "10vh",
                   },
                 }}
               >
