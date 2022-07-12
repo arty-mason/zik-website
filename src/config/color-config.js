@@ -17,16 +17,16 @@ export const theme = createTheme({
       main: '#ffc071',
       dark: '#ffb25e',
     },
-    error: {
-      light: red[50],
-      main: red[500],
-      dark: red[700],
-    },
-    success: {
-      light: green[50],
-      main: green[500],
-      dark: green[700],
-    },
+    /*     error: {
+          light: red[50],
+          main: red[500],
+          dark: red[700],
+        },
+        success: {
+          light: green[50],
+          main: green[500],
+          dark: green[700],
+        }, */
     // Additionally imported palette
   }
 })

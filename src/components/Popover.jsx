@@ -2,6 +2,7 @@ import * as React from "react";
 
 import { Popover, Typography, Button } from "@mui/material";
 import LanguageIcon from "@mui/icons-material/LanguageOutlined";
+import { theme } from "../config/color-config";
 
 export default function BasicPopover(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -20,7 +21,7 @@ export default function BasicPopover(props) {
   return (
     <div>
       <Button aria-describedby={id} onClick={handleClick} width="30px">
-        <LanguageIcon sx={{ color: "#fbaf1a" }} />
+        <LanguageIcon sx={{ color: theme.palette.primary.dark }} />
       </Button>
       <Popover
         id={id}

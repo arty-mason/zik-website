@@ -22,7 +22,9 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import Popover from "./Popover";
 import pages from "../services/pages";
 import languages from "../services/languages";
+
 import { Colors } from "../config/design-config";
+import { theme } from "../config/color-config";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -33,11 +35,10 @@ const NavBar = () => {
       ///The navbar itself
       position="sticky"
       sx={{
-        width: "100vw",
-        marginTop: -1,
-        marginLeft: -1,
-        backgroundColor: Colors.Blue,
-        border: `2px solid ${Colors.Grey}`,
+        width: "98vw",
+        backgroundColor: "white",
+        border: `2px solid ${Colors.Grey.dark}`,
+        borderRadius: "20px",
       }}
     >
       <Container maxWidth="xl">
@@ -48,16 +49,25 @@ const NavBar = () => {
         >
           <IconButton
             sx={{
-              color: Colors.Yellow,
+              color: theme.palette.primary.dark,
             }}
           >
             <MenuIcon
               onClick={() => setOpen(true)}
               ///Firing callback to set the open state to "true" by clicking on the burger menu (opens the menu)
             />
+            <Typography
+              sx={{
+                marginLeft: "10px",
+                color: theme.palette.primary.light,
+                fontSize: "18px",
+              }}
+            >
+              Наши услуги
+            </Typography>
           </IconButton>
           <Button
-            // The place for the logo
+            ///The place for the logo
             sx={{
               marginRight: { md: "none", xs: "auto" },
               marginLeft: { md: "none", xs: "auto" },
@@ -66,13 +76,6 @@ const NavBar = () => {
             component={Link}
             to="/home"
           >
-            {/*   <Typography
-              color="#fbaf1a"
-              border="1px solid #fbaf1a"
-              px="7px"
-              py="4px"
-            >
-              ZiK */}
             <img
               src={require("../img/zikLogoBlue.jpg")}
               ///Importing logo from the folder
@@ -80,18 +83,20 @@ const NavBar = () => {
               height="35px"
               width="55px"
             />
-            {/*   </Typography> */}
           </Button>
-
           <Popover>
             {languages.map((lang) => (
-              //Iterating through language array using .map function
+              ///Iterating through language array using .map function
               <Box
                 key={lang.id}
                 ///Rendering each language in a button, using id as a key
               >
                 <Button>
-                  <Typography>
+                  <Typography
+                    sx={{
+                      color: Colors.Grey.main,
+                    }}
+                  >
                     {
                       lang.name
                       ///Rendering the language name in each button
@@ -137,7 +142,9 @@ const NavBar = () => {
                 to={page.to}
                 sx={{
                   my: 2,
-                  border: `1px solid ${Colors.Grey}`,
+                  border: `2px solid ${Colors.Grey.main}`,
+                  backgroundColor: theme.palette.primary.dark,
+                  borderRadius: "30px",
                   width: {
                     xs: "50vw",
                     sm: "30vw",
@@ -153,7 +160,7 @@ const NavBar = () => {
                 <Typography
                   variant="text"
                   component="div"
-                  color={Colors.Grey}
+                  color={theme.palette.secondary.main}
                   textAlign="center"
                 >
                   {page.name}
