@@ -94,7 +94,7 @@ const NavBar = () => {
                 <Button>
                   <Typography
                     sx={{
-                      color: Colors.Grey.main,
+                      color: theme.palette.primary.main,
                     }}
                   >
                     {

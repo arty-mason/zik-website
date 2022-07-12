@@ -13,20 +13,21 @@ export const theme = createTheme({
       dark: "#c38000",
     },
     //  Client palette
-    warning: {
-      main: '#ffc071',
-      dark: '#ffb25e',
-    },
-    /*     error: {
-          light: red[50],
-          main: red[500],
-          dark: red[700],
+    /*     warning: {
+          main: '#ffc071',
+          dark: '#ffb25e',
+        },
+        error: {
+          light: "#ffebee",
+          main: "#f44336",
+          dark: "#d32f2f",
         },
         success: {
-          light: green[50],
-          main: green[500],
-          dark: green[700],
-        }, */
-    // Additionally imported palette
+          light: "e8f5e9",
+          main: "#4caf50",
+          dark: "388e3c",
+        },
+        ///Additionally imported palette
+        */
   }
 })
