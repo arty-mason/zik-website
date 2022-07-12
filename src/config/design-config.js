@@ -1,7 +1,19 @@
 export const Colors = {
-  Yellow: "#fbaf1a",
-  Blue: "#005b84",
-  Grey: "#262626",
-  Green: "#44b651",
-  Red: "#877687",
+  // Client additional colors
+  Grey: {
+    main: "#262626",
+    light: "#4e4e4e",
+    dark: "#000000",
+  },
+  Green: {
+    main: "#44b651",
+    light: "#7ae980",
+    dark: "#008523",
+  },
+  Red: {
+    main: "#ac0717",
+    light: "#e54a3f",
+    dark: "#750000",
+  },
+
 }

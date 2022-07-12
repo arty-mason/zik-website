@@ -13,7 +13,7 @@ export const CustomText = styled(Typography)({
 const CommercialOffer = () => {
   return (
     <Grid
-      className="animate__animated animate__flip"
+      // className="animate__animated animate__flip"
       container
       justifyContent="center"
       sx={{ marginLeft: "-10px", width: "100vw" }}

@@ -11,6 +11,7 @@ import ConstructAndInstall from "./pages/ConstructAndInstall";
 import ElevatorInstall from "./pages/ElevatorInstall";
 import FacilityService from "./pages/FacilityService";
 import Template from "./pages/Template";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="facility" element={<FacilityService />} />
         <Route path="*" element={<Navigate to="home" replace={true} />} />
       </Routes>
+      <Footer />
     </ThemeProvider>
   );
 }
