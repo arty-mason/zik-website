@@ -92,11 +92,11 @@ const Footer = () => {
                 <Box>
                   <Divider color="black" />
                   <Button>
-                    <FooterText>{content.subPointOne}</FooterText>
+                    <FooterText>{content.sectionOne}</FooterText>
                   </Button>
                   <Divider color="black" />
                   <Button>
-                    <FooterText>{content.subPointTwo}</FooterText>
+                    <FooterText>{content.sectionTwo}</FooterText>
                   </Button>
                 </Box>
               </CustomBox>
