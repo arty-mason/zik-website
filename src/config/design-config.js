@@ -4,6 +4,7 @@ export const Colors = {
     main: "#262626",
     light: "#4e4e4e",
     dark: "#000000",
+    ultraLight: "#c6c6c6",
   },
   Green: {
     main: "#44b651",
@@ -14,6 +15,7 @@ export const Colors = {
     main: "#ac0717",
     light: "#e54a3f",
     dark: "#750000",
+
   },
 
 }

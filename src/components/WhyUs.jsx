@@ -1,86 +1,38 @@
 import React from "react";
 
-import {
-  Box,
-  Paper,
-  Card,
-  CardContent,
-  CardMedia,
-  Typography,
-} from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 
-import { Slider } from "./Carousel";
-
-import reasons from "../services/reasons-to-choose";
-
-import CustomText from "../shared/custom-text";
+import Swing from "./Carousel";
+import { Colors } from "../config/design-config";
+import { theme } from "../config/color-config";
 
 const WhyUs = () => {
   return (
-    <Box elevation={10}>
+    <Box
+      elevation={10}
+      sx={{
+        my: "50px",
+        mx: "65px",
+      }}
+    >
       <Typography
         variant="h4"
         component="h1"
         marginBottom={3}
         textAlign="center"
-        color="#005b84"
+        color={theme.palette.primary.dark}
       >
         Почему выбирают нас?
       </Typography>
       <Paper
         elevation={15}
         sx={{
-          display: "flex",
-          justifyContent: "space-around",
           border: "2px solid #262626",
           borderRadius: "15px",
-          "& > :not(style)": {
-            m: 4,
-            width: 400,
-            height: 400,
-          },
+          backgroundColor: Colors.Grey.ultraLight,
         }}
       >
-        {reasons.map((reason) => {
-          return (
-            <Card
-              key={reason.id}
-              sx={{
-                maxWidth: "400px",
-                height: "400px",
-                borderRadius: "10px",
-                backgroundColor: "#005b84",
-                border: "2px solid #262626",
-              }}
-              elevation={15}
-            >
-              <CardContent>
-                <CustomText
-                  variant="body2"
-                  component="p"
-                  textAlign="center"
-                  fontSize="18px"
-                >
-                  {reason.text}
-                </CustomText>
-                <Box marginTop="5%" marginLeft="10%">
-                  <CardMedia
-                    component="img"
-                    src={reason.img}
-                    alt={reason.name}
-                    sx={{
-                      height: "35%",
-                      width: "35%",
-                      objectFit: "fill",
-                      marginLeft: "25%",
-                      color: "#fbaf1a",
-                    }}
-                  />
-                </Box>
-              </CardContent>
-            </Card>
-          );
-        })}
+        <Swing />
       </Paper>
     </Box>
   );

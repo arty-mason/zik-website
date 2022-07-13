@@ -60,12 +60,13 @@ const NavBar = () => {
             />
             <Typography
               sx={{
-                color: theme.palette.primary.light,
+                color: theme.palette.primary.main,
                 fontSize: "18px",
                 display: { sm: "block", xs: "none" },
+                marginLeft: "10px",
               }}
             >
-              Наши услуги
+              Меню
             </Typography>
           </IconButton>
           <Button
@@ -96,7 +97,7 @@ const NavBar = () => {
                 <Button>
                   <Typography
                     sx={{
-                      color: theme.palette.primary.main,
+                      color: theme.palette.secondary.dark,
                     }}
                   >
                     {

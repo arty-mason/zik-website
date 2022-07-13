@@ -16,7 +16,7 @@ const CommercialOffer = () => {
       container
       spacing={2}
       sx={{
-        my: "50px",
+        my: "20px",
         justifyContent: "space-around",
       }}
     >
@@ -32,6 +32,7 @@ const CommercialOffer = () => {
             padding: "30px",
             backgroundImage: "url('../img/backgrounds/crane.jpeg')",
             //! Not working properly yet
+            backgroundColor: Colors.Grey.ultraLight,
           }}
         >
           <CustomText
@@ -45,7 +46,7 @@ const CommercialOffer = () => {
           <CustomText
             variant="h6"
             component="p"
-            color={theme.palette.primary.dark}
+            color={theme.palette.primary.main}
             textAlign="left"
           >
             <b>«ZAVIISKYI & KABACHEK BUSINESS COMPANY» </b> специализируется на
@@ -61,7 +62,7 @@ const CommercialOffer = () => {
           <CustomText
             variant="h5"
             component="p"
-            color={theme.palette.primary.dark}
+            color={theme.palette.primary.main}
             textAlign="center"
           >
             Вы платите только за реально предоставленные услуги, а наши
@@ -79,6 +80,7 @@ const CommercialOffer = () => {
             my: "50px",
             height: "600px",
             padding: "30px",
+            backgroundColor: Colors.Grey.ultraLight,
           }}
         >
           <CardMedia component="img" src={constructionSite} />
