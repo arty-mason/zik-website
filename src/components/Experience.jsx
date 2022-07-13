@@ -2,8 +2,9 @@ import React from "react";
 
 import { Card, CardContent, CardMedia, Paper, Typography } from "@mui/material";
 
-import CustomText from "../shared/custom-text";
 import { theme } from "../config/color-config";
+
+import CustomText from "../shared/custom-text";
 
 const Experience = () => {
   return (
@@ -12,8 +13,8 @@ const Experience = () => {
       sx={{
         borderRadius: "20px",
         // ! Not working properly yet
-        marginTop: "80px",
         width: "95vw",
+        my: "70px",
       }}
     >
       <Typography
