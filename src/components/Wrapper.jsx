@@ -9,6 +9,7 @@ const Wrapper = (props) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        width: "90vw",
       }}
     >
       {props.children}

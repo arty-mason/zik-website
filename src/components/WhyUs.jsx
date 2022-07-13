@@ -1,3 +1,5 @@
+import React from "react";
+
 import {
   Box,
   Paper,
@@ -6,7 +8,8 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
-import React from "react";
+
+import { Slider } from "./Carousel";
 
 import reasons from "../services/reasons-to-choose";
 
