@@ -3,7 +3,7 @@ import React from "react";
 import { Box, Paper, Typography } from "@mui/material";
 
 import Swing from "./Carousel";
-import { Colors } from "../config/design-config";
+
 import { theme } from "../config/color-config";
 
 const WhyUs = () => {
@@ -25,11 +25,9 @@ const WhyUs = () => {
         Почему выбирают нас?
       </Typography>
       <Paper
-        elevation={15}
+        elevation={20}
         sx={{
-          border: "2px solid #262626",
           borderRadius: "15px",
-          // backgroundColor: Colors.Grey.ultraLight,
         }}
       >
         <Swing />

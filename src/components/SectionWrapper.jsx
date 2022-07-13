@@ -1,8 +1,7 @@
+import { Container } from "@mui/material";
 import React from "react";
 
-import { Container } from "@mui/material";
-
-const Wrapper = (props) => {
+const SectionWrapper = (props) => {
   return (
     <Container
       fixed
@@ -23,4 +22,4 @@ const Wrapper = (props) => {
   );
 };
 
-export default Wrapper;
+export default SectionWrapper;

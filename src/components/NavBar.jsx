@@ -33,6 +33,7 @@ const NavBar = () => {
   return (
     <AppBar
       ///The navbar itself
+      elevation={12}
       disableGutters
       position="sticky"
       sx={{
@@ -40,7 +41,7 @@ const NavBar = () => {
         marginTop: "-8px",
         width: "100vw",
         backgroundColor: "white",
-        border: `2px solid ${Colors.Grey.dark}`,
+        // border: `2px solid ${Colors.Grey.dark}`,
       }}
     >
       <Container maxWidth="xl">
@@ -60,8 +61,8 @@ const NavBar = () => {
             />
             <Typography
               sx={{
-                color: theme.palette.primary.main,
-                fontSize: "18px",
+                color: Colors.Grey.dark,
+                fontSize: "25px",
                 display: { sm: "block", xs: "none" },
                 marginLeft: "10px",
               }}

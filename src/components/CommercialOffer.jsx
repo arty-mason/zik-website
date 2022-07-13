@@ -7,7 +7,6 @@ import CustomText from "../shared/custom-text";
 
 import constructionSite from "../img/backgrounds/constructionSite.jpeg";
 import { theme } from "../config/color-config";
-import { Colors } from "../config/design-config";
 
 const CommercialOffer = () => {
   return (
@@ -22,17 +21,17 @@ const CommercialOffer = () => {
     >
       <Grid item xs={4}>
         <CustomPaper
-          elevation={13}
+          elevation={15}
           sx={{
-            borderRadius: 5,
-            border: `2px solid ${Colors.Grey.main}`,
+            borderRadius: 15,
+
             my: "50px",
             width: "500px",
             height: "600px",
             padding: "30px",
-            backgroundImage: "url('../img/backgrounds/crane.jpeg')",
-            //! Not working properly yet
-            // backgroundColor: Colors.Grey.ultraLight,
+            /*   backgroundImage: "url('../img/backgrounds/crane.jpeg')",
+            //! Not working properly yet 
+            */
           }}
         >
           <CustomText
@@ -73,17 +72,22 @@ const CommercialOffer = () => {
       </Grid>
       <Grid item xs={6}>
         <CustomPaper
-          elevation={13}
+          elevation={15}
           sx={{
             borderRadius: 5,
-            border: `2px solid ${Colors.Grey.main}`,
+
             my: "50px",
             height: "600px",
             padding: "30px",
-            // backgroundColor: Colors.Grey.ultraLight,
           }}
         >
-          <CardMedia component="img" src={constructionSite} />
+          <CardMedia
+            component="img"
+            src={constructionSite}
+            sx={{
+              borderRadius: 4,
+            }}
+          />
         </CustomPaper>
       </Grid>
     </Grid>
