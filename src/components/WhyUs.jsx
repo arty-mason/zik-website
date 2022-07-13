@@ -20,7 +20,7 @@ const WhyUs = () => {
         component="h1"
         marginBottom={3}
         textAlign="center"
-        color={theme.palette.primary.dark}
+        color={theme.palette.secondary.dark}
       >
         Почему выбирают нас?
       </Typography>
@@ -29,7 +29,7 @@ const WhyUs = () => {
         sx={{
           border: "2px solid #262626",
           borderRadius: "15px",
-          backgroundColor: Colors.Grey.ultraLight,
+          // backgroundColor: Colors.Grey.ultraLight,
         }}
       >
         <Swing />

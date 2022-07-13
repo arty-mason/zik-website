@@ -38,7 +38,7 @@ const NavBar = () => {
       sx={{
         marginLeft: "-8px",
         marginTop: "-8px",
-        width: "99vw",
+        width: "100vw",
         backgroundColor: "white",
         border: `2px solid ${Colors.Grey.dark}`,
       }}

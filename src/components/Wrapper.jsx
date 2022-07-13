@@ -1,5 +1,6 @@
-import { Container } from "@mui/material";
 import React from "react";
+
+import { Container } from "@mui/material";
 
 const Wrapper = (props) => {
   return (
@@ -9,7 +10,7 @@ const Wrapper = (props) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        width: "90vw",
+        width: "100%",
       }}
     >
       {props.children}

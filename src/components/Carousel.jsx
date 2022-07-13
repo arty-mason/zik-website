@@ -26,7 +26,7 @@ const Swing = () => {
               py: "30px",
               flexDirection: "column",
               justifyContent: "space-around",
-              backgroundColor: Colors.Grey.ultraLight,
+              // backgroundColor: Colors.Grey.ultraLight,
             }}
           >
             <CustomText

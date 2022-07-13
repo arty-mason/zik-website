@@ -2,9 +2,9 @@ export const Colors = {
   // Client additional colors
   Grey: {
     main: "#262626",
-    light: "#4e4e4e",
-    dark: "#000000",
-    ultraLight: "#c6c6c6",
+    light: "#515151",
+    dark: "#1a1a1a",
+    ultraLight: "#bdbdbd",
   },
   Green: {
     main: "#44b651",

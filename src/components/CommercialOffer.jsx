@@ -32,7 +32,7 @@ const CommercialOffer = () => {
             padding: "30px",
             backgroundImage: "url('../img/backgrounds/crane.jpeg')",
             //! Not working properly yet
-            backgroundColor: Colors.Grey.ultraLight,
+            // backgroundColor: Colors.Grey.ultraLight,
           }}
         >
           <CustomText
@@ -63,7 +63,7 @@ const CommercialOffer = () => {
             variant="h5"
             component="p"
             color={theme.palette.primary.main}
-            textAlign="center"
+            textAlign="right"
           >
             Вы платите только за реально предоставленные услуги, а наши
             квалифицированные специалисты выполнят все типы работ в
@@ -80,7 +80,7 @@ const CommercialOffer = () => {
             my: "50px",
             height: "600px",
             padding: "30px",
-            backgroundColor: Colors.Grey.ultraLight,
+            // backgroundColor: Colors.Grey.ultraLight,
           }}
         >
           <CardMedia component="img" src={constructionSite} />
