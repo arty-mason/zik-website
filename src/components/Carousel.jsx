@@ -10,7 +10,7 @@ import reasons from "../services/reasons-to-choose";
 // Importing the carousel data array
 import CustomText from "../shared/custom-text";
 import { theme } from "../config/color-config";
-import { Colors } from "../config/design-config";
+// import { Colors } from "../config/design-config";
 
 const Swing = () => {
   return (

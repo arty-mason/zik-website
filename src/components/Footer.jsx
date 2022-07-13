@@ -13,7 +13,6 @@ import { theme } from "../config/color-config";
 
 const CustomBox = styled(Box)({
   padding: "10px",
-  marginLeft: "10px",
   marginLeft: "10em",
   display: "flex",
   flexDirection: "column",
