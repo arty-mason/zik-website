@@ -8,6 +8,7 @@ import {
   Paper,
   Typography,
 } from "@mui/material";
+// Importing the additional components from MUI
 
 import elevatorServices from "../services/elevator-services";
 
