@@ -22,6 +22,7 @@ const CustomBox = styled(Box)({
 
 const ConstructAndInstall = () => {
   return (
+    <Box>
     <Container container justifyContent="center">
       <TextField
         variant="h2"
@@ -85,6 +86,7 @@ const ConstructAndInstall = () => {
           </TextField>
         </Box>
       </Box>
+      </Container>
       <TextField
         variant="h2"
         component="h1"
@@ -110,8 +112,8 @@ const ConstructAndInstall = () => {
               key={service.id}
               elevation={20}
               sx={{
-                width: "600px",
-                height: "470px",
+                width: "400px",
+                height: "400px",
                 marginRight: "50px",
                 my: "50px",
                 px: "20px",
@@ -119,7 +121,9 @@ const ConstructAndInstall = () => {
               }}
             >
               <CustomBox>
-                <TextField sx={{ color: theme.palette.secondary.main }}>
+                <TextField
+                  sx={{ color: theme.palette.secondary.main, fontSize: "30px" }}
+                >
                   {service.serviceName}
                 </TextField>
               </CustomBox>
@@ -143,7 +147,8 @@ const ConstructAndInstall = () => {
           );
         })}
       </Box>
-    </Container>
+   
+    </Box>
   );
 };
 
