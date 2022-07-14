@@ -6,6 +6,8 @@ import { theme } from "../config/color-config";
 
 import CustomText from "../shared/custom-text";
 
+import buildingsBackground from "../img/backgrounds/buildingsBackground.jpg"
+
 const Experience = () => {
   return (
     <Paper
@@ -83,11 +85,11 @@ const Experience = () => {
         </CardContent>
         <CardMedia
           component="img"
-          image="http://www.hoistway.com.ua/wp-content/uploads/2020/02/bak%C4%B1m-onakasansor.com_.png"
+          image={buildingsBackground}
           alt="Lift service"
           sx={{
-            height: "350px",
-            width: "350px",
+            height: "400px",
+            width: "600px",
             objectFit: "scale-down",
             borderRadius: "15px",
           }}

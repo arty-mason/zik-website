@@ -13,6 +13,7 @@ const FacilityService = () => {
           component="h1"
           sx={{
             color: theme.palette.primary.dark,
+            mt: "20px",
           }}
         >
           Обслуживание коммерческих объектов и жилых домов
@@ -20,14 +21,22 @@ const FacilityService = () => {
       </Box>
       {facilities.map((facility) => {
         return (
-          <Paper key={facility.id}>
+          <Paper
+            key={facility.id}
+            elevation={15}
+            sx={{
+              borderRadius: "15px",
+            }}
+          >
             <Box
               sx={{
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "space-around",
                 alignItems: "center",
-                py: "20px",
+                p: "5px",
+                mb: "50px",
+                mt: "20px",
               }}
             >
               <Box
