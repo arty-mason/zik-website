@@ -14,7 +14,7 @@ const CommercialOffer = () => {
       <CustomText
         variant="h3"
         component="h1"
-        color={theme.palette.primary.dark}
+        color={theme.palette.secondary.dark}
         textAlign="center"
       >
         Коммерческое предложение

@@ -12,7 +12,7 @@ const FacilityService = () => {
           variant="h4"
           component="h1"
           sx={{
-            color: theme.palette.secondary.dark,
+            color: theme.palette.primary.dark,
           }}
         >
           Обслуживание коммерческих объектов и жилых домов
@@ -26,6 +26,7 @@ const FacilityService = () => {
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "space-around",
+                alignItems: "center",
                 py: "20px",
               }}
             >
@@ -36,31 +37,35 @@ const FacilityService = () => {
                   alignItems: "center",
                   flexDirection: "column",
                   justifyContent: "center",
-                  px: "40px",
+                  p: "30px",
                   my: "50px",
                   mx: "20px",
                   border: `1px solid ${Colors.Grey.ultraLight}`,
                   borderRadius: "15px",
+                  height: "300px",
+                  width: "300px",
                 }}
               >
                 <TextField
-                  variant="h6"
-                  component="p"
+                  variant="p"
                   sx={{
-                    color: Colors.Green.dark,
+                    fontSize: "20px",
+                    color: theme.palette.primary.main,
                   }}
                 >
                   {facility.text}
                 </TextField>
               </Box>
-              <Box>
+              <Box sx={{}}>
                 <CardMedia
                   component="img"
                   src={facility.img}
                   sx={{
-                    width: "700px",
-                    height: "400px",
-                    objectFit: "scale-down",
+                    width: "600px",
+                    height: "390px",
+                    objectFit: "fill",
+                    border: `2px solid ${Colors.Grey.ultraLight}`,
+                    borderRadius: "12px",
                   }}
                 />
               </Box>

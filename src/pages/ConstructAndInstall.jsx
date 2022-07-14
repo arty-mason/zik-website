@@ -7,7 +7,8 @@ import TextField from "../shared/text-field";
 import servicesTypes from "../services/construct-services";
 
 import { theme } from "../config/color-config";
-import { Colors } from "../config/design-config";
+
+import crane from "../img/backgrounds/crane.jpeg";
 
 const CustomBox = styled(Box)({
   my: "10px",
@@ -30,7 +31,7 @@ const ConstructAndInstall = () => {
           sx={{
             textAlign: "center",
             my: "20px",
-            color: Colors.Red.main,
+            color: theme.palette.primary.main,
           }}
         >
           Строительно-монтажные работы
@@ -40,6 +41,7 @@ const ConstructAndInstall = () => {
           sx={{
             padding: "10px",
             borderRadius: "20px",
+            display: "flex",
           }}
         >
           <Box
@@ -53,7 +55,7 @@ const ConstructAndInstall = () => {
               variant="p"
               sx={{
                 fontSize: "20px",
-                color: Colors.Red.dark,
+                color: theme.palette.primary.dark,
                 my: "20px",
                 textAlign: "center",
               }}
@@ -84,7 +86,15 @@ const ConstructAndInstall = () => {
               width: "45%",
             }}
           >
-            <CardMedia component="image" src="" />
+            <CardMedia
+              component="img"
+              src={crane}
+              sx={{
+                maxHeight: {
+                  lg: "450px",
+                },
+              }}
+            />
           </Box>
         </Paper>
       </Container>
@@ -93,8 +103,9 @@ const ConstructAndInstall = () => {
         component="h1"
         sx={{
           textAlign: "center",
-          marginTop: "20px",
-          color: Colors.Red.main,
+          marginTop: "40px",
+          
+          color: theme.palette.primary.dark,
         }}
       >
         Услуги, на которых мы специализируемся:
@@ -123,13 +134,13 @@ const ConstructAndInstall = () => {
             >
               <CustomBox>
                 <TextField
-                  sx={{ color: theme.palette.secondary.main, fontSize: "30px" }}
+                  sx={{ color: theme.palette.primary.light, fontSize: "30px" }}
                 >
                   {service.serviceName}
                 </TextField>
               </CustomBox>
               <CustomBox>
-                <TextField sx={{ color: theme.palette.secondary.dark }}>
+                <TextField sx={{ color: theme.palette.primary.dark }}>
                   {service.serviceDescription}
                 </TextField>
               </CustomBox>

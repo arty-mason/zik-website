@@ -48,6 +48,7 @@ const Swing = () => {
             >
               {reason.text}
             </CustomText>
+
             <img alt={reason.name} src={reason.img} />
           </Box>
         );
