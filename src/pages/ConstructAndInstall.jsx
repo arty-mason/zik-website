@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Card, CardMedia, Container } from "@mui/material";
+import { Box, Card, CardMedia, Container, Paper } from "@mui/material";
 import { styled } from "@mui/system";
 
 import TextField from "../shared/text-field";
@@ -23,69 +23,70 @@ const CustomBox = styled(Box)({
 const ConstructAndInstall = () => {
   return (
     <Box>
-    <Container container justifyContent="center">
-      <TextField
-        variant="h2"
-        component="h1"
-        sx={{
-          textAlign: "center",
-          marginTop: "20px",
-          color: Colors.Red.main,
-        }}
-      >
-        Строительно-монтажные работы
-      </TextField>
-      <Box
-        sx={{
-          my: "35px",
-        }}
-      >
-        <Box
+      <Container container justifyContent="center">
+        <TextField
+          variant="h3"
+          component="h1"
           sx={{
-            marginTop: "30px",
+            textAlign: "center",
+            my: "20px",
+            color: Colors.Red.main,
           }}
         >
-          <TextField
-            variant="p"
-            sx={{
-              fontSize: "30px",
-              color: Colors.Red.dark,
-              my: "20px",
-            }}
-          >
-            Вам надо провести строительно-монтажные работы, но вы не знаете где
-            найти надежных и качественных специалистов?
-            <br /> <br />
-            Наша компания предоставляет комплексные решения в сфере
-            проектирования, монтажа и технического обслуживания с лояльными
-            ценами для клиента.
-          </TextField>
-        </Box>
-        <Box
+          Строительно-монтажные работы
+        </TextField>
+        <Paper
+          elevation={15}
           sx={{
-            marginTop: "30px",
+            padding: "10px",
+            borderRadius: "20px",
           }}
         >
-          <TextField
-            variant="p"
+          <Box
             sx={{
-              fontSize: "30px",
-              color: Colors.Red.dark,
+              my: "35px",
+              mx: "20px",
+              width: "45%",
             }}
           >
-            Преимущество сотрудничества с нами – выполнение любых общих
-            строительных работ в установленные сроки, использование только
-            качественных европейских материалов для строительства, выполнение
-            работ только квалифицированными рабочими и специалистами.
-            <br /> <br />
-            Основная задача нашего строительного отдела – показать клиенту
-            истинное качество выполнения работ за оптимальную цену.
-            <br /> <br />
-            Опыт работы наших специалистов не даст сомневаться в выборе нашей
-            компании!
-          </TextField>
-        </Box>
-      </Box>
+            <TextField
+              variant="p"
+              sx={{
+                fontSize: "20px",
+                color: Colors.Red.dark,
+                my: "20px",
+                textAlign: "center",
+              }}
+            >
+              Вам надо провести строительно-монтажные работы, но вы не знаете
+              где найти надежных и качественных специалистов?
+              <br /> <br />
+              Наша компания предоставляет комплексные решения в сфере
+              проектирования, монтажа и технического обслуживания с лояльными
+              ценами для клиента.
+              <br /> <br />
+              Преимущество сотрудничества с нами – выполнение любых общих
+              строительных работ в установленные сроки, использование только
+              качественных европейских материалов для строительства, выполнение
+              работ только квалифицированными рабочими и специалистами.
+              <br /> <br />
+              Основная задача нашего строительного отдела – показать клиенту
+              истинное качество выполнения работ за оптимальную цену.
+              <br /> <br />
+              Опыт работы наших специалистов не даст сомневаться в выборе нашей
+              компании!
+            </TextField>
+          </Box>
+          <Box
+            sx={{
+              my: "35px",
+              mx: "20px",
+              width: "45%",
+            }}
+          >
+            <CardMedia component="image" src="" />
+          </Box>
+        </Paper>
       </Container>
       <TextField
         variant="h2"
@@ -147,7 +148,6 @@ const ConstructAndInstall = () => {
           );
         })}
       </Box>
-   
     </Box>
   );
 };

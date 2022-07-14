@@ -1,18 +1,11 @@
 import React from "react";
 
-import {
-  Box,
-  Card,
-  CardMedia,
-  Container,
-  Paper,
-  Typography,
-} from "@mui/material";
+import { Box, Card, CardMedia, Container, Paper } from "@mui/material";
 // Importing the additional components from MUI
 
 import elevatorServices from "../services/elevator-services";
 import TextField from "../shared/text-field";
-import { Colors } from "../config/design-config";
+
 import { theme } from "../config/color-config";
 
 const ElevatorInstall = () => {
