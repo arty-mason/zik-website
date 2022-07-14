@@ -11,12 +11,23 @@ import {
 // Importing the additional components from MUI
 
 import elevatorServices from "../services/elevator-services";
+import TextField from "../shared/text-field";
+import { Colors } from "../config/design-config";
+import { theme } from "../config/color-config";
 
 const ElevatorInstall = () => {
   return (
-    <Container>
+    <Container container justifyContent="center">
       <Paper>
-        <Typography>Установка лифтов</Typography>
+      <TextField
+        variant="h2"
+        component="h1"
+        sx={{
+          textAlign: "center",
+          marginTop: "20px",
+          color: theme.palette.primary.main,
+        }}
+      >Установка лифтов</TextField>
         <Box>
           <Typography>
             Наша компания-надежный партнер и помощник в вопросах монтажа,

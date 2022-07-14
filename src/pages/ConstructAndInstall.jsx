@@ -1,16 +1,11 @@
-import {
-  Box,
-  Card,
-  CardMedia,
-  Container,
-  Paper,
-  Typography,
-} from "@mui/material";
-
-import { styled } from "@mui/system";
 import React from "react";
+
+import { Box, Card, CardMedia, Container } from "@mui/material";
+import { styled } from "@mui/system";
+
 import TextField from "../shared/text-field";
 import servicesTypes from "../services/construct-services";
+
 import { theme } from "../config/color-config";
 import { Colors } from "../config/design-config";
 
