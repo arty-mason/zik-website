@@ -8,7 +8,7 @@ import CustomText from "../shared/custom-text";
 import constructionSite from "../img/backgrounds/constructionSite.jpeg";
 import { theme } from "../config/color-config";
 
-const CommercialOffer = () => {
+const AboutUs = () => {
   return (
     <Box>
       <CustomText
@@ -69,4 +69,4 @@ const CommercialOffer = () => {
   );
 };
 
-export default CommercialOffer;
+export default AboutUs;
