@@ -6,7 +6,6 @@ import {
   AppBar,
   Box,
   Toolbar,
-  Container,
   IconButton,
   SwipeableDrawer,
   Divider,
@@ -37,81 +36,82 @@ const NavBar = () => {
       disableGutters
       position="sticky"
       sx={{
-        marginLeft: "-8px",
-        marginTop: "-8px",
-        width: "100vw",
         backgroundColor: "white",
-        // border: `2px solid ${Colors.Grey.dark}`,
+        borderRadius: `10px`,
+        bottom: "0",
+        left: "0",
+        width: "100%",
       }}
     >
-      <Container maxWidth="xl">
-        <Toolbar
-          ///A toolbar to hide the nav links once the screen is small
-          disableGutters
-          ///Disabling gutter padding left from Toolbar
+      <Toolbar
+        ///A toolbar to hide the nav links once the screen is small
+        disableGutters
+        ///Disabling gutter padding left from Toolbar
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          py: "5px",
+          px: "30px",
+        }}
+      >
+        <IconButton
+          sx={{
+            color: theme.palette.primary.dark,
+          }}
         >
-          <IconButton
+          <MenuIcon
+            onClick={() => setOpen(true)}
+            ///Firing callback to set the open state to "true" by clicking on the burger menu (opens the menu)
+          />
+          <Typography
             sx={{
-              color: theme.palette.primary.dark,
+              color: Colors.Grey.dark,
+              fontSize: "25px",
+              display: { sm: "block", xs: "none" },
+              marginLeft: "10px",
             }}
           >
-            <MenuIcon
-              onClick={() => setOpen(true)}
-              ///Firing callback to set the open state to "true" by clicking on the burger menu (opens the menu)
-            />
-            <Typography
-              sx={{
-                color: Colors.Grey.dark,
-                fontSize: "25px",
-                display: { sm: "block", xs: "none" },
-                marginLeft: "10px",
-              }}
+            Меню
+          </Typography>
+        </IconButton>
+        <Button
+          ///The place for the logo
+          color="inherit"
+          component={Link}
+          to="/home"
+        >
+          <img
+            src={require("../img/zikLogoBlue.jpg")}
+            ///Importing logo from the folder
+            alt="Zik logo"
+            height="100px"
+            width="150px"
+          />
+        </Button>
+        <Popover>
+          {languages.map((lang) => (
+            ///Iterating through language array using .map function
+            <Box
+              key={lang.id}
+              ///Rendering each language in a button, using id as a key
             >
-              Меню
-            </Typography>
-          </IconButton>
-          <Button
-            ///The place for the logo
-            sx={{
-              marginRight: { md: "none", xs: "auto" },
-              marginLeft: { md: "none", xs: "auto" },
-            }}
-            color="inherit"
-            component={Link}
-            to="/home"
-          >
-            <img
-              src={require("../img/zikLogoBlue.jpg")}
-              ///Importing logo from the folder
-              alt="Zik logo"
-              height="65px"
-              width="90px"
-            />
-          </Button>
-          <Popover>
-            {languages.map((lang) => (
-              ///Iterating through language array using .map function
-              <Box
-                key={lang.id}
-                ///Rendering each language in a button, using id as a key
-              >
-                <Button>
-                  <Typography
-                    sx={{
-                      color: theme.palette.secondary.dark,
-                    }}
-                  >
-                    {
-                      lang.name
-                      ///Rendering the language name in each button
-                    }
-                  </Typography>
-                </Button>
-              </Box>
-            ))}
-          </Popover>
-        </Toolbar>
-      </Container>
+              <Button>
+                <Typography
+                  sx={{
+                    color: theme.palette.secondary.dark,
+                  }}
+                >
+                  {
+                    lang.name
+                    ///Rendering the language name in each button
+                  }
+                </Typography>
+              </Button>
+            </Box>
+          ))}
+        </Popover>
+      </Toolbar>
       <SwipeableDrawer
         ///The drawer imported from MUI
         anchor="left"
