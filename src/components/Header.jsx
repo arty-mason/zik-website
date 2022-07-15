@@ -6,15 +6,13 @@ import {
   AppBar,
   Box,
   Toolbar,
-  Container,
   IconButton,
   SwipeableDrawer,
   Divider,
   ListItem,
   Typography,
-  Button,
-  Hidden,
   List,
+  Button,
 } from "@mui/material";
 
 import MenuIcon from "@mui/icons-material/Menu";
@@ -23,6 +21,8 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import Popover from "./Popover";
 import pages from "../services/pages";
 import languages from "../services/languages";
+import { Colors } from "../config/design-config";
+import { theme } from "../config/color-config";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -36,105 +36,33 @@ const Header = () => {
         width: "100vw",
         marginTop: -1,
         marginLeft: -1,
-        backgroundColor: "#005b84",
-        border: "1px solid #262626",
+        border: `2px solid ${Colors.Grey.light}`,
       }}
     >
-      <Container maxWidth="xl">
-        <Toolbar
-          ///A toolbar to hide the nav links once the screen is small
-          disableGutters
-          ///Disabling gutter padding left from Toolbar
-        >
-          <Button
-            // The place for the logo
-            color="inherit"
-            component={Link}
-            to="/home"
-            sx={{
-              display: { md: "flex", xs: "none" },
-            }}
-          >
-            <Typography
-              color="#fbaf1a"
-              border="1px solid #fbaf1a"
-              px="7px"
-              py="4px"
-            >
-              ZiK
-            </Typography>
-          </Button>
-          <Hidden
-            smDown
-            ///The enclosed content will be hidden on given resolution or lower
-          >
-            {pages.map((page) => {
-              return (
-                <Box
-                  key={page.id}
-                  sx={{
-                    marginRight: "30px",
-                    display: "flex",
-                    juistifyContent: "center",
-                    alignItems: "center",
-                    flexShrink: "1",
-
-                    maxWidth: {
-                      md: "260px",
-                      lg: "300px",
-                      xl: "475px",
-                    },
-                  }}
-                >
-                  <Button
-                    color="inherit"
-                    component={Link}
-                    to={page.to}
-                    sx={{
-                      my: 2,
-                      color: "#fbaf1a",
-                      display: "block",
-                      border: "1px solid #fbaf1a",
-                    }}
-                  >
-                    <Typography
-                      variant="text"
-                      component="div"
-                      color="#fbaf1a"
-                      textAlign="center"
-                    >
-                      {page.name}
-                    </Typography>
-                  </Button>
-                </Box>
-              );
-            })}
-          </Hidden>
-          <Hidden
-            smUp
-            ///The enclosed content will be hidden on given resolution or higher
-          >
-            <IconButton>
-              <MenuIcon
-                onClick={() => setOpen(true)}
-                ///Firing callback to set the open state to "true" by clicking on the burger menu (opens the menu)
-              />
-            </IconButton>
-          </Hidden>
-          <Popover>
-            {languages.map((lang) => (
-              //Iterating through language array using .map function
-              <Box key={lang.id}>
-                <Button>
-                  {/* Rendering each language in a button, using id as a key */}
-                  <Typography>{lang.name}</Typography>
-                  {/* Rendering the language name in each button */}
-                </Button>
-              </Box>
-            ))}
-          </Popover>
-        </Toolbar>
-      </Container>
+      <Toolbar
+        ///A toolbar to hide the nav links once the screen is small
+        disableGutters
+        ///Disabling gutter padding left from Toolbar
+      >
+        <IconButton>
+          <MenuIcon
+            onClick={() => setOpen(true)}
+            ///Firing callback to set the open state to "true" by clicking on the burger menu (opens the menu)
+          />
+        </IconButton>
+        <Popover>
+          {languages.map((lang) => (
+            //Iterating through language array using .map function
+            <Box key={lang.id}>
+              <Button>
+                {/* Rendering each language in a button, using id as a key */}
+                <Typography>{lang.name}</Typography>
+                {/* Rendering the language name in each button */}
+              </Button>
+            </Box>
+          ))}
+        </Popover>
+      </Toolbar>
       <SwipeableDrawer
         ///The drawer imported from MUI
         anchor="left"
@@ -169,15 +97,15 @@ const Header = () => {
                 to={page.to}
                 sx={{
                   my: 2,
-                  color: "#fbaf1a",
+                  color: theme.palette.secondary.dark,
                   display: "block",
-                  border: "1px solid #fbaf1a",
+                  border: `1px solid ${theme.palette.secondary.dark}`,
                 }}
               >
                 <Typography
                   variant="text"
                   component="div"
-                  color="#fbaf1a"
+                  color={theme.palette.secondary.dark}
                   textAlign="center"
                 >
                   {page.name}
