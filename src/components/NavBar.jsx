@@ -9,26 +9,26 @@ import {
   IconButton,
   SwipeableDrawer,
   Divider,
-  ListItem,
   Typography,
   Button,
-  List,
 } from "@mui/material";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
 import Popover from "./Popover";
-import pages from "../services/pages";
 import languages from "../services/languages";
 
 import { Colors } from "../config/design-config";
 import { theme } from "../config/color-config";
 
+import { BurgerMenuLinks } from "./BurgerMenuLinks";
+
 const NavBar = () => {
   const [open, setOpen] = useState(false);
   ///Using the useState hook to create a state (open) and a state changer (setOpen)
   ///Assigning the variables to the hook and setting default state value to false
+
   return (
     <AppBar
       ///The navbar itself
@@ -59,7 +59,9 @@ const NavBar = () => {
           sx={{
             display: "flex",
             width: "200px",
+            cursor: 'pointer',
           }}
+          onClick={() => setOpen(true)}
         >
           <IconButton
             sx={{
@@ -67,8 +69,8 @@ const NavBar = () => {
             }}
           >
             <MenuIcon
-              onClick={() => setOpen(true)}
-              ///Firing callback to set the open state to "true" by clicking on the burger menu (opens the menu)
+
+            ///Firing callback to set the open state to "true" by clicking on the burger menu (opens the menu)
             />
           </IconButton>
           <Typography
@@ -97,9 +99,11 @@ const NavBar = () => {
           />
         </Button>
         <Box sx={{ display: "flex", alignItems: "center", width: "250px" }}>
-          <Typography color="primary" right="100px">
-            +34 666 399 550
-          </Typography>
+          <a style={{ textDecoration: "none" }} href="tel:+34 666 399 550">
+            <Typography color="primary" right="100px">
+              +34 666 399 550
+            </Typography>
+          </a>
           <Popover>
             {languages.map((lang) => (
               ///Iterating through language array using .map function
@@ -144,37 +148,7 @@ const NavBar = () => {
         <Divider
         ///The divider line
         />
-        <List
-        ///Importing List to give structure to the links
-        >
-          {pages.map((page) => (
-            <ListItem
-              key={page.id}
-              ///Importing ListItem to separate links into lines
-            >
-              <Button
-                color="inherit"
-                component={Link}
-                to={page.to}
-                sx={{
-                  my: 2,
-                  border: `2px solid ${Colors.Grey.main}`,
-                  backgroundColor: theme.palette.primary.dark,
-                  borderRadius: "30px",
-                }}
-              >
-                <Typography
-                  variant="text"
-                  component="div"
-                  color={theme.palette.secondary.main}
-                  textAlign="center"
-                >
-                  {page.name}
-                </Typography>
-              </Button>
-            </ListItem>
-          ))}
-        </List>
+        <BurgerMenuLinks onMenuItemClicked={() => setOpen(false)} />
       </SwipeableDrawer>
     </AppBar>
   );
