@@ -63,6 +63,7 @@ const Home = () => {
                 component="div"
                 color={page.color}
                 textAlign="center"
+                width="90%"
               >
                 {page.name}
               </Typography>

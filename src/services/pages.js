@@ -12,7 +12,7 @@ const pages = [
   },
   {
     id: "2",
-    name: `Установка лифтов`,
+    name: `Продажа, монтаж и обслуживание лифтов`,
     to: "elevator",
     img: zikLogoBlue,
     color: "#005b84",
