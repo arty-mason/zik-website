@@ -96,7 +96,7 @@ const NavBar = () => {
             height="70px"
           />
         </Button>
-        <Box sx={{ display: "flex", alignItems: "center", width: "200px" }}>
+        <Box sx={{ display: "flex", alignItems: "center", width: "250px" }}>
           <Typography color="primary" right="100px">
             +34 666 399 550
           </Typography>
