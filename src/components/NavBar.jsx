@@ -89,6 +89,7 @@ const NavBar = () => {
             width="150px"
           />
         </Button>
+        <Typography color="primary" position="absolute" top="4" right="100px">+34 666 399 550</Typography>
         <Popover>
           {languages.map((lang) => (
             ///Iterating through language array using .map function

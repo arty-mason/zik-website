@@ -13,19 +13,10 @@ import elevatorWorks from "../img/elevators/elevatorWorks.png";
 
 const ElevatorInstall = () => {
   return (
-    <Container container justifyContent="center">
+    <Container container justifyContent="center" sx={{
+      my: "50px"
+    }}>
       <Paper elevation={12} borderRadius="25px">
-        <TextField
-          variant="h2"
-          component="h1"
-          sx={{
-            textAlign: "center",
-            marginTop: "20px",
-            color: theme.palette.primary.main,
-          }}
-        >
-          Установка лифтов
-        </TextField>
         <Box
           sx={{
             display: "flex",

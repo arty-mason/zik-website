@@ -23,19 +23,8 @@ const CustomBox = styled(Box)({
 
 const ConstructAndInstall = () => {
   return (
-    <Box>
+    <Box mt="50px">
       <Container container justifyContent="center">
-        <TextField
-          variant="h3"
-          component="h1"
-          sx={{
-            textAlign: "center",
-            my: "20px",
-            color: theme.palette.primary.main,
-          }}
-        >
-          Строительно-монтажные работы
-        </TextField>
         <Paper
           elevation={15}
           sx={{
@@ -104,7 +93,7 @@ const ConstructAndInstall = () => {
         sx={{
           textAlign: "center",
           marginTop: "40px",
-          
+
           color: theme.palette.primary.dark,
         }}
       >

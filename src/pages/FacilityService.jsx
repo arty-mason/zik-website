@@ -7,23 +7,12 @@ import { Colors } from "../config/design-config";
 const FacilityService = () => {
   return (
     <Container>
-      <Box>
-        <TextField
-          variant="h4"
-          component="h1"
-          sx={{
-            color: theme.palette.primary.dark,
-            mt: "20px",
-          }}
-        >
-          Обслуживание коммерческих объектов и жилых домов
-        </TextField>
-      </Box>
       {facilities.map((facility) => {
         return (
           <Paper
             key={facility.id}
             elevation={15}
+            marginTop="50px"
             sx={{
               borderRadius: "15px",
             }}

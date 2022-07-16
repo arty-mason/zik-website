@@ -1,18 +1,28 @@
+import zikLogoBlue from "../img/zikLogoBlue.jpg";
+import zikLogoRed from "../img/zikLogoRed.jpg";
+import zikLogoGreen from "../img/zikLogoGreen.jpg";
+
 const pages = [
   {
-    id: '1',
+    id: "1",
     name: `Строительно-монтажные работы`,
-    to: 'construct',
+    to: "construct",
+    img: zikLogoRed,
+    color: "#ac0717",
   },
   {
-    id: '2',
+    id: "2",
     name: `Установка лифтов`,
-    to: 'elevator',
+    to: "elevator",
+    img: zikLogoBlue,
+    color: "#005b84",
   },
   {
-    id: '3',
+    id: "3",
     name: `Обслуживание коммерческих объектов и жилых домов`,
-    to: 'facility',
+    to: "facility",
+    img: zikLogoGreen,
+    color: "#44b651",
   },
 ];
 
