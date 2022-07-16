@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Typography, Button, Card } from "@mui/material";
+import { Box, Typography, Card } from "@mui/material";
 
 import pages from "../services/pages";
 
@@ -10,90 +10,96 @@ const Home = () => {
   return (
     <Box
       sx={{
-        py: "12vh",
-        px: "20px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
       }}
     >
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        {pages.map((page) => (
-          <Card
-            key={page.id}
-            ///Importing ListItem to separate links into lines
+      {pages.map((page) => (
+        <Box
+          key={page.id}
+          sx={{
+            width: {
+              xl: "300px",
+              lg: "275px",
+              md: "250px",
+              sm: "200px ",
+              xs: "150px",
+            },
+          }}
+        >
+          <Box
             sx={{
-              alignItems: "center",
-              alignContent: "center",
-              alignSelf: "center",
-              align: "center",
               display: "flex",
-              flexDirection: "column",
-              borderRadius: "15px",
-              width: {
-                xl: "300px",
-                lg: "275px",
-                md: "250px",
-                sm: "200px ",
-                xs: "150px",
-              },
-              height: {
-                xl: "300px",
-                lg: "275px",
-                md: "250px",
-                sm: "200px ",
-                xs: "150px",
-              },
-              boxShadow: `1px 1px 7px ${page.color}`,
+              alignItems: "flex-end",
+              justifyContent: "center",
+              minHeight: "75px",
             }}
           >
-            <Button
-              color="inherit"
-              component={Link}
-              to={page.to}
+            <Typography
+              variant="text"
+              component="h3"
+              color={page.color}
+              textAlign="center"
+              m="10px"
+              mb="15px"
+            >
+              {page.name}
+            </Typography>
+          </Box>
+          <Link to={page.to}>
+            <Card
+              ///Importing ListItem to separate links into lines
               sx={{
-                my: 2,
+                position: "relative",
+                alignItems: "center",
+                alignContent: "center",
+                alignSelf: "center",
+                align: "center",
+                display: "flex",
+                flexDirection: "column",
+                borderRadius: "15px",
+                boxShadow: `1px 1px 7px ${page.color}`,
+                height: {
+                  xl: "300px",
+                  lg: "275px",
+                  md: "250px",
+                  sm: "200px ",
+                  xs: "150px",
+                },
+                background: `url(${page.background})`,
+                "&:hover": {
+                  cursor: "pointer",
+                  boxShadow: `3px 3px 21px ${page.color}`,
+                },
               }}
             >
-              <Typography
-                variant="text"
-                component="div"
-                color={page.color}
-                textAlign="center"
-                width="90%"
-              >
-                {page.name}
-              </Typography>
-            </Button>
-            <img
-              src={page.img}
-              alt="Logo"
-              sx={{
-                /*  width: {
-                  xl: "200px",
-                  lg: "175px",
-                  md: "150px",
-                  sm: "100px ",
-                  xs:  "none",
-                },
-                height: {
-                  xl: "150px",
-                  lg: "125px",
-                  md: "100px",
-                  sm: "50px ",
-                  xs: "none",
-                }, */
-                width: "75%",
-                height: "50%",
-                objectFit: "scale-down",
-              }}
-            />
-          </Card>
-        ))}
-      </Box>
+              <Box
+                sx={{
+                  position: "absolute",
+                  bottom: -300,
+                  right: -200,
+                  width: 400,
+                  height: 400,
+                  borderRadius: 200,
+                  background: "#FFFFFF",
+                }}
+              />
+              <img
+                src={page.img}
+                alt="Logo"
+                objectFit="scale-down"
+                style={{
+                  position: "absolute",
+                  bottom: 15,
+                  right: 15,
+                  width: 80,
+                }}
+              />
+            </Card>
+          </Link>
+        </Box>
+      ))}
     </Box>
   );
 };

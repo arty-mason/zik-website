@@ -34,13 +34,13 @@ const NavBar = () => {
       ///The navbar itself
       elevation={12}
       disableGutters
-      position="sticky"
+      position="fixed"
       sx={{
         backgroundColor: "white",
         borderRadius: `10px`,
-        bottom: "0",
-        left: "0",
-        width: "100%",
+        top: "4px",
+        left: "4px",
+        right: "4px",
       }}
     >
       <Toolbar
@@ -55,15 +55,22 @@ const NavBar = () => {
           px: "30px",
         }}
       >
-        <IconButton
+        <Box
           sx={{
-            color: theme.palette.primary.dark,
+            display: "flex",
+            width: "200px",
           }}
         >
-          <MenuIcon
-            onClick={() => setOpen(true)}
-            ///Firing callback to set the open state to "true" by clicking on the burger menu (opens the menu)
-          />
+          <IconButton
+            sx={{
+              color: theme.palette.primary.dark,
+            }}
+          >
+            <MenuIcon
+              onClick={() => setOpen(true)}
+              ///Firing callback to set the open state to "true" by clicking on the burger menu (opens the menu)
+            />
+          </IconButton>
           <Typography
             sx={{
               color: Colors.Grey.dark,
@@ -74,44 +81,48 @@ const NavBar = () => {
           >
             Меню
           </Typography>
-        </IconButton>
+        </Box>
         <Button
           ///The place for the logo
           color="inherit"
           component={Link}
           to="/home"
+          sx={{}}
         >
           <img
             src={require("../img/zikLogoBlue.jpg")}
             ///Importing logo from the folder
             alt="Zik logo"
-            height="100px"
-            width="150px"
+            height="70px"
           />
         </Button>
-        <Typography color="primary" position="absolute" top="4" right="100px">+34 666 399 550</Typography>
-        <Popover>
-          {languages.map((lang) => (
-            ///Iterating through language array using .map function
-            <Box
-              key={lang.id}
-              ///Rendering each language in a button, using id as a key
-            >
-              <Button>
-                <Typography
-                  sx={{
-                    color: theme.palette.secondary.dark,
-                  }}
-                >
-                  {
-                    lang.name
-                    ///Rendering the language name in each button
-                  }
-                </Typography>
-              </Button>
-            </Box>
-          ))}
-        </Popover>
+        <Box sx={{ display: "flex", alignItems: "center", width: "200px" }}>
+          <Typography color="primary" right="100px">
+            +34 666 399 550
+          </Typography>
+          <Popover>
+            {languages.map((lang) => (
+              ///Iterating through language array using .map function
+              <Box
+                key={lang.id}
+                ///Rendering each language in a button, using id as a key
+              >
+                <Button>
+                  <Typography
+                    sx={{
+                      color: theme.palette.secondary.dark,
+                    }}
+                  >
+                    {
+                      lang.name
+                      ///Rendering the language name in each button
+                    }
+                  </Typography>
+                </Button>
+              </Box>
+            ))}
+          </Popover>
+        </Box>
       </Toolbar>
       <SwipeableDrawer
         ///The drawer imported from MUI
@@ -150,17 +161,6 @@ const NavBar = () => {
                   border: `2px solid ${Colors.Grey.main}`,
                   backgroundColor: theme.palette.primary.dark,
                   borderRadius: "30px",
-                  width: {
-                    xs: "70vw",
-                    sm: "30vw",
-                    ///Adapting the box width to smaller screen resolution
-                  },
-                  height: {
-                    xs: "11vh",
-                    sm: "12vh",
-                    ///Adapting the box height to smaller screen resolution
-                    md: "10vh",
-                  },
                 }}
               >
                 <Typography

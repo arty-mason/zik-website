@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { ThemeProvider } from "@mui/material";
+import GlobalStyles from "@mui/material/GlobalStyles";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { logAnalyticsEvent } from "./services/firebase";
 
@@ -23,8 +24,21 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Wrapper>
-        <NavBar />
+      <GlobalStyles
+        styles={{
+          html: {
+            height: "100vh",
+            backgroundColor: "#fafafa",
+          },
+          body: {
+            height: "100%",
+          },
+          "#root": {
+            height: "100%",
+          },
+        }}
+      />
+      <Wrapper renderHeader={() => <NavBar />} renderFooter={() => <Footer />}>
         <Routes>
           <Route path="home" element={<Home />} />
           <Route path="about" element={<AboutUs />} />
@@ -35,7 +49,6 @@ function App() {
           <Route path="facility" element={<FacilityService />} />
           <Route path="*" element={<Navigate to="home" replace={true} />} />
         </Routes>
-        <Footer />
       </Wrapper>
     </ThemeProvider>
   );

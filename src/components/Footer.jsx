@@ -19,12 +19,12 @@ const Footer = () => {
           px: "40px",
           borderRadius: "15px",
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent: "space-around",
           alignItems: "center",
         }}
       >
         <Button>
-          <img src={zikLogoBlue} alt="Zik Logo" height="160px" width="250x" />
+          <img src={zikLogoBlue} alt="Zik Logo" style={{ height: 80 }} />
         </Button>
         <Box>
           <Box>
@@ -33,27 +33,30 @@ const Footer = () => {
             </Typography>
             <Divider color="black" />
           </Box>
-          {footerContent.map((content) => {
-            return (
-              <Box key={content.id}>
-                <Box
-                  sx={{
-                    m: "5px",
-                  }}
-                >
-                  <Button fullWidth variant="contained">
-                    <Typography
-                      sx={{
-                        color: theme.palette.secondary.main,
-                      }}
-                    >
-                      {content.name}
-                    </Typography>
-                  </Button>
+
+          <Box sx={{ display: "flex" }}>
+            {footerContent.map((content) => {
+              return (
+                <Box key={content.id}>
+                  <Box
+                    sx={{
+                      m: "5px",
+                    }}
+                  >
+                    <Button fullWidth variant="contained">
+                      <Typography
+                        sx={{
+                          color: theme.palette.secondary.main,
+                        }}
+                      >
+                        {content.name}
+                      </Typography>
+                    </Button>
+                  </Box>
                 </Box>
-              </Box>
-            );
-          })}
+              );
+            })}
+          </Box>
         </Box>
       </Paper>
     </Box>
