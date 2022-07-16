@@ -2,7 +2,7 @@ import React from "react";
 
 import { Box, Paper, Typography } from "@mui/material";
 
-import Swing from "./WhyUsCarousel";
+import Swing from "../components/WhyUsCarousel";
 
 import { theme } from "../config/color-config";
 

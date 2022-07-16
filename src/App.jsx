@@ -4,11 +4,15 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { theme } from "./config/color-config";
 import Wrapper from "./components/Wrapper";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+
 import Home from "./pages/Home";
+import AboutUs from "./pages/AboutUs";
+import WhyUs from "./pages/WhyUs";
+import OurExperience from "./pages/OurExperience";
 import ConstructAndInstall from "./pages/ConstructAndInstall";
 import ElevatorInstall from "./pages/ElevatorInstall";
 import FacilityService from "./pages/FacilityService";
-import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,6 +21,9 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="home" element={<Home />} />
+          <Route path="about" element={<AboutUs />} />
+          <Route path="why" element={<WhyUs />} />
+          <Route path="experience" element={<OurExperience />} />
           <Route path="construct" element={<ConstructAndInstall />} />
           <Route path="elevator" element={<ElevatorInstall />} />
           <Route path="facility" element={<FacilityService />} />
