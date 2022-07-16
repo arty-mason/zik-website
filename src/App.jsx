@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import { ThemeProvider } from "@mui/material";
 import { Routes, Route, Navigate } from "react-router-dom";
+import { logAnalyticsEvent } from "./services/firebase";
 
 import { theme } from "./config/color-config";
 import Wrapper from "./components/Wrapper";
@@ -15,6 +17,10 @@ import ElevatorInstall from "./pages/ElevatorInstall";
 import FacilityService from "./pages/FacilityService";
 
 function App() {
+  useEffect(() => {
+    logAnalyticsEvent("Page rendered");
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <Wrapper>
