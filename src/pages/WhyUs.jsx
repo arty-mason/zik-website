@@ -1,10 +1,8 @@
 import React from "react";
 
-import { Box, Paper, Typography } from "@mui/material";
+import { Box, Paper } from "@mui/material";
 
 import Swing from "../components/WhyUsCarousel";
-
-import { theme } from "../config/color-config";
 
 const WhyUs = () => {
   return (
@@ -15,15 +13,6 @@ const WhyUs = () => {
         mx: "65px",
       }}
     >
-      <Typography
-        variant="h4"
-        component="h1"
-        marginBottom={3}
-        textAlign="center"
-        color={theme.palette.secondary.dark}
-      >
-        Почему выбирают нас?
-      </Typography>
       <Paper
         elevation={20}
         sx={{

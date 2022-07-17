@@ -1,6 +1,6 @@
-import constructionExperience from '../img/backgrounds/constructionExperience.jpg';
-import constructionTechnology from '../img/backgrounds/constructionTechnology.jpeg';
-import constructionLevel from '../img/backgrounds/constructionLevel.jpeg';
+import constructionExperience from "../img/backgrounds/constructionExperience.jpg";
+import constructionTechnology from "../img/backgrounds/constructionTechnology.jpeg";
+import constructionLevel from "../img/backgrounds/constructionLevel.jpeg";
 
 const reasons = [
   {
@@ -14,11 +14,7 @@ const reasons = [
     id: `2`,
     img: constructionLevel,
     name: `Уровень`,
-    text: `Мы:
-    осуществляем обслуживание лифтов на самом высоком уровне,
-    используем современные технологии, 
-    квалифицированных специалистов, надежны и стремимся к длительному и 
-    взаимовыгодному сотрудничеству с нашими партнерами и клиентами.`,
+    text: `Мы осуществляем обслуживание лифтов на самом высоком уровне, используем современные технологии, квалифицированных специалистов, надежны и стремимся к длительному и взаимовыгодному сотрудничеству с нашими партнерами и клиентами.`,
   },
   {
     id: `3`,

@@ -29,7 +29,7 @@ const Swing = () => {
               // backgroundColor: Colors.Grey.ultraLight,
             }}
           >
-            <CustomText
+        {/*     <CustomText
               variant="h4"
               component="h1"
               sx={{
@@ -37,7 +37,7 @@ const Swing = () => {
               }}
             >
               {reason.name}
-            </CustomText>
+            </CustomText> */}
             <CustomText
               variant="h6"
               component="h1"
