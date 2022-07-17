@@ -4,10 +4,22 @@ import { Box, CardMedia, Paper, Typography } from "@mui/material";
 
 import constructionSite from "../img/backgrounds/constructionSite.jpeg";
 import { theme } from "../config/color-config";
+import styled from "@emotion/styled";
+
+const CommercialText = styled(Typography)({
+  marginBottom: "30px",
+  color: theme.palette.primary.main,
+});
 
 const AboutUs = () => {
   return (
-    <Box display="flex">
+    <Box
+      display="flex"
+      flex-direction="column"
+      alignItems="stretch"
+      justifyContent="center"
+      marginBottom="20px"
+    >
       <Paper
         elevation={15}
         sx={{
@@ -17,26 +29,19 @@ const AboutUs = () => {
           width: "70%",
         }}
       >
-        <Typography
-          variant="h6"
-          component="p"
-          color={theme.palette.primary.main}
-          textAlign="center"
-          sx={{
-            py: "50px",
-          }}
-        >
+        <CommercialText variant="h6" component="h1" textAlign="center">
           <b>«ZAVIISKYI & KABACHEK BUSINESS COMPANY» </b> специализируется на
           услугах для клиентов в следующих отраслях:
-          <ul textAlign="left">
-            <li>строительно-монтажные работы,</li>
-            <li>установку и обслуживание лифтов,</li>
-            <li>обслуживание коммерческих объектов и жилых домов.</li>
-          </ul>
+        </CommercialText>
+        <CommercialText variant="h6" component="p">
+          - строительно-монтажные работы, <br />
+          - установку и обслуживание лифтов, <br /> - обслуживание коммерческих
+          объектов и жилых домов.
+          <br /> <br />
           Вы платите только за реально предоставленные услуги, а наши
           квалифицированные специалисты выполнят все типы работ в установленные
           сроки по доступным ценам для клиента.
-        </Typography>
+        </CommercialText>
       </Paper>
 
       <Paper
@@ -44,8 +49,10 @@ const AboutUs = () => {
         sx={{
           borderRadius: 15,
           my: "20px",
+          ml: "50px",
           width: "70%",
           padding: "30px",
+          display: "flex",
         }}
       >
         <CardMedia
