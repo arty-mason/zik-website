@@ -5,11 +5,11 @@ import {
   Card,
   CardMedia,
   Container,
-  // Icon,
+  Icon,
   Paper,
   Typography,
 } from "@mui/material";
-import { styled } from "@mui/system";
+/* import { styled } from "@mui/system"; */
 
 import TextField from "../shared/text-field";
 import servicesTypes from "../services/construct-services";
@@ -19,14 +19,7 @@ import { Colors } from "../config/design-config";
 
 import constructionAdvantage from "../services/construction-content";
 
-const CustomBox = styled(Box)({
-  my: "10px",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  alignContent: "center",
-  justifyContent: "center",
-});
+const IconConfig = Icon;
 
 const ConstructAndInstall = () => {
   return (
@@ -119,7 +112,8 @@ const ConstructAndInstall = () => {
                       >
                         {paragraph.advantageText}
                       </Typography>
-                      {/* <Icon color="black" src={paragraph.advantageIcon} /> */}
+
+                      <IconConfig src={paragraph.advantageIcon} />
                     </Card>
                   </Box>
                 );
