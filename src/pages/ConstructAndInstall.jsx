@@ -1,89 +1,146 @@
 import React from "react";
 
-import { Box, Card, CardMedia, Container, Paper } from "@mui/material";
+import {
+  Box,
+  Card,
+  CardMedia,
+  Container,
+  // Icon,
+  Paper,
+  Typography,
+} from "@mui/material";
 import { styled } from "@mui/system";
 
 import TextField from "../shared/text-field";
 import servicesTypes from "../services/construct-services";
 
 import { theme } from "../config/color-config";
+import { Colors } from "../config/design-config";
 
-import crane from "../img/backgrounds/crane.jpeg";
+import constructionAdvantage from "../services/construction-content";
 
 const CustomBox = styled(Box)({
   my: "10px",
   display: "flex",
   flexDirection: "column",
-  flexWrap: "wrap",
   alignItems: "center",
   alignContent: "center",
   justifyContent: "center",
-  alignSelf: "center",
 });
 
 const ConstructAndInstall = () => {
   return (
-    <Box mt="50px">
+    <Box>
       <Container container justifyContent="center">
         <Paper
           elevation={15}
           sx={{
             padding: "10px",
-            borderRadius: "20px",
+            borderRadius: "25px",
             display: "flex",
+            borderBottom: `10px outset ${Colors.Red.light}`,
+            borderRight: `10px inset ${theme.palette.secondary.main}`,
           }}
         >
           <Box
             sx={{
               my: "35px",
-              mx: "20px",
-              width: "45%",
             }}
           >
-            <TextField
-              variant="p"
+            <Typography
+              variant="h4"
+              component="h1"
               sx={{
-                fontSize: "20px",
                 color: theme.palette.primary.dark,
                 my: "20px",
                 textAlign: "center",
+                mx: "5%",
               }}
             >
               Вам надо провести строительно-монтажные работы, но вы не знаете
               где найти надежных и качественных специалистов?
-              <br /> <br />
+            </Typography>
+            <Typography
+              variant="h5"
+              component="h1"
+              sx={{
+                color: theme.palette.primary.dark,
+                my: "20px",
+                mx: "5%",
+                textAlign: "center",
+              }}
+            >
               Наша компания предоставляет комплексные решения в сфере
               проектирования, монтажа и технического обслуживания с лояльными
               ценами для клиента.
-              <br /> <br />
-              Преимущество сотрудничества с нами – выполнение любых общих
-              строительных работ в установленные сроки, использование только
-              качественных европейских материалов для строительства, выполнение
-              работ только квалифицированными рабочими и специалистами.
-              <br /> <br />
+            </Typography>
+            <Typography
+              variant="h4"
+              component="h1"
+              sx={{
+                color: theme.palette.primary.dark,
+                mt: "20px",
+                mb: "40px",
+                textAlign: "center",
+              }}
+            >
+              Преимущество сотрудничества с нами:
+            </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-around",
+              }}
+            >
+              {constructionAdvantage.map((paragraph) => {
+                return (
+                  <Box
+                    key={paragraph.id}
+                    sx={{
+                      width: "25%",
+                      mx: "5px",
+                    }}
+                  >
+                    <Card
+                      elevation={10}
+                      sx={{
+                        height: "300px",
+                        borderRadius: "20px",
+                        background: `linear-gradient(to bottom, ${theme.palette.secondary.main}, ${Colors.Red.main})`,
+                      }}
+                    >
+                      <Typography
+                        sx={{
+                          color: "white",
+                          my: "20px",
+                          fontSize: "18px",
+                          textAlign: "center",
+                        }}
+                      >
+                        {paragraph.advantageText}
+                      </Typography>
+                      {/* <Icon color="black" src={paragraph.advantageIcon} /> */}
+                    </Card>
+                  </Box>
+                );
+              })}
+            </Box>
+            <Typography
+              variant="h5"
+              component="h1"
+              sx={{
+                color: theme.palette.primary.dark,
+                my: "30px",
+                mx: "5%",
+                textAlign: "center",
+              }}
+            >
               Основная задача нашего строительного отдела – показать клиенту
               истинное качество выполнения работ за оптимальную цену.
               <br /> <br />
               Опыт работы наших специалистов не даст сомневаться в выборе нашей
               компании!
-            </TextField>
-          </Box>
-          <Box
-            sx={{
-              my: "35px",
-              mx: "20px",
-              width: "45%",
-            }}
-          >
-            <CardMedia
-              component="img"
-              src={crane}
-              sx={{
-                maxHeight: {
-                  lg: "450px",
-                },
-              }}
-            />
+            </Typography>
           </Box>
         </Paper>
       </Container>
@@ -93,7 +150,6 @@ const ConstructAndInstall = () => {
         sx={{
           textAlign: "center",
           marginTop: "40px",
-
           color: theme.palette.primary.dark,
         }}
       >
@@ -102,8 +158,7 @@ const ConstructAndInstall = () => {
       <Box
         sx={{
           display: "flex",
-          flexGrow: "1",
-          flexShrink: "1",
+          justifyContent: "space-around",
           padding: "10px",
         }}
       >
@@ -113,37 +168,52 @@ const ConstructAndInstall = () => {
               key={service.id}
               elevation={20}
               sx={{
-                width: "400px",
-                height: "400px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "space-evenly",
+                width: "100%",
+                height: "500px",
                 marginRight: "50px",
                 my: "50px",
                 px: "20px",
                 py: "15px",
               }}
             >
-              <CustomBox>
+              <TextField
+                sx={{
+                  color: theme.palette.primary.light,
+                  fontSize: "30px",
+                  minHeight: "50px",
+                }}
+              >
+                {service.serviceName}
+              </TextField>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  minHeight: "175px",
+                  my: "1%",
+                }}
+              >
                 <TextField
-                  sx={{ color: theme.palette.primary.light, fontSize: "30px" }}
+                  sx={{
+                    color: theme.palette.primary.dark,
+                  }}
                 >
-                  {service.serviceName}
-                </TextField>
-              </CustomBox>
-              <CustomBox>
-                <TextField sx={{ color: theme.palette.primary.dark }}>
                   {service.serviceDescription}
                 </TextField>
-              </CustomBox>
-              <CustomBox>
-                <CardMedia
-                  component="img"
-                  src={service.img}
-                  sx={{
-                    width: "300px",
-                    height: "200px",
-                    objectFit: "scale-down",
-                  }}
-                />
-              </CustomBox>
+              </Box>
+              <CardMedia
+                component="img"
+                src={service.img}
+                sx={{
+                  height: "250px",
+                  objectFit: "scale-down",
+                }}
+              />
             </Card>
           );
         })}

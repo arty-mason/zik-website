@@ -4,9 +4,6 @@ import { Box, Button, Typography, Divider, Paper } from "@mui/material";
 
 import zikLogoBlue from "../img/zikLogoBlue.jpg";
 
-import { footerContent } from "../services/footer-content";
-
-import { theme } from "../config/color-config";
 import LeftPopper from "./LeftPopper";
 
 const Footer = () => {
@@ -36,28 +33,7 @@ const Footer = () => {
           </Box>
 
           <Box sx={{ display: "flex" }}>
-          <LeftPopper />
-          {/*   {footerContent.map((content) => {
-              return (
-                <Box key={content.id}>
-                  <Box
-                    sx={{
-                      m: "5px",
-                    }}
-                  >
-                    <Button  variant="contained">
-                      <Typography
-                        sx={{
-                          color: theme.palette.secondary.main,
-                        }}
-                      >
-                        {content.name}
-                      </Typography>
-                    </Button>
-                  </Box>
-                </Box>
-              );
-            })} */}
+            <LeftPopper />
           </Box>
         </Box>
       </Paper>

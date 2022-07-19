@@ -67,7 +67,7 @@ const Home = () => {
                   sm: "200px ",
                   xs: "150px",
                 },
-                background: `url(${page.background})`,
+                /* background: `url(${page.background})`, */
                 "&:hover": {
                   cursor: "pointer",
                   boxShadow: `3px 3px 21px ${page.color}`,
@@ -75,25 +75,23 @@ const Home = () => {
               }}
             >
               <Box
-                sx={{
+              /* sx={{
                   position: "absolute",
-                  bottom: -300,
-                  right: -200,
+                  bottom: -290,
+                  right: -235,
                   width: 400,
                   height: 400,
                   borderRadius: 200,
                   background: "#FFFFFF",
-                }}
+                }} */
               />
               <img
-                src={page.img}
+                src={page.background}
                 alt="Logo"
                 objectFit="scale-down"
                 style={{
-                  position: "absolute",
-                  bottom: 15,
-                  right: 15,
-                  width: 80,
+                  position: "relative",
+                  height: "100%",
                 }}
               />
             </Card>

@@ -1,34 +1,34 @@
-import zikLogoBlue from "../img/zikLogoBlue.jpg";
+/* import zikLogoBlue from "../img/zikLogoBlue.jpg";
 import zikLogoRed from "../img/zikLogoRed.jpg";
-import zikLogoGreen from "../img/zikLogoGreen.jpg";
-import constructionSite2 from "../img/backgrounds/constructionSite2.jpeg"
-import elevatorsBackground5 from "../img/backgrounds/elevatorsBackground5.jpg"
-import cleaningService from "../img/backgrounds/cleaningService.jpg";
+import zikLogoGreen from "../img/zikLogoGreen.jpg"; */
+import constructLink from "../img/homepage/constructLink.jpeg";
+import elevatorLink from "../img/homepage/elevatorLink.jpeg";
+import serviceLink from "../img/homepage/serviceLink.jpeg"
 
 const pages = [
   {
     id: "1",
     name: `Строительно-монтажные работы`,
     to: "/construct",
-    img: zikLogoRed,
+    /*     img: zikLogoRed, */
     color: "#ac0717",
-    background: constructionSite2,
+    background: constructLink,
   },
   {
     id: "2",
     name: `Продажа, монтаж и обслуживание лифтов`,
     to: "/elevator",
-    img: zikLogoBlue,
+    /*   img: zikLogoBlue, */
     color: "#005b84",
-    background: elevatorsBackground5,
+    background: elevatorLink,
   },
   {
     id: "3",
     name: `Обслуживание коммерческих объектов и жилых домов`,
     to: "/facility",
-    img: zikLogoGreen,
+    /*   img: zikLogoGreen, */
     color: "#44b651",
-    background: cleaningService,
+    background: serviceLink,
   },
 ];
 
