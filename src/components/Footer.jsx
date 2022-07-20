@@ -1,10 +1,18 @@
 import React from "react";
 
-import { Box, Button, Typography, Divider, Paper } from "@mui/material";
-
-import zikLogoBlue from "../img/zikLogoBlue.jpg";
+import {
+  Box,
+  Button,
+  Typography,
+  Divider,
+  Paper,
+  CardMedia,
+} from "@mui/material";
 
 import LeftPopper from "./LeftPopper";
+import instagram from "../img/social/instagram.svg";
+import facebook from "../img/social/facebook.svg";
+import zikLogoBlue from "../img/zikLogoBlue.jpg";
 
 const Footer = () => {
   return (
@@ -13,11 +21,14 @@ const Footer = () => {
         elevation={20}
         sx={{
           position: "relative",
-          py: "20px",
+          /*  py: "20px", */
           px: "40px",
           borderRadius: "15px",
           display: "flex",
           justifyContent: "space-around",
+          /*   "&:not-last-child": {
+            justifyContent: "space-between",
+          }, */
           alignItems: "center",
         }}
       >
@@ -31,10 +42,29 @@ const Footer = () => {
             </Typography>
             <Divider color="black" />
           </Box>
-
           <Box sx={{ display: "flex" }}>
             <LeftPopper />
           </Box>
+        </Box>
+        <Box display="flex" justifyContent="space-between" width="100px">
+          <Button href="">
+            <CardMedia
+              component="img"
+              src={instagram}
+              objectFit="scale-down"
+              width="50px"
+              height="50px"
+            />
+          </Button>
+          <Button href="">
+            <CardMedia
+              component="img"
+              src={facebook}
+              objectFit="scale-down"
+              width="50px"
+              height="50px"
+            />
+          </Button>
         </Box>
       </Paper>
     </Box>

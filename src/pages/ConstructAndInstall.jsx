@@ -5,11 +5,9 @@ import {
   Card,
   CardMedia,
   Container,
-  Icon,
   Paper,
   Typography,
 } from "@mui/material";
-/* import { styled } from "@mui/system"; */
 
 import TextField from "../shared/text-field";
 import servicesTypes from "../services/construct-services";
@@ -18,8 +16,6 @@ import { theme } from "../config/color-config";
 import { Colors } from "../config/design-config";
 
 import constructionAdvantage from "../services/construction-content";
-
-const IconConfig = Icon;
 
 const ConstructAndInstall = () => {
   return (
@@ -44,10 +40,13 @@ const ConstructAndInstall = () => {
               variant="h4"
               component="h1"
               sx={{
-                color: theme.palette.primary.dark,
+                /*  color: Colors.Red.dark, */
                 my: "20px",
                 textAlign: "center",
                 mx: "5%",
+                background: `linear-gradient(30deg,  ${Colors.Red.dark}, ${theme.palette.secondary.dark})`,
+                textFillColor: `transparent`,
+                backgroundClip: `text`,
               }}
             >
               Вам надо провести строительно-монтажные работы, но вы не знаете
@@ -57,10 +56,13 @@ const ConstructAndInstall = () => {
               variant="h5"
               component="h1"
               sx={{
-                color: theme.palette.primary.dark,
+                /*    color: Colors.Red.main, */
                 my: "20px",
                 mx: "5%",
                 textAlign: "center",
+                background: `linear-gradient(30deg,  ${Colors.Red.dark}, ${theme.palette.secondary.dark})`,
+                textFillColor: `transparent`,
+                backgroundClip: `text`,
               }}
             >
               Наша компания предоставляет комплексные решения в сфере
@@ -71,10 +73,13 @@ const ConstructAndInstall = () => {
               variant="h4"
               component="h1"
               sx={{
-                color: theme.palette.primary.dark,
+                /* color: Colors.Red.light, */
                 mt: "20px",
                 mb: "40px",
                 textAlign: "center",
+                background: `linear-gradient(30deg,  ${Colors.Red.dark}, ${theme.palette.secondary.dark})`,
+                textFillColor: `transparent`,
+                backgroundClip: `text`,
               }}
             >
               Преимущество сотрудничества с нами:
@@ -86,6 +91,7 @@ const ConstructAndInstall = () => {
               }}
             >
               {constructionAdvantage.map((paragraph) => {
+                const IconComponent = paragraph.advantageIcon;
                 return (
                   <Box
                     key={paragraph.id}
@@ -100,6 +106,10 @@ const ConstructAndInstall = () => {
                         height: "300px",
                         borderRadius: "20px",
                         background: `linear-gradient(to bottom, ${theme.palette.secondary.main}, ${Colors.Red.main})`,
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center",
                       }}
                     >
                       <Typography
@@ -113,7 +123,13 @@ const ConstructAndInstall = () => {
                         {paragraph.advantageText}
                       </Typography>
 
-                      <IconConfig src={paragraph.advantageIcon} />
+                      <IconComponent
+                        sx={{
+                          height: "100px",
+                          width: "100px",
+                          color: "white",
+                        }}
+                      />
                     </Card>
                   </Box>
                 );
@@ -123,10 +139,13 @@ const ConstructAndInstall = () => {
               variant="h5"
               component="h1"
               sx={{
-                color: theme.palette.primary.dark,
+                /*  color: theme.palette.primary.dark, */
                 my: "30px",
                 mx: "5%",
                 textAlign: "center",
+                background: `linear-gradient(30deg,  ${Colors.Red.dark}, ${theme.palette.secondary.dark})`,
+                textFillColor: `transparent`,
+                backgroundClip: `text`,
               }}
             >
               Основная задача нашего строительного отдела – показать клиенту
@@ -144,7 +163,7 @@ const ConstructAndInstall = () => {
         sx={{
           textAlign: "center",
           marginTop: "40px",
-          color: theme.palette.primary.dark,
+          /*   color: theme.palette.primary.dark, */
         }}
       >
         Услуги, на которых мы специализируемся:
@@ -169,6 +188,8 @@ const ConstructAndInstall = () => {
                 width: "100%",
                 height: "500px",
                 marginRight: "50px",
+                borderRadius: "20px",
+                boxShadow: "5px",
                 my: "50px",
                 px: "20px",
                 py: "15px",
