@@ -2,7 +2,6 @@ import * as React from "react";
 
 import { Popover, Typography, Button } from "@mui/material";
 import LanguageIcon from "@mui/icons-material/LanguageOutlined";
-import { theme } from "../config/color-config";
 import { usePageTheme } from "../services/page-theme.hook";
 
 export default function BasicPopover(props) {

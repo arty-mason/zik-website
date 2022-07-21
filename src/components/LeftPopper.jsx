@@ -6,18 +6,22 @@ import Button from "@mui/material/Button";
 import Fade from "@mui/material/Fade";
 import Paper from "@mui/material/Paper";
 import { footerContent } from "../services/footer-content";
-import { theme } from "../config/color-config";
+
+import { usePageTheme } from "../services/page-theme.hook";
 
 const LeftPopper = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [open, setOpen] = React.useState(false);
   const [placement, setPlacement] = React.useState();
 
+  const { colors } = usePageTheme();
+
   const handleClick = (newPlacement) => (event) => {
     setAnchorEl(event.currentTarget);
     setOpen((prev) => placement !== newPlacement || !prev);
     setPlacement(newPlacement);
   };
+
   return (
     <Box sx={{ width: 500 }}>
       {footerContent.map((content) => {
@@ -33,9 +37,7 @@ const LeftPopper = () => {
               {({ TransitionProps }) => (
                 <Fade {...TransitionProps} timeout={350}>
                   <Paper>
-                    <Typography sx={{ p: 2 }}>
-                     {content.info}
-                    </Typography>
+                    <Typography sx={{ p: 2 }}>{content.info}</Typography>
                   </Paper>
                 </Fade>
               )}
@@ -51,10 +53,16 @@ const LeftPopper = () => {
                   fullWidth
                   variant="contained"
                   onClick={handleClick("top")}
+                  sx={{
+                    backgroundColor: colors.primary,
+                    "&:hover": {
+                      backgroundColor: colors.primaryDark,
+                    },
+                  }}
                 >
                   <Typography
                     sx={{
-                      color: theme.palette.secondary.main,
+                      color: colors.secondary,
                     }}
                   >
                     {content.name}

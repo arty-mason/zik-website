@@ -17,9 +17,6 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import Popover from "./Popover";
 import languages from "../services/languages";
 
-import { Colors } from "../config/design-config";
-import { theme } from "../config/color-config";
-
 import { BurgerMenuLinks } from "./BurgerMenuLinks";
 import { usePageTheme } from "../services/page-theme.hook";
 import { Link } from "react-router-dom";
