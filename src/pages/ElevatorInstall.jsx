@@ -1,15 +1,19 @@
 import React from "react";
 
-import { Box, Card, CardMedia, Container, Paper } from "@mui/material";
+import {
+  Card,
+  CardMedia,
+  Container,
+  Grid,
+  Paper,
+  Typography,
+} from "@mui/material";
 // Importing the additional components from MUI
-
-import ElevatorCarousel from "../components/ElevatorCarousel";
-
-import TextField from "../shared/text-field";
 
 import { theme } from "../config/color-config";
 
-import elevatorWorks from "../img/elevators/elevatorWorks.png";
+import ElevatorGallery from "../components/ElevatorCarousel";
+import elevatorServices from "../services/elevator-services";
 
 const ElevatorInstall = () => {
   return (
@@ -24,77 +28,70 @@ const ElevatorInstall = () => {
         elevation={12}
         sx={{
           borderRadius: "25px",
-          pb: "20px",
         }}
       >
-        <TextField
-          variant="h5"
-          component="p"
-          sx={{
-            my: "30px",
-            p: "40px",
-            color: theme.palette.primary.dark,
-          }}
-        >
-          Наша компания-надежный партнер и помощник в вопросах монтажа,
-          обслуживании, модернизации и автоматизации лифтов, подъемников,
-          эскалаторов и травалаторов.
-          <br /> <br />
-          Как и любое высокотехнологичное оборудование, подвержено износу, лифты
-          и подъемные механизмы требуют регулярного технического обслуживания, а
-          впоследствии – ремонта и модернизации. Мы поставляем запасные части и
-          комплектующие изделия для лифтов и других подъемных механизмов
-          различных заводов-производителей по доступным ценам.
-        </TextField>
-
-        <CardMedia
-          component="img"
-          src={elevatorWorks}
-          sx={{
-            maxHeight: "400px",
-            objectFit: "scale-down",
-          }}
-        />
+        <ElevatorGallery />
       </Paper>
-      <Box>
-        <TextField
-          variant="h4"
-          component="h2"
-          sx={{
-            my: "20px",
-            color: theme.palette.primary.dark,
-          }}
-        >
-          Мы предоставляем следующие виды услуг
-        </TextField>
-        <Card
-          elevation={10}
-          sx={{
-            borderRadius: "15px",
-          }}
-        >
-          <ElevatorCarousel />
-        </Card>
 
-        <TextField
-          variant="h5"
-          component="p"
-          sx={{
-            my: "20px",
-            p: "40px",
-            color: theme.palette.primary.dark,
-          }}
-        >
-          Наша команда дисциплинирована и знает, что такое сроки.
-          <br />
-          <br />
-          Мы предоставляем круглосуточное обслуживание, доступные цены,
-          использование только сертифицированных инструментов и сотрудничество с
-          европейскими производителями лифтового оборудования. <br />
-          <br />
-          Наша компания - залог качества и безопасности.
-        </TextField>
-      </Box>
+      <Typography
+        variant="h3"
+        component="h4"
+        sx={{
+          minHeight: "80px",
+          my: "30px",
+          color: theme.palette.secondary.dark,
+          textAlign: "center",
+        }}
+      >
+        Мы предоставляем следующие виды услуг:
+      </Typography>
+      {/*   <Box
+        sx={{
+          px: "50px",
+          py: "30px",
+            display: "flex",
+           flexDirection: "column",
+          alignItems: "center",
+          background: `linear-gradient(to bottom, ${theme.palette.primary.dark}, ${theme.palette.primary.light})`,
+          borderRadius: "22px",
+        }}
+      ></Box> */}
+      <Grid container spacing={3}>
+        {elevatorServices.map((service) => {
+          return (
+            <Grid key={service.id} item xs={4}>
+              <Card
+                sx={{
+                  p: "10px",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "space-evenly",
+                  background: `linear-gradient(160deg, ${theme.palette.primary.dark}, ${theme.palette.primary.light})`,
+                  borderRadius: "22px",
+                  minHeight: "400px",
+                  minWidth: "310px",
+                  "&:hover": {
+                    boxShadow: `inset 0 0 7px 7px ${theme.palette.secondary.main}`,
+                  },
+                }}
+              >
+                <Typography
+                  color="white"
+                  fontSize="19px"
+                  textAlign="center"
+                  sx={{
+                    px: "2px",
+                  }}
+                >
+                  {service.name}
+                </Typography>
+                <CardMedia component="img" src={service.img} />
+              </Card>
+            </Grid>
+          );
+        })}
+      </Grid>
     </Container>
   );
 };

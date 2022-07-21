@@ -6,50 +6,48 @@ import "react-responsive-carousel/lib/styles/carousel.css";
 // Importing the carousel stylesheet
 import { Box, Typography } from "@mui/material";
 
-import elevatorServices from "../services/elevator-services";
+import carouselBase from "../services/elevator-carousel";
 // Importing the carousel data array
 
 import { theme } from "../config/color-config";
 
-const Gallery = () => {
+const ElevatorGallery = () => {
   return (
     <Carousel autoPlay="true">
-      {elevatorServices.map((service) => {
+      {carouselBase.map((slide) => {
         return (
           <Box
-            container
-            spacing={3}
-            key={service.id}
+            key={slide.id}
             sx={{
               px: "50px",
               py: "30px",
+              display: "flex",
               flexDirection: "column",
-              justifyContent: "space-around",
+              alignItems: "center",
+              background: `linear-gradient(20deg, ${theme.palette.primary.main}, black)`,
+              borderRadius: "22px",
             }}
           >
-            <Typography
-              variant="h4"
-              component="h1"
-              sx={{
-                color: theme.palette.primary.main,
-              }}
-            >
-              {service.serviceName}
-            </Typography>
             <Box
               sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                alignContent: "center",
-                ml: "11%",
-                py: "30px",
-                width: "800px",
-                height: "600px",
+                mt: "25px",
               }}
             >
-              <img alt={service.alt} src={service.img} />
+              <img alt="" src={slide.img} />
             </Box>
+            <Typography
+              variant="p"
+              component="h6"
+              sx={{
+                minHeight: "80px",
+                my: "20px",
+                color: theme.palette.secondary.main,
+                fontSize: "22px",
+                verticalAlign: "middle",
+              }}
+            >
+              {slide.text}
+            </Typography>
           </Box>
         );
       })}
@@ -57,4 +55,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default ElevatorGallery;

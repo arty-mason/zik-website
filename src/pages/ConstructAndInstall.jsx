@@ -110,6 +110,9 @@ const ConstructAndInstall = () => {
                         flexDirection: "column",
                         alignItems: "center",
                         justifyContent: "center",
+                        "&:hover": {
+                          animation: `pulse 2s linear infinite`,
+                        },
                       }}
                     >
                       <Typography
@@ -122,7 +125,6 @@ const ConstructAndInstall = () => {
                       >
                         {paragraph.advantageText}
                       </Typography>
-
                       <IconComponent
                         sx={{
                           height: "100px",
@@ -139,13 +141,13 @@ const ConstructAndInstall = () => {
               variant="h5"
               component="h1"
               sx={{
-                /*  color: theme.palette.primary.dark, */
+                color: "white",
                 my: "30px",
                 mx: "5%",
                 textAlign: "center",
-                background: `linear-gradient(30deg,  ${Colors.Red.dark}, ${theme.palette.secondary.dark})`,
+                /*    background: `linear-gradient(30deg,  ${Colors.Red.dark}, ${theme.palette.secondary.dark})`,
                 textFillColor: `transparent`,
-                backgroundClip: `text`,
+                backgroundClip: `text`, */
               }}
             >
               Основная задача нашего строительного отдела – показать клиенту
@@ -163,7 +165,10 @@ const ConstructAndInstall = () => {
         sx={{
           textAlign: "center",
           marginTop: "40px",
-          /*   color: theme.palette.primary.dark, */
+          color: Colors.Red.main,
+          /*    background: `linear-gradient(to bottom,  ${Colors.Red.dark}, ${theme.palette.secondary.dark})`,
+          textFillColor: `transparent`,
+          backgroundClip: `text`, */
         }}
       >
         Услуги, на которых мы специализируемся:
@@ -181,6 +186,7 @@ const ConstructAndInstall = () => {
               key={service.id}
               elevation={20}
               sx={{
+                background: `linear-gradient(180deg,  ${Colors.Red.dark}, ${theme.palette.secondary.dark})`,
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -193,13 +199,19 @@ const ConstructAndInstall = () => {
                 my: "50px",
                 px: "20px",
                 py: "15px",
+                "&:hover": {
+                  transform: "scale(1.08)",
+                },
               }}
             >
               <TextField
                 sx={{
-                  color: theme.palette.primary.light,
+                  color: "white",
                   fontSize: "30px",
                   minHeight: "50px",
+                  /*   background: `linear-gradient(to bottom,  ${Colors.Red.dark}, ${theme.palette.secondary.dark})`,
+                  textFillColor: `transparent`,
+                  backgroundClip: `text`, */
                 }}
               >
                 {service.serviceName}
@@ -215,7 +227,10 @@ const ConstructAndInstall = () => {
               >
                 <TextField
                   sx={{
-                    color: theme.palette.primary.dark,
+                    color: "white",
+                    /*   background: `linear-gradient(-200deg,  ${Colors.Red.dark}, ${theme.palette.secondary.dark})`,
+                    textFillColor: `transparent`,
+                    backgroundClip: `text`, */
                   }}
                 >
                   {service.serviceDescription}
