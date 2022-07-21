@@ -1,13 +1,6 @@
 import React from "react";
 
-import {
-  Card,
-  CardMedia,
-  Container,
-  Grid,
-  Paper,
-  Typography,
-} from "@mui/material";
+import { Box, Card, Container, Grid, Paper, Typography } from "@mui/material";
 // Importing the additional components from MUI
 
 import { theme } from "../config/color-config";
@@ -79,7 +72,14 @@ const ElevatorInstall = () => {
                 >
                   {service.name}
                 </Typography>
-                <CardMedia component="img" src={service.img} />
+                <Box
+                  sx={{
+                    background: `url(${service.img})`,
+                    backgroundSize: "cover",
+                    height: "270px",
+                    width: "300px",
+                  }}
+                />
               </Card>
             </Grid>
           );
