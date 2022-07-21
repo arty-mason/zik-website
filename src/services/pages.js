@@ -1,9 +1,11 @@
 import zikLogoBlue from "../img/zikLogoBlue.jpg";
 import zikLogoRed from "../img/zikLogoRed.jpg";
 import zikLogoGreen from "../img/zikLogoGreen.jpg";
-import constructionSite2 from "../img/backgrounds/constructionSite2.jpeg"
-import elevatorsBackground5 from "../img/backgrounds/elevatorsBackground5.jpg"
-import cleaningService from "../img/backgrounds/cleaningService.jpg";
+
+import constructionButton from "../img/homePage/constructionButton.jpeg";
+import elevatorsButton from "../img/homePage/elevatorsButton.jpg"
+import housingButton from "../img/homePage/housingButton.jpg"
+
 
 const pages = [
   {
@@ -12,7 +14,7 @@ const pages = [
     to: "/construct",
     img: zikLogoRed,
     color: "#ac0717",
-    background: constructionSite2,
+    background: constructionButton,
   },
   {
     id: "2",
@@ -20,7 +22,7 @@ const pages = [
     to: "/elevator",
     img: zikLogoBlue,
     color: "#005b84",
-    background: elevatorsBackground5,
+    background: elevatorsButton,
   },
   {
     id: "3",
@@ -28,7 +30,7 @@ const pages = [
     to: "/facility",
     img: zikLogoGreen,
     color: "#44b651",
-    background: cleaningService,
+    background: housingButton,
   },
 ];
 

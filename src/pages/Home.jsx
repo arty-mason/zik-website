@@ -69,6 +69,7 @@ const Home = () => {
                   xs: "150px",
                 },
                 background: `url(${page.background})`,
+                backgroundSize: "cover",
                 "&:hover": {
                   cursor: "pointer",
                   boxShadow: `3px 3px 21px ${page.color}`,
