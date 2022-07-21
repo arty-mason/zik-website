@@ -31,6 +31,7 @@ const AboutUs = () => {
           my: "20px",
           p: "30px",
           width: "70%",
+          background: "#eceff1",
           border: `3px outset ${theme.palette.primary.main}`,
           "&:hover": {
             background: `linear-gradient(to right,  ${theme.palette.primary.dark}, ${theme.palette.primary.light})`,

@@ -15,7 +15,5 @@ export const Colors = {
     main: "#ac0717",
     light: "#e54a3f",
     dark: "#750000",
-
   },
-
 }

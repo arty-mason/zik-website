@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-import { Link } from "react-router-dom";
-
 import {
   AppBar,
   Box,
@@ -23,11 +21,14 @@ import { Colors } from "../config/design-config";
 import { theme } from "../config/color-config";
 
 import { BurgerMenuLinks } from "./BurgerMenuLinks";
+import { usePageTheme } from "../services/page-theme.hook";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
   ///Using the useState hook to create a state (open) and a state changer (setOpen)
   ///Assigning the variables to the hook and setting default state value to false
+  const { logoSrc, colors } = usePageTheme();
 
   return (
     <AppBar
@@ -59,23 +60,20 @@ const NavBar = () => {
           sx={{
             display: "flex",
             width: "200px",
-            cursor: 'pointer',
+            cursor: "pointer",
           }}
           onClick={() => setOpen(true)}
         >
           <IconButton
             sx={{
-              color: theme.palette.primary.dark,
+              color: colors.primary,
             }}
           >
-            <MenuIcon
-
-            ///Firing callback to set the open state to "true" by clicking on the burger menu (opens the menu)
-            />
+            <MenuIcon />
           </IconButton>
           <Typography
             sx={{
-              color: Colors.Grey.dark,
+              color: colors.primary,
               fontSize: "25px",
               display: { sm: "block", xs: "none" },
               marginLeft: "10px",
@@ -91,16 +89,11 @@ const NavBar = () => {
           to="/home"
           sx={{}}
         >
-          <img
-            src={require("../img/zikLogoBlue.jpg")}
-            ///Importing logo from the folder
-            alt="Zik logo"
-            height="70px"
-          />
+          <img src={logoSrc} alt="Zik logo" height="70px" />
         </Button>
         <Box sx={{ display: "flex", alignItems: "center", width: "250px" }}>
           <a style={{ textDecoration: "none" }} href="tel:+34 666 399 550">
-            <Typography color="primary" right="100px">
+            <Typography color={colors.primary} right="100px">
               +34 666 399 550
             </Typography>
           </a>
@@ -114,7 +107,7 @@ const NavBar = () => {
                 <Button>
                   <Typography
                     sx={{
-                      color: theme.palette.secondary.dark,
+                      color: colors.primary,
                     }}
                   >
                     {

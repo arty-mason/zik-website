@@ -27,4 +27,5 @@ const Wrapper = (props) => {
     </Box>
   );
 };
+
 export default Wrapper;

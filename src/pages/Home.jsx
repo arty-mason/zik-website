@@ -12,6 +12,7 @@ const Home = () => {
       sx={{
         display: "flex",
         alignItems: "center",
+        flexDirection: { md: "row", xs: "column" },
         justifyContent: "space-between",
       }}
     >
