@@ -5,7 +5,7 @@ import { Box, CardMedia, Paper, Typography } from "@mui/material";
 
 import constructionSite from "../img/backgrounds/constructionSite.jpeg";
 import { theme } from "../config/color-config";
-import { Colors } from "../config/design-config";
+
 import styled from "@emotion/styled";
 
 const CommercialText = styled(Typography)({

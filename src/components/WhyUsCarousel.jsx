@@ -10,7 +10,6 @@ import reasons from "../services/reasons-to-choose";
 // Importing the carousel data array
 import CustomText from "../shared/custom-text";
 import { theme } from "../config/color-config";
-// import { Colors } from "../config/design-config";
 
 const Swing = () => {
   return (
@@ -23,33 +22,29 @@ const Swing = () => {
             key={reason.id}
             sx={{
               px: "50px",
-              py: "30px",
+              pt: "30px",
+              pb: "40px",
               flexDirection: "column",
-              justifyContent: "space-around",
-              // backgroundColor: Colors.Grey.ultraLight,
+              justifyContent: "space-evenly",
+              background: `linear-gradient(to bottom,  ${theme.palette.primary.main}, ${theme.palette.primary.dark})`,
+              borderRadius: "20px",
             }}
           >
-        {/*     <CustomText
-              variant="h4"
-              component="h1"
-              sx={{
-                color: theme.palette.primary.main,
-              }}
-            >
-              {reason.name}
-            </CustomText> */}
             <CustomText
               variant="h6"
               component="h1"
               sx={{
-                color: theme.palette.primary.main,
+                background: `linear-gradient(to top, ${theme.palette.secondary.light}, ${theme.palette.secondary.main})`,
+                textFillColor: `transparent`,
+                backgroundClip: `text`,
                 paddingBottom: "10px",
               }}
             >
               {reason.text}
             </CustomText>
-
-            <img alt={reason.name} src={reason.img} />
+            <Box maxWidth="400" maxHeight="400">
+              <img alt={reason.name} src={reason.img} />
+            </Box>
           </Box>
         );
       })}
