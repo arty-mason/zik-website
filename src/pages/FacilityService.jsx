@@ -17,7 +17,7 @@ const FacilityService = () => {
               borderRadius: "15px",
               background: `linear-gradient(-130deg, ${Colors.Green.main}, black)`,
               "&:hover": {
-                background: `linear-gradient(to right, ${Colors.Green.dark}, black)`,
+                background: `linear-gradient(to left, ${Colors.Green.dark}, black)`,
                 boxShadow: `inset 0 0 5px 5px ${theme.palette.secondary.dark}`,
               },
             }}
