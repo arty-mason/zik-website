@@ -15,6 +15,11 @@ const FacilityService = () => {
             marginTop="50px"
             sx={{
               borderRadius: "15px",
+              background: `linear-gradient(-130deg, ${Colors.Green.main}, black)`,
+              "&:hover": {
+                background: `linear-gradient(to right, ${Colors.Green.dark}, black)`,
+                boxShadow: `inset 0 0 5px 5px ${theme.palette.secondary.dark}`,
+              },
             }}
           >
             <Box
@@ -38,7 +43,7 @@ const FacilityService = () => {
                   p: "30px",
                   my: "50px",
                   mx: "20px",
-                  border: `1px solid ${Colors.Grey.ultraLight}`,
+                  border: `3px outset ${Colors.Grey.ultraLight}`,
                   borderRadius: "15px",
                   height: "300px",
                   width: "300px",
@@ -48,7 +53,7 @@ const FacilityService = () => {
                   variant="p"
                   sx={{
                     fontSize: "20px",
-                    color: theme.palette.primary.main,
+                    color: "white",
                   }}
                 >
                   {facility.text}

@@ -32,7 +32,6 @@ const ElevatorInstall = () => {
       >
         <ElevatorGallery />
       </Paper>
-
       <Typography
         variant="h3"
         component="h4"
@@ -45,21 +44,15 @@ const ElevatorInstall = () => {
       >
         Мы предоставляем следующие виды услуг:
       </Typography>
-      {/*   <Box
-        sx={{
-          px: "50px",
-          py: "30px",
-            display: "flex",
-           flexDirection: "column",
-          alignItems: "center",
-          background: `linear-gradient(to bottom, ${theme.palette.primary.dark}, ${theme.palette.primary.light})`,
-          borderRadius: "22px",
-        }}
-      ></Box> */}
-      <Grid container spacing={3}>
+      <Grid
+        container
+        spacing={3}
+        alignItems="center"
+        justifyContent="space-around"
+      >
         {elevatorServices.map((service) => {
           return (
-            <Grid key={service.id} item xs={4}>
+            <Grid key={service.id} item lg={4} md={6} sm={8} xs={10}>
               <Card
                 sx={{
                   p: "10px",
