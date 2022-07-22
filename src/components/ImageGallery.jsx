@@ -45,8 +45,10 @@ const ExperienceGallery = () => {
                 sx={{
                   background: `url(${photo.img})`,
                   backgroundSize: "cover",
-                  height: "600px",
-                  width: "850px",
+                  height: "800px",
+                  width: "600px",
+                  border: `5px outset ${Colors.Grey.ultraLight}`,
+                  borderRadius: "7px",
                   mb: "20px",
                 }}
               />
