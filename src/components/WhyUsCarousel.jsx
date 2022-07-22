@@ -4,12 +4,12 @@ import { Carousel } from "react-responsive-carousel";
 // Importing Carousel component after installing package
 import "react-responsive-carousel/lib/styles/carousel.css";
 // Importing the carousel stylesheet
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 import reasons from "../services/reasons-to-choose";
 // Importing the carousel data array
-import CustomText from "../shared/custom-text";
 import { theme } from "../config/color-config";
+import { Colors } from "../config/design-config";
 
 const Swing = () => {
   return (
@@ -17,22 +17,24 @@ const Swing = () => {
       {reasons.map((reason) => {
         return (
           <Box
-            container
-            spacing={3}
             key={reason.id}
             sx={{
+              display: "flex",
+              flexdirection: "column",
+              flexWrap: "wrap",
+              alignItems: "center",
+              justifyContent: "center",
               px: "50px",
               pt: "30px",
               pb: "40px",
-              background: `linear-gradient(to bottom,  ${theme.palette.primary.main}, ${theme.palette.primary.dark})`,
-              /*  borderRadius: "20px", */
+              background: `linear-gradient(to bottom,  ${theme.palette.primary.dark}, white)`,
             }}
           >
-            <CustomText
+            <Typography
               variant="h6"
               component="h1"
               sx={{
-                background: `linear-gradient(to top, ${theme.palette.secondary.light}, ${theme.palette.secondary.main})`,
+                background: `linear-gradient(to top, ${theme.palette.secondary.main}, ${theme.palette.secondary.dark})`,
                 textFillColor: `transparent`,
                 backgroundClip: `text`,
                 paddingBottom: "10px",
@@ -40,33 +42,18 @@ const Swing = () => {
               }}
             >
               {reason.text}
-            </CustomText>
-            {/* <Box
-              sx={{
-                background: `url(${reason.img}})`,
-                backgroundSize: "cover",
-                height: "400px",
-                width: "400px",
-              }}
-            /> 
-            //! Not working for some reason, requires debugging
-            */}
+            </Typography>
             <Box
               sx={{
-                display: "flex",
-                flexShrink: "1",
-                alignItems: "center",
-                justifyContent: "space-between",
+                background: `url(${reason.img})`,
+                backgroundSize: "cover",
+                borderRadius: "50px",
+                border: `5px outset ${Colors.Grey.ultraLight}`,
+                height: "500px",
+                width: "700px",
+                mb: "20px",
               }}
-            >
-              <img
-                alt={reason.name}
-                src={reason.img}
-                sx={{
-                  objectFit: "cover",
-                }}
-              />
-            </Box>
+            />
           </Box>
         );
       })}

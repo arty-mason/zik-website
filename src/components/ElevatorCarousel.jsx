@@ -10,6 +10,7 @@ import carouselBase from "../services/elevator-carousel";
 // Importing the carousel data array
 
 import { theme } from "../config/color-config";
+import { Colors } from "../config/design-config";
 
 const ElevatorGallery = () => {
   return (
@@ -23,7 +24,8 @@ const ElevatorGallery = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              background: `linear-gradient(to top, ${theme.palette.primary.dark}, black)`,
+
+              background: `linear-gradient(to bottom, ${theme.palette.primary.dark}, white )`,
               borderRadius: "22px",
             }}
           >
@@ -46,6 +48,8 @@ const ElevatorGallery = () => {
               sx={{
                 background: `url(${slide.img})`,
                 backgroundSize: "cover",
+                borderRadius: "50px",
+                border: `5px outset ${Colors.Grey.ultraLight}`,
                 height: "500px",
                 width: "700px",
                 mb: "20px",

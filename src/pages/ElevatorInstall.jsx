@@ -76,6 +76,7 @@ const ElevatorInstall = () => {
                   sx={{
                     background: `url(${service.img})`,
                     backgroundSize: "cover",
+                    borderRadius: "15px",
                     height: "270px",
                     width: "300px",
                   }}
