@@ -24,10 +24,8 @@ const Swing = () => {
               px: "50px",
               pt: "30px",
               pb: "40px",
-              flexDirection: "column",
-              justifyContent: "space-evenly",
               background: `linear-gradient(to bottom,  ${theme.palette.primary.main}, ${theme.palette.primary.dark})`,
-              borderRadius: "20px",
+              /*  borderRadius: "20px", */
             }}
           >
             <CustomText
@@ -38,12 +36,36 @@ const Swing = () => {
                 textFillColor: `transparent`,
                 backgroundClip: `text`,
                 paddingBottom: "10px",
+                minHeight: "140px",
               }}
             >
               {reason.text}
             </CustomText>
-            <Box maxWidth="400" maxHeight="400">
-              <img alt={reason.name} src={reason.img} />
+            {/* <Box
+              sx={{
+                background: `url(${reason.img}})`,
+                backgroundSize: "cover",
+                height: "400px",
+                width: "400px",
+              }}
+            /> 
+            //! Not working for some reason, requires debugging
+            */}
+            <Box
+              sx={{
+                display: "flex",
+                flexShrink: "1",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <img
+                alt={reason.name}
+                src={reason.img}
+                sx={{
+                  objectFit: "cover",
+                }}
+              />
             </Box>
           </Box>
         );

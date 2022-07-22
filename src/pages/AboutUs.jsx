@@ -3,7 +3,8 @@ import React from "react";
 
 import { Box, CardMedia, Paper, Typography } from "@mui/material";
 
-import constructionSite from "../img/backgrounds/constructionSite.jpeg";
+import aboutUs from "../img/aboutUs/aboutUs.jpg";
+
 import { theme } from "../config/color-config";
 
 import styled from "@emotion/styled";
@@ -62,7 +63,7 @@ const AboutUs = () => {
         </CommercialText>
         <CardMedia
           component="img"
-          src={constructionSite}
+          src={aboutUs}
           sx={{
             borderRadius: 5,
             objectFit: "scale-down",

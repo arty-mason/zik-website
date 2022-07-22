@@ -40,7 +40,6 @@ const ConstructAndInstall = () => {
               variant="h4"
               component="h1"
               sx={{
-                /*  color: Colors.Red.dark, */
                 my: "20px",
                 textAlign: "center",
                 mx: "5%",
@@ -56,7 +55,6 @@ const ConstructAndInstall = () => {
               variant="h5"
               component="h1"
               sx={{
-                /*    color: Colors.Red.main, */
                 my: "20px",
                 mx: "5%",
                 textAlign: "center",
@@ -73,7 +71,6 @@ const ConstructAndInstall = () => {
               variant="h4"
               component="h1"
               sx={{
-                /* color: Colors.Red.light, */
                 mt: "20px",
                 mb: "40px",
                 textAlign: "center",
@@ -145,9 +142,6 @@ const ConstructAndInstall = () => {
                 my: "30px",
                 mx: "5%",
                 textAlign: "center",
-                /*    background: `linear-gradient(30deg,  ${Colors.Red.dark}, ${theme.palette.secondary.dark})`,
-                textFillColor: `transparent`,
-                backgroundClip: `text`, */
               }}
             >
               Основная задача нашего строительного отдела – показать клиенту
@@ -166,9 +160,6 @@ const ConstructAndInstall = () => {
           textAlign: "center",
           marginTop: "40px",
           color: Colors.Red.main,
-          /*    background: `linear-gradient(to bottom,  ${Colors.Red.dark}, ${theme.palette.secondary.dark})`,
-          textFillColor: `transparent`,
-          backgroundClip: `text`, */
         }}
       >
         Услуги, на которых мы специализируемся:
@@ -209,9 +200,6 @@ const ConstructAndInstall = () => {
                   color: "white",
                   fontSize: "30px",
                   minHeight: "50px",
-                  /*   background: `linear-gradient(to bottom,  ${Colors.Red.dark}, ${theme.palette.secondary.dark})`,
-                  textFillColor: `transparent`,
-                  backgroundClip: `text`, */
                 }}
               >
                 {service.serviceName}
@@ -228,9 +216,6 @@ const ConstructAndInstall = () => {
                 <TextField
                   sx={{
                     color: "white",
-                    /*   background: `linear-gradient(-200deg,  ${Colors.Red.dark}, ${theme.palette.secondary.dark})`,
-                    textFillColor: `transparent`,
-                    backgroundClip: `text`, */
                   }}
                 >
                   {service.serviceDescription}
