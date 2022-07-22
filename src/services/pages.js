@@ -1,6 +1,6 @@
-import zikLogoBlue from "../img/zikLogoBlue.jpg";
-import zikLogoRed from "../img/zikLogoRed.jpg";
-import zikLogoGreen from "../img/zikLogoGreen.jpg";
+import zikLogoBlue from "../img/logos/zikLogoBlue.jpg";
+import zikLogoRed from "../img/logos/zikLogoRed.jpg";
+import zikLogoGreen from "../img/logos/zikLogoGreen.jpg";
 
 import constructionButton from "../img/homePage/constructionButton.jpeg";
 import elevatorsButton from "../img/homePage/elevatorsButton.jpg"

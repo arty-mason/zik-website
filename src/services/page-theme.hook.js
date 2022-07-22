@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 
-const DefaultLogo = require("../img/zikLogoBlue.jpg");
+const DefaultLogo = require("../img/logos/zikLogoBlue.jpg");
 
 const PathnameToLogo = {
   "/home": DefaultLogo,

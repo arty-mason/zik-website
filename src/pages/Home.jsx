@@ -53,12 +53,6 @@ const Home = () => {
               ///Importing ListItem to separate links into lines
               sx={{
                 position: "relative",
-                alignItems: "center",
-                alignContent: "center",
-                alignSelf: "center",
-                align: "center",
-                display: "flex",
-                flexDirection: "column",
                 borderRadius: "15px",
                 boxShadow: `1px 1px 7px ${page.color}`,
                 height: {

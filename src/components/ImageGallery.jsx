@@ -30,12 +30,11 @@ const ExperienceGallery = () => {
               }}
             >
               <Typography
-                variant="6"
+                variant="h3"
                 component="h6"
                 sx={{
                   mb: "20px",
                   color: theme.palette.secondary.main,
-                  fontSize: "22px",
                   textAlign: "center",
                 }}
               >
