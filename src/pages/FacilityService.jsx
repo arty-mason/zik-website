@@ -1,82 +1,80 @@
-import { Box, CardMedia, Container, Paper } from "@mui/material";
 import React from "react";
-import facilities from "../services/facility-services";
-import TextField from "../shared/text-field";
+
+import { Box, Grid, Paper, Typography } from "@mui/material";
+
 import { theme } from "../config/color-config";
 import { Colors } from "../config/design-config";
+
+import facilities from "../services/facility-services";
+
 const FacilityService = () => {
   return (
-    <Container>
+    <Grid
+      container
+      spacing={2}
+      justifyContent="center"
+      columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+      marginBottom="20px"
+    >
       {facilities.map((facility) => {
         return (
-          <Paper
-            key={facility.id}
-            elevation={15}
-            marginTop="50px"
-            sx={{
-              borderRadius: "15px",
-              background: `linear-gradient(-130deg, ${Colors.Green.main}, black)`,
-              "&:hover": {
-                background: `linear-gradient(to left, ${Colors.Green.dark}, black)`,
-                boxShadow: `inset 0 0 5px 5px ${theme.palette.secondary.dark}`,
-              },
-            }}
-          >
-            <Box
+          <Grid item md={10} lg={6} marginBottom="15px">
+            <Paper
+              key={facility.id}
+              elevation={15}
+              marginTop="50px"
               sx={{
                 display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-around",
+                flexDirection: "column",
+                flexWrap: "wrap",
                 alignItems: "center",
-                p: "5px",
-                mb: "50px",
-                mt: "20px",
+                p: "30px",
+                justifyContent: "space-around",
+                borderRadius: "15px",
+                background: `linear-gradient(-130deg, ${Colors.Green.main}, black)`,
+                "&:hover": {
+                  background: `linear-gradient(130deg, ${Colors.Green.dark}, ${theme.palette.primary.dark})`,
+                  boxShadow: `inset 0 0 5px 5px ${theme.palette.secondary.dark}`,
+                },
               }}
             >
               <Box
                 elevation={10}
                 sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  p: "30px",
-                  my: "50px",
-                  mx: "20px",
+                  m: "20px",
+                  p: "20px",
+                  height: "170px",
                   border: `3px outset ${Colors.Grey.ultraLight}`,
                   borderRadius: "15px",
-                  height: "300px",
-                  width: "300px",
+                  display: "flex",
+                  alignItems: "center",
                 }}
               >
-                <TextField
+                <Typography
                   variant="p"
                   sx={{
                     fontSize: "20px",
                     color: "white",
+                    textAlign: "center",
                   }}
                 >
                   {facility.text}
-                </TextField>
+                </Typography>
               </Box>
-              <Box sx={{}}>
-                <CardMedia
-                  component="img"
-                  src={facility.img}
-                  sx={{
-                    width: "600px",
-                    height: "390px",
-                    objectFit: "fill",
-                    border: `2px solid ${Colors.Grey.ultraLight}`,
-                    borderRadius: "12px",
-                  }}
-                />
-              </Box>
-            </Box>
-          </Paper>
+              <Box
+                sx={{
+                  background: `url(${facility.img})`,
+                  backgroundSize: "cover",
+                  height: "420px",
+                  width: "420px",
+                  p: "10px",
+                }}
+              />
+            </Paper>
+          </Grid>
         );
       })}
-    </Container>
+    </Grid>
   );
 };
 
