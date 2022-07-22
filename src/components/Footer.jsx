@@ -12,8 +12,8 @@ import {
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 import LeftPopper from "./LeftPopper";
-import instagram from "../img/social/instagram.svg";
-import facebook from "../img/social/facebook.svg";
+import instagram from "../img/socialMedia/instagram.svg";
+import facebook from "../img/socialMedia/facebook.svg";
 
 import { usePageTheme } from "../services/page-theme.hook";
 

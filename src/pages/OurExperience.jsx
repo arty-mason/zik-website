@@ -5,6 +5,7 @@ import { Box, Grid, Paper, Typography } from "@mui/material";
 import { theme } from "../config/color-config";
 import { Colors } from "../config/design-config";
 import { achievements } from "../services/experience-achievements";
+import ExperienceGallery from "../components/ImageGallery";
 
 const Experience = () => {
   return (
@@ -79,6 +80,7 @@ const Experience = () => {
           );
         })}
       </Grid>
+      <ExperienceGallery />
     </Box>
   );
 };
