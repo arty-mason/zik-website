@@ -92,7 +92,6 @@ const NavBar = () => {
           component={Link}
           to="/home"
         >
-          textDecoration: "underline",
           <img src={logoSrc} alt="Zik logo" height="70px" />
         </Button>
         <Box sx={{ display: "flex", alignItems: "center", width: "250px" }}>
