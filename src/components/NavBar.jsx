@@ -64,6 +64,9 @@ const NavBar = () => {
           <IconButton
             sx={{
               color: colors.primary,
+              "&:hover": {
+                color: colors.secondary,
+              },
             }}
           >
             <MenuIcon />
@@ -74,6 +77,10 @@ const NavBar = () => {
               fontSize: "25px",
               display: { sm: "block", xs: "none" },
               marginLeft: "10px",
+              "&:hover": {
+                color: colors.secondary,
+                textDecoration: "underline",
+              },
             }}
           >
             Меню
@@ -84,13 +91,22 @@ const NavBar = () => {
           color="inherit"
           component={Link}
           to="/home"
-          sx={{}}
         >
+          textDecoration: "underline",
           <img src={logoSrc} alt="Zik logo" height="70px" />
         </Button>
         <Box sx={{ display: "flex", alignItems: "center", width: "250px" }}>
           <a style={{ textDecoration: "none" }} href="tel:+34 666 399 550">
-            <Typography color={colors.primary} right="100px">
+            <Typography
+              color={colors.primary}
+              sx={{
+                "&:hover": {
+                  color: colors.secondary,
+                  textDecoration: "underline",
+                },
+              }}
+              right="100px"
+            >
               +34 666 399 550
             </Typography>
           </a>
@@ -105,6 +121,10 @@ const NavBar = () => {
                   <Typography
                     sx={{
                       color: colors.primary,
+                      "&:hover": {
+                        color: colors.secondary,
+                        textDecoration: "underline",
+                      },
                     }}
                   >
                     {
@@ -132,6 +152,11 @@ const NavBar = () => {
         <IconButton>
           <ChevronLeftIcon
             onClick={() => setOpen(false)}
+            sx={{
+              "&:hover": {
+                color: colors.secondary,
+              },
+            }}
             ///Firing callback to set the open state to "false" by clicking on the burger menu (closes the menu)
           />
         </IconButton>

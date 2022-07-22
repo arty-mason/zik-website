@@ -14,24 +14,50 @@ import ExpandMore from "@mui/icons-material/ExpandMore";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 import { menuConfig } from "../services/menu-config";
+import { usePageTheme } from "../services/page-theme.hook";
 
 const MenuItemIcon = (props) => {
   const { isSubMenuOpened, hasSubItems } = props;
+  const { colors } = usePageTheme();
 
   if (!hasSubItems) {
-    return <ArrowRightAltIcon />;
+    return (
+      <ArrowRightAltIcon
+        sx={{
+          "&:hover": {
+            color: colors.secondary,
+          },
+        }}
+      />
+    );
   }
 
   if (isSubMenuOpened) {
-    return <ExpandLess />;
+    return (
+      <ExpandLess
+        sx={{
+          "&:hover": {
+            color: colors.secondary,
+          },
+        }}
+      />
+    );
   }
 
-  return <ExpandMore />;
+  return (
+    <ExpandMore
+      sx={{
+        "&:hover": {
+          color: colors.secondary,
+        },
+      }}
+    />
+  );
 };
 
 export const BurgerMenuLinks = (props) => {
   const [isSubMenuOpened, setIsSubMenuOpened] = useState(false);
-
+  const { colors } = usePageTheme();
   const handleMenuClicked = (config) => {
     if (!config.subItems) {
       props.onMenuItemClicked(); // new callback function. Usage: <BurgerMenuLinks onMenuItemClicked={() => setOpen(false)} />
@@ -61,7 +87,15 @@ export const BurgerMenuLinks = (props) => {
                 isSubMenuOpened={isSubMenuOpened}
               />
             </ListItemIcon>
-            <ListItemText primary={item.name} />
+            <ListItemText
+              primary={item.name}
+              sx={{
+                "&:hover": {
+                  color: colors.secondary,
+                  textDecoration: "underline",
+                },
+              }}
+            />
           </ListItemButton>
           {item.subItems && isSubMenuOpened ? (
             <List component="div" disablePadding>
@@ -74,9 +108,23 @@ export const BurgerMenuLinks = (props) => {
                   onClick={() => handleMenuClicked(subItem)}
                 >
                   <ListItemIcon>
-                    <ArrowRightAltIcon />
+                    <ArrowRightAltIcon
+                      sx={{
+                        "&:hover": {
+                          color: colors.secondary,
+                        },
+                      }}
+                    />
                   </ListItemIcon>
-                  <ListItemText primary={subItem.name} />
+                  <ListItemText
+                    primary={subItem.name}
+                    sx={{
+                      "&:hover": {
+                        color: colors.secondary,
+                        textDecoration: "underline",
+                      },
+                    }}
+                  />
                 </ListItemButton>
               ))}
             </List>

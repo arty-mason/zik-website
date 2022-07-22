@@ -28,6 +28,10 @@ export default function BasicPopover(props) {
             color: colors.primary,
             width: "35px",
             height: "35px",
+            "&:hover": {
+              color: colors.secondary,
+              textDecoration: "underline",
+            },
           }}
         />
       </Button>
