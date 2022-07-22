@@ -13,7 +13,7 @@ import { theme } from "../config/color-config";
 
 const ElevatorGallery = () => {
   return (
-    <Carousel autoPlay="true">
+    <Carousel autoPlay infiniteLoop>
       {carouselBase.map((slide) => {
         return (
           <Box

@@ -13,7 +13,7 @@ import { theme } from "../config/color-config";
 
 const Swing = () => {
   return (
-    <Carousel autoPlay="true">
+    <Carousel autoPlay infiniteLoop>
       {reasons.map((reason) => {
         return (
           <Box
