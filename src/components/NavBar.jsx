@@ -83,7 +83,7 @@ const NavBar = () => {
               },
             }}
           >
-            Меню
+            МЕНЮ
           </Typography>
         </Box>
         <Button
