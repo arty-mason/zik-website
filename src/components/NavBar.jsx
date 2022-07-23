@@ -77,6 +77,7 @@ const NavBar = () => {
               fontSize: "25px",
               display: { sm: "block", xs: "none" },
               marginLeft: "10px",
+              marginTop: "3px",
               "&:hover": {
                 color: colors.secondary,
                 textDecoration: "underline",

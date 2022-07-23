@@ -1,7 +1,7 @@
 import React from "react";
 /* import "animate.css"; */
 
-import { Box, CardMedia, Paper, Typography } from "@mui/material";
+import { Box, CardMedia, Container, Paper, Typography } from "@mui/material";
 
 import aboutUs from "../img/aboutUs/aboutUs.jpg";
 
@@ -15,77 +15,92 @@ const CommercialText = styled(Typography)({
 
 const AboutUs = () => {
   return (
-    <Box
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
-      marginBottom="20px"
-    >
-      <Paper
-        elevation={15}
-        sx={{
-          borderRadius: 15,
-          display: "flex",
-          flexWrap: "wrap",
-          flexDirection: "column",
-          alignItems: "center",
-          my: "20px",
-          p: "30px",
-          width: "70%",
-          background: "#eceff1",
-          border: `3px outset ${theme.palette.primary.main}`,
-          "&:hover": {
-            background: `linear-gradient(to right,  ${theme.palette.primary.dark}, ${theme.palette.primary.light})`,
-            color: "white",
-            border: "none",
-          },
-        }}
-      >
-        <CommercialText
-          variant="h4"
+    <Container>
+      <Box display="flex" justifyContent="center">
+        {/*  <Typography
+          variant="h2"
           component="h1"
           textAlign="center"
-          sx={{ color: theme.palette.secondary.dark }}
-        >
-          <b>«ZAVIISKYI & KABACHEK BUSINESS COMPANY» </b> специализируется на
-          услугах для клиентов в следующих отраслях:
-        </CommercialText>
-        <CommercialText
-          variant="h6"
-          component="p"
-          className="animate__bounce"
-          // ! Not working yet
-          sx={{ color: theme.palette.secondary.dark }}
-        >
-          - строительно-монтажные работы, <br />
-          - установку и обслуживание лифтов, <br /> - обслуживание коммерческих
-          объектов и жилых домов.
-        </CommercialText>
-        <CardMedia
-          component="img"
-          src={aboutUs}
           sx={{
-            borderRadius: 5,
-            objectFit: "scale-down",
-            width: "80%",
+            color: theme.palette.primary.main,
+            fontWeight: "bold",
           }}
-        />
-        <CommercialText
-          variant="h6"
-          component="p"
-          textAlign="justify"
+        >
+          О нас
+        </Typography> */}
+      </Box>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        marginBottom="20px"
+      >
+        <Paper
+          elevation={15}
           sx={{
+            borderRadius: 15,
+            display: "flex",
+            flexWrap: "wrap",
+            flexDirection: "column",
+            alignItems: "center",
             my: "20px",
-            mx: "95px",
-            color: theme.palette.secondary.dark,
+            p: "30px",
+            width: "70%",
+            background: "#eceff1",
+            border: `3px outset ${theme.palette.primary.main}`,
+            "&:hover": {
+              background: `linear-gradient(to right,  ${theme.palette.primary.dark}, ${theme.palette.primary.light})`,
+              color: "white",
+              border: "none",
+            },
           }}
         >
-          Вы платите только за реально предоставленные услуги, а наши
-          квалифицированные специалисты выполнят все типы работ в установленные
-          сроки по доступным ценам для клиента.
-        </CommercialText>
-      </Paper>
-    </Box>
+          <CommercialText
+            variant="h4"
+            component="h1"
+            textAlign="center"
+            sx={{ color: theme.palette.secondary.dark }}
+          >
+            <b>«ZAVIISKYI & KABACHEK BUSINESS COMPANY» </b> специализируется на
+            услугах для клиентов в следующих отраслях:
+          </CommercialText>
+          <CommercialText
+            variant="h6"
+            component="p"
+            className="animate__bounce"
+            // ! Not working yet
+            sx={{ color: theme.palette.secondary.dark }}
+          >
+            - строительно-монтажные работы, <br />
+            - установку и обслуживание лифтов, <br /> - обслуживание
+            коммерческих объектов и жилых домов.
+          </CommercialText>
+          <CardMedia
+            component="img"
+            src={aboutUs}
+            sx={{
+              borderRadius: 5,
+              objectFit: "scale-down",
+              width: "80%",
+            }}
+          />
+          <CommercialText
+            variant="h6"
+            component="p"
+            textAlign="justify"
+            sx={{
+              my: "20px",
+              mx: "95px",
+              color: theme.palette.secondary.dark,
+            }}
+          >
+            Вы платите только за реально предоставленные услуги, а наши
+            квалифицированные специалисты выполнят все типы работ в
+            установленные сроки по доступным ценам для клиента.
+          </CommercialText>
+        </Paper>
+      </Box>
+    </Container>
   );
 };
 

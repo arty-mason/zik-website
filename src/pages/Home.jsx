@@ -18,7 +18,7 @@ const Home = () => {
         sx={{
           alignItems: "center",
           justifyContent: "space-around",
-          mb: "10vh",
+          mb: "50px",
         }}
       >
         {topNav.map((page) => {
@@ -29,7 +29,7 @@ const Home = () => {
               xs={10}
               md={3}
               sx={{
-                mt: "40px",
+                mt: "30px",
                 display: "flex",
                 justifyContent: "center",
               }}
@@ -96,7 +96,7 @@ const Home = () => {
           display: "flex",
           alignItems: "center",
           flexDirection: { md: "row", xs: "column" },
-          justifyContent: "space-between",
+          justifyContent: "space-around",
         }}
       >
         {pages.map((page) => (

@@ -1,4 +1,4 @@
-import { Container, Box } from "@mui/material";
+import { Box } from "@mui/material";
 import React from "react";
 
 const Wrapper = (props) => {
@@ -16,12 +16,15 @@ const Wrapper = (props) => {
       <Box>
         {renderHeader && renderHeader()}
 
-        <Container
+        <Box
           component="main"
-          sx={{ maxWidth: "1920px", marginTop: "120px" }}
+          sx={{
+            maxWidth: "1920px",
+            marginTop: "120px",
+          }}
         >
           {children}
-        </Container>
+        </Box>
       </Box>
       {renderHeader && renderFooter()}
     </Box>

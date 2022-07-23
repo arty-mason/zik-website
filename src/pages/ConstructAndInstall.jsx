@@ -164,7 +164,7 @@ const ConstructAndInstall = () => {
       >
         Услуги, на которых мы специализируемся:
       </TextField>
-      <Box
+      <Container
         sx={{
           display: "flex",
           justifyContent: "space-around",
@@ -232,7 +232,7 @@ const ConstructAndInstall = () => {
             </Card>
           );
         })}
-      </Box>
+      </Container>
     </Box>
   );
 };
