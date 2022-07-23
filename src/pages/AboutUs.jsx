@@ -8,27 +8,16 @@ import aboutUs from "../img/aboutUs/aboutUs.jpg";
 import { theme } from "../config/color-config";
 
 import styled from "@emotion/styled";
+import { useTranslation } from "react-i18next";
 
 const CommercialText = styled(Typography)({
   marginBottom: "20px",
 });
 
 const AboutUs = () => {
+  const { t } = useTranslation();
   return (
     <Container>
-      <Box display="flex" justifyContent="center">
-        {/*  <Typography
-          variant="h2"
-          component="h1"
-          textAlign="center"
-          sx={{
-            color: theme.palette.primary.main,
-            fontWeight: "bold",
-          }}
-        >
-          О нас
-        </Typography> */}
-      </Box>
       <Box
         display="flex"
         alignItems="center"
@@ -61,19 +50,17 @@ const AboutUs = () => {
             textAlign="center"
             sx={{ color: theme.palette.secondary.dark }}
           >
-            <b>«ZAVIISKYI & KABACHEK BUSINESS COMPANY» </b> специализируется на
-            услугах для клиентов в следующих отраслях:
+            {t("about_us_top_text")}
           </CommercialText>
           <CommercialText
             variant="h6"
             component="p"
-            className="animate__bounce"
-            // ! Not working yet
+            textAlign="center"
             sx={{ color: theme.palette.secondary.dark }}
           >
-            - строительно-монтажные работы, <br />
-            - установку и обслуживание лифтов, <br /> - обслуживание
-            коммерческих объектов и жилых домов.
+            {t("about_us_service_one")} <br />
+            {t("about_us_service_two")} <br />
+            {t("about_us_service_three")} <br />
           </CommercialText>
           <CardMedia
             component="img"
@@ -94,9 +81,7 @@ const AboutUs = () => {
               color: theme.palette.secondary.dark,
             }}
           >
-            Вы платите только за реально предоставленные услуги, а наши
-            квалифицированные специалисты выполнят все типы работ в
-            установленные сроки по доступным ценам для клиента.
+            {t("about_us_last_paragraph")}
           </CommercialText>
         </Paper>
       </Box>

@@ -10,8 +10,10 @@ import reasons from "../services/reasons-to-choose";
 // Importing the carousel data array
 import { theme } from "../config/color-config";
 import { Colors } from "../config/design-config";
+import { useTranslation } from "react-i18next";
 
 const Swing = () => {
+  const [t] = useTranslation();
   return (
     <Carousel autoPlay infiniteLoop>
       {reasons.map((reason) => {
@@ -31,7 +33,7 @@ const Swing = () => {
             }}
           >
             <Typography
-              variant="h6"
+              variant="h5"
               component="h1"
               sx={{
                 background: `linear-gradient(to top, ${theme.palette.secondary.main}, ${theme.palette.secondary.dark})`,
@@ -41,7 +43,7 @@ const Swing = () => {
                 minHeight: "140px",
               }}
             >
-              {reason.text}
+              {t(reason.text)}
             </Typography>
             <Box
               sx={{
