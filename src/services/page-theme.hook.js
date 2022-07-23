@@ -4,8 +4,8 @@ const DefaultLogo = require("../img/logos/zikLogoBlue.jpg");
 
 const PathnameToLogo = {
   "/home": DefaultLogo,
-  "/construct": require("../img/zikLogoRed.jpg"),
-  "/facility": require("../img/zikLogoGreen.jpg"),
+  "/construct": require("../img/logos/zikLogoRed.jpg"),
+  "/facility": require("../img/logos/zikLogoGreen.jpg"),
   ///Importing logo from the folder
 };
 

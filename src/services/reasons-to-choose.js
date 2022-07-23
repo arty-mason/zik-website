@@ -1,5 +1,5 @@
-import whyUsExperience from "../img/whyUs/whyUsExperience.jpg";
-import whyUsLevel from "../img/whyUs/whyUsLevel.png";
+import whyUsExperience from "../img/whyUs/whyUsExperience.jpeg";
+import whyUsLevel from "../img/whyUs/whyUsLevel.jpg";
 import whyUsUnique from "../img/whyUs/whyUsUnique.jpg"
 
 const reasons = [
