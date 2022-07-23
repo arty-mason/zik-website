@@ -8,8 +8,10 @@ import { topNav } from "../services/menu-top-nav";
 
 import { theme } from "../config/color-config";
 import { Colors } from "../config/design-config";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
   return (
     <Box>
       <Grid
@@ -129,7 +131,7 @@ const Home = () => {
                 mb="15px"
                 minHeight="45px"
               >
-                {page.name}
+                {t(page.name)}
               </Typography>
             </Box>
             <Link to={page.to}>

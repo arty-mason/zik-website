@@ -16,6 +16,9 @@ import OurExperience from "./pages/OurExperience";
 import ConstructAndInstall from "./pages/ConstructAndInstall";
 import ElevatorInstall from "./pages/ElevatorInstall";
 import FacilityService from "./pages/FacilityService";
+import { init18n } from "./services/i18n";
+
+init18n();
 
 function App() {
   useEffect(() => {

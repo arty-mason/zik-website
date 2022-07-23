@@ -20,6 +20,7 @@ import { usePageTheme } from "../services/page-theme.hook";
 const Footer = () => {
   const isSmallScreen = useMediaQuery("(max-width:700px)");
   const { logoSrc } = usePageTheme();
+
   return (
     <Box width="100%">
       <Paper

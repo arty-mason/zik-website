@@ -8,6 +8,7 @@ import Paper from "@mui/material/Paper";
 import { footerContent } from "../services/footer-content";
 
 import { usePageTheme } from "../services/page-theme.hook";
+import { useTranslation } from "react-i18next";
 
 const LeftPopper = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -21,6 +22,8 @@ const LeftPopper = () => {
     setOpen((prev) => placement !== newPlacement || !prev);
     setPlacement(newPlacement);
   };
+
+  const { t } = useTranslation();
 
   return (
     <Box sx={{ width: 500 }}>
@@ -65,7 +68,7 @@ const LeftPopper = () => {
                       color: colors.secondary,
                     }}
                   >
-                    {content.name}
+                    {t(content.name)}
                   </Typography>
                 </Button>
               </Box>

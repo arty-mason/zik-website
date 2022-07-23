@@ -20,12 +20,14 @@ import languages from "../services/languages";
 import { BurgerMenuLinks } from "./BurgerMenuLinks";
 import { usePageTheme } from "../services/page-theme.hook";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
   ///Using the useState hook to create a state (open) and a state changer (setOpen)
   ///Assigning the variables to the hook and setting default state value to false
   const { logoSrc, colors } = usePageTheme();
+  const { t, i18n } = useTranslation();
 
   return (
     <AppBar
@@ -78,13 +80,14 @@ const NavBar = () => {
               display: { sm: "block", xs: "none" },
               marginLeft: "10px",
               marginTop: "3px",
+              textTransform: "uppercase",
               "&:hover": {
                 color: colors.secondary,
                 textDecoration: "underline",
               },
             }}
           >
-            МЕНЮ
+            {t("label_menu")}
           </Typography>
         </Box>
         <Button
@@ -117,7 +120,7 @@ const NavBar = () => {
                 key={lang.id}
                 ///Rendering each language in a button, using id as a key
               >
-                <Button>
+                <Button onClick={() => i18n.changeLanguage(lang.lngCode)}>
                   <Typography
                     sx={{
                       color: colors.primary,

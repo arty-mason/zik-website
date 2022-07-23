@@ -10,7 +10,7 @@ import housingButton from "../img/homePage/housingButton.jpg"
 const pages = [
   {
     id: "1",
-    name: `Строительно-монтажные работы`,
+    name: "content_construction_and_assembly",
     to: "/construct",
     img: zikLogoRed,
     color: "#ac0717",

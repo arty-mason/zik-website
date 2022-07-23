@@ -1,15 +1,18 @@
 const langChoices = [
   {
     id: 1,
-    name: 'Spanish',
+    name: 'Español',
+    lngCode: "sp",
   },
   {
     id: 2,
-    name: 'Ukrainian',
+    name: 'Українська',
+    lngCode: "ua",
   },
   {
     id: 3,
     name: 'English',
+    lngCode: "en",
   },
 ];
 
