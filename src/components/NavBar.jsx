@@ -87,7 +87,7 @@ const NavBar = () => {
               },
             }}
           >
-            {t("label_menu")}
+            {t("label_navbar_menu")}
           </Typography>
         </Box>
         <Button

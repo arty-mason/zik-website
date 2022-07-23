@@ -86,7 +86,7 @@ const Home = () => {
                     color: theme.palette.secondary.main,
                   }}
                 >
-                  {page.name}
+                  {t(page.name)}
                 </Typography>
               </Button>
             </Grid>

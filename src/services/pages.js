@@ -10,7 +10,7 @@ import housingButton from "../img/homePage/housingButton.jpg"
 const pages = [
   {
     id: "1",
-    name: "content_construction_and_assembly",
+    name: "title_construction_and_assembly",
     to: "/construct",
     img: zikLogoRed,
     color: "#ac0717",
@@ -18,7 +18,7 @@ const pages = [
   },
   {
     id: "2",
-    name: `Продажа, монтаж и обслуживание лифтов`,
+    name: `title_elevator_selling_installation_and_maintenance`,
     to: "/elevator",
     img: zikLogoBlue,
     color: "#005b84",
@@ -26,7 +26,7 @@ const pages = [
   },
   {
     id: "3",
-    name: `Обслуживание коммерческих объектов и жилых домов`,
+    name: `title_commercial_facilities_maintenance`,
     to: "/facility",
     img: zikLogoGreen,
     color: "#44b651",

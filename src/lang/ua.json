@@ -1,5 +1,13 @@
 {
-  "label_menu": "Меню",
-  "button_contacts": "Контактна інформація",
-  "content_construction_and_assembly": "Будівельно-монтажні роботи"
+  "label_navbar_menu": "Меню",
+  "label_footer_info": "Інформація",
+  "button_footer_contacts": "Контакти",
+  "button_footer_reviews": "Відгук",
+  "button_homepage_about": "Про нас",
+  "button_homepage_why_us": "Чому ми",
+  "button_submenu_services": "Послуги",
+  "button_homepage_our_experience": "Наш досвід",
+  "title_construction_and_assembly": "Будівельно-монтажні роботи",
+  "title_elevator_selling_installation_and_maintenance": "Продаж, монтаж і обслуговування ліфтів",
+  "title_commercial_facilities_maintenance": "Обслуговування комерційних об’єктів та житлових будинків"
 }

@@ -1,5 +1,13 @@
 {
-  "label_menu": "Menú",
-  "button_contacts": "Información de contacto",
-  "content_construction_and_assembly": "Obras de construcción y montaje"
+  "label_navbar_menu": "Menú",
+  "label_footer_info": "Información",
+  "button_footer_contacts": "Contacto",
+  "button_footer_reviews": "Dictamenes",
+  "button_homepage_about": "Quiénes somos",
+  "button_homepage_why_us": "Por qué nos eligen",
+  "button_submenu_services": "Servicios",
+  "button_homepage_our_experience": "Nuestra experiencia",
+  "title_construction_and_assembly": "Obras de construcción y montaje",
+  "title_elevator_selling_installation_and_maintenance": "Venta, instalación y mantenimiento de ascensores",
+  "title_commercial_facilities_maintenance": "Mantenimiento de objetos comerciales y edificios residenciales"
 }

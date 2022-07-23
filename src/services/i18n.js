@@ -25,7 +25,7 @@ export const init18n = () => {
           translation: ua,
         },
       },
-      fallbackLng: "en",
+      fallbackLng: "sp",
     });
 }
 

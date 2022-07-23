@@ -15,6 +15,7 @@ import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 import { menuConfig } from "../services/menu-config";
 import { usePageTheme } from "../services/page-theme.hook";
+import { t } from "i18next";
 
 const MenuItemIcon = (props) => {
   const { isSubMenuOpened, hasSubItems } = props;
@@ -88,7 +89,7 @@ export const BurgerMenuLinks = (props) => {
               />
             </ListItemIcon>
             <ListItemText
-              primary={item.name}
+              primary={t(item.name)}
               sx={{
                 "&:hover": {
                   color: colors.secondary,
@@ -117,7 +118,7 @@ export const BurgerMenuLinks = (props) => {
                     />
                   </ListItemIcon>
                   <ListItemText
-                    primary={subItem.name}
+                    primary={t(subItem.name)}
                     sx={{
                       "&:hover": {
                         color: colors.secondary,

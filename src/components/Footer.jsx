@@ -16,6 +16,7 @@ import instagram from "../img/socialMedia/instagram.svg";
 import facebook from "../img/socialMedia/facebook.svg";
 
 import { usePageTheme } from "../services/page-theme.hook";
+import { t } from "i18next";
 
 const Footer = () => {
   const isSmallScreen = useMediaQuery("(max-width:700px)");
@@ -44,8 +45,13 @@ const Footer = () => {
           <>
             <Box>
               <Box>
-                <Typography variant="h6" component="h6" textAlign="center">
-                  ИНФОРМАЦИЯ
+                <Typography
+                  variant="h6"
+                  component="h6"
+                  textAlign="center"
+                  textTransform="uppercase"
+                >
+                  {t("label_footer_info")}
                 </Typography>
                 <Divider color="black" />
               </Box>

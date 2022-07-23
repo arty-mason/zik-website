@@ -6,13 +6,13 @@ const langChoices = [
   },
   {
     id: 2,
-    name: 'Українська',
-    lngCode: "ua",
+    name: 'English',
+    lngCode: "en",
   },
   {
     id: 3,
-    name: 'English',
-    lngCode: "en",
+    name: 'Українська',
+    lngCode: "ua",
   },
 ];
 

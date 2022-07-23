@@ -1,37 +1,37 @@
 export const menuConfig = [
   {
     id: "1",
-    name: "О нас",
+    name: "button_homepage_about",
     link: "/about",
   },
   {
     id: "2",
-    name: "Почему выбирают нас",
+    name: "button_homepage_why_us",
     link: "/why",
   },
   {
     id: "3",
-    name: "Наш опыт",
+    name: "button_homepage_our_experience",
     link: "/experience",
   },
   {
     id: "4",
-    name: "Уcлуги",
+    name: "button_submenu_services",
     link: null,
     subItems: [
       {
         id: "6",
-        name: "Строительно-монтажные работы",
+        name: "title_construction_and_assembly",
         link: "/construct",
       },
       {
         id: "7",
-        name: "Продажа, монтаж и обслуживание лифтов",
+        name: "title_elevator_selling_installation_and_maintenance",
         link: "/elevator",
       },
       {
         id: "8",
-        name: "Обслуживание коммерческих объектов и жилых домов",
+        name: "title_commercial_facilities_maintenance",
         link: "facility",
       },
     ],
