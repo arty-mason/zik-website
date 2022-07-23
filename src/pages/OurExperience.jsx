@@ -6,8 +6,10 @@ import { theme } from "../config/color-config";
 import { Colors } from "../config/design-config";
 import { achievements } from "../services/experience-achievements";
 import ExperienceGallery from "../components/ImageGallery";
+import { useTranslation } from "react-i18next";
 
 const Experience = () => {
+  const { t } = useTranslation();
   return (
     <Container>
       <Box
@@ -32,7 +34,7 @@ const Experience = () => {
             backgroundClip: `text`,
           }}
         >
-          <b> В течение последних пяти лет наша компания:</b>
+          <b>{t("our_experience_title")}</b>
         </Typography>
         <Grid container spacing={5}>
           {achievements.map((achievement) => {
@@ -46,8 +48,8 @@ const Experience = () => {
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
-                    justifyContent: "space-around",
-                    height: "300px",
+                    justifyContent: "space-evenly",
+                    height: "350px",
                     background: `linear-gradient(to bottom, ${theme.palette.primary.dark}, ${Colors.Grey.light})`,
                     border: `5px solid ${Colors.Grey.light}`,
                     "&:hover": {
@@ -59,14 +61,16 @@ const Experience = () => {
                 >
                   <Typography
                     sx={{
-                      p: "20px",
+                      px: "20px",
+                      py: "30px",
                       fontSize: "16px",
                       color: Colors.Grey.ultraLight,
                       textAlign: "center",
-                      minHeight: "10px",
+                      minHeight: "150px",
+                      mb: "20px",
                     }}
                   >
-                    {achievement.text}
+                    {t(achievement.text)}
                   </Typography>
                   <IconComponent
                     sx={{

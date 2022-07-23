@@ -6,8 +6,10 @@ import { workPhotos } from "../services/experience-images";
 import { theme } from "../config/color-config";
 import { Colors } from "../config/design-config";
 import { Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const ExperienceGallery = () => {
+  const { t } = useTranslation();
   return (
     <Carousel autoPlay infiniteLoop>
       {workPhotos.map((photo) => {
@@ -38,7 +40,7 @@ const ExperienceGallery = () => {
                   textAlign: "center",
                 }}
               >
-                Наши работы:
+                {t("our_experience_work_demo")}
               </Typography>
               <Box
                 sx={{

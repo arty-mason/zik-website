@@ -7,27 +7,25 @@ export const achievements = [
   {
     id: `1`,
     name: `Elevator`,
-    text: `Обслужила более 1000 лифтов на территории Украины`,
+    text: `our_experience_achievement_one`,
     icon: ElevatorIcon,
   },
   {
     id: `2`,
     name: `Service`,
-    text: `Продолжает обслуживать 62 дома как управляющая компания`,
+    text: `our_experience_achievement_two`,
     icon: SupervisorAccountIcon,
   },
   {
     id: `3`,
     name: `Supervise`,
-    text: `Продала и смонтировала больше 100 лифтов в новостройках и выполнила
-    около 325 контрактов по ремонту лифтового оборудования`,
+    text: `our_experience_achievement_three`,
     icon: ShoppingCartIcon,
   },
   {
     id: `4`,
     name: `Completed`,
-    text: `Выполнила более 500 договоров с учреждениями, которые
-    финансируются государственным бюджетом Украины`,
+    text: `our_experience_achievement_four`,
     icon: DoneAllIcon,
   },
 ]
