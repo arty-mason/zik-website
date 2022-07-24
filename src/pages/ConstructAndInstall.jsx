@@ -16,8 +16,21 @@ import { theme } from "../config/color-config";
 import { Colors } from "../config/design-config";
 
 import constructionAdvantage from "../services/construction-content";
+import { useTranslation } from "react-i18next";
+/* 
+import { styled } from "@mui/system";
 
+const ConstrText = styled(Typography)({
+  my: "20px",
+  textAlign: "center",
+  mx: "5%",
+  background: `linear-gradient(30deg,  ${Colors.Red.dark}, ${theme.palette.secondary.dark})`,
+  textFillColor: `transparent`,
+  backgroundClip: `text`,
+}); 
+*/
 const ConstructAndInstall = () => {
+  const { t } = useTranslation();
   return (
     <Box>
       <Container container justifyContent="center">
@@ -48,8 +61,7 @@ const ConstructAndInstall = () => {
                 backgroundClip: `text`,
               }}
             >
-              Вам надо провести строительно-монтажные работы, но вы не знаете
-              где найти надежных и качественных специалистов?
+              {t("construction_page_headline")}
             </Typography>
             <Typography
               variant="h5"
@@ -63,9 +75,7 @@ const ConstructAndInstall = () => {
                 backgroundClip: `text`,
               }}
             >
-              Наша компания предоставляет комплексные решения в сфере
-              проектирования, монтажа и технического обслуживания с лояльными
-              ценами для клиента.
+              {t("construction_page_paragrapgh_one")}
             </Typography>
             <Typography
               variant="h4"
@@ -79,7 +89,7 @@ const ConstructAndInstall = () => {
                 backgroundClip: `text`,
               }}
             >
-              Преимущество сотрудничества с нами:
+              {t("construction_page_reason_title")}
             </Typography>
             <Box
               sx={{
@@ -116,11 +126,12 @@ const ConstructAndInstall = () => {
                         sx={{
                           color: "white",
                           my: "20px",
+                          px: "10px",
                           fontSize: "18px",
                           textAlign: "center",
                         }}
                       >
-                        {paragraph.advantageText}
+                        {t(paragraph.advantageText)}
                       </Typography>
                       <IconComponent
                         sx={{
@@ -138,17 +149,17 @@ const ConstructAndInstall = () => {
               variant="h5"
               component="h1"
               sx={{
-                color: "white",
+                background: `linear-gradient(30deg,  ${Colors.Red.dark}, ${theme.palette.secondary.dark})`,
+                textFillColor: `transparent`,
+                backgroundClip: `text`,
                 my: "30px",
                 mx: "5%",
                 textAlign: "center",
               }}
             >
-              Основная задача нашего строительного отдела – показать клиенту
-              истинное качество выполнения работ за оптимальную цену.
+              {t("construction_page_paragrapgh_two")}
               <br /> <br />
-              Опыт работы наших специалистов не даст сомневаться в выборе нашей
-              компании!
+              {t("construction_page_paragrapgh_three")}
             </Typography>
           </Box>
         </Paper>
@@ -162,7 +173,7 @@ const ConstructAndInstall = () => {
           color: Colors.Red.main,
         }}
       >
-        Услуги, на которых мы специализируемся:
+        {t("construction_page_services_title")}
       </TextField>
       <Container
         sx={{
@@ -202,7 +213,7 @@ const ConstructAndInstall = () => {
                   minHeight: "50px",
                 }}
               >
-                {service.serviceName}
+                {t(service.serviceName)}
               </TextField>
               <Box
                 sx={{
@@ -218,7 +229,7 @@ const ConstructAndInstall = () => {
                     color: "white",
                   }}
                 >
-                  {service.serviceDescription}
+                  {t(service.serviceDescription)}
                 </TextField>
               </Box>
               <CardMedia

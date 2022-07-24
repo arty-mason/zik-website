@@ -5,17 +5,17 @@ import HowToRegIcon from '@mui/icons-material/HowToReg';
 const constructionAdvantage = [
   {
     id: `1`,
-    advantageText: `Выполнение любых общих строительных работ в установленные сроки`,
+    advantageText: `construction_page_reason_one`,
     advantageIcon: AccessTimeIcon,
   },
   {
     id: `2`,
-    advantageText: `Использование только качественных европейских материалов для строительства`,
+    advantageText: `construction_page_reason_two`,
     advantageIcon: ThumbUpIcon,
   },
   {
     id: `3`,
-    advantageText: `Выполнение работ только квалифицированными рабочими и специалистами`,
+    advantageText: `construction_page_reason_three`,
     advantageIcon: HowToRegIcon,
   },
 ]

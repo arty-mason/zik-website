@@ -10,18 +10,37 @@
   "title_construction_and_assembly": "Obras de construcción y montaje",
   "title_elevator_selling_installation_and_maintenance": "Venta, instalación y mantenimiento de ascensores",
   "title_commercial_facilities_maintenance": "Mantenimiento de objetos comerciales y edificios residenciales",
+
   "about_us_top_text": "ZAVIISKYI & KABACHEK BUSINESS COMPANY» se dedica a la prestación de servicios para los clientes en los siguientes sectores:",
   "about_us_service_one": "- obras de construcción y montaje;",
   "about_us_service_two": "- instalación y mantenimiento de ascensores;",
   "about_us_service_three": "- mantenimiento de objetos comerciales y edificios residenciales.",
   "about_us_last_paragraph": "Pagará únicamente por los servicios realmente prestados, y nuestros profesionales técnicos realizarán todos los tipos de obras dentro de los plazos acordados y por el precio asequible para el cliente.",
+
   "why_us_reason_one": "Gracias a nuestra experiencia adquirida durante muchos años, nuestra compañía ha decidido a emprender su negocio en España. Actualmente, nuestra tarea consiste en demostrar a nuestros nuevos clientes la gama de servicios que son muy demandados hoy en día.",
   "why_us_reason_two": "Realizamos el mantenimiento de ascensores al nivel más alto, utilizamos las tecnologías innovadoras, personal calificado, fiabilidad e intención de una colaboración duradera y beneficiosa con nuestros socios y clientes.",
   "why_us_reason_three": "Nuestra compañía es capaz de ofrecer un enfoque personalizado a la solución de sus problemas, la fiabilidad (nuestra prioridad es la colaboración duradera y beneficiosa), uso de tecnologías y equipamiento innovador en el objeto, ejecución de las obras precisamente dentro de los plazos acordados.",
+
   "our_experience_title": "Durante los últimos cinco años, nuestra compañía:",
   "our_experience_achievement_one": "Ha realizado el mantenimiento de más de 1000 ascensores en el territorio de Ucrania",
   "our_experience_achievement_two": "Prestamos nuestros servicios a 62 edificios, como la compañía gestora",
   "our_experience_achievement_three": "Tenemos más de 100 ascensores vendidos e instalados en edificios de nueva construcción y aproximadamente 325 contratos ejecutados de reparación de equipamiento de ascensores",
   "our_experience_achievement_four": "Más de 500 contratos ejecutados con entidades, financiadas por el presupuesto público de Ucrania",
-  "our_experience_work_demo": "Fotos de nuestro trabajo:"
+  "our_experience_work_demo": "Fotos de nuestro trabajo:",
+
+  "construction_page_headline": "¿Quiere realizar obras de construcción y montaje y no sabe dónde encontrar a unos especialistas profesionales y fiables? ",
+  "construction_page_paragrapgh_one": "Nuestra compañía ofrece unas soluciones de complejo en el sector de proyección, montaje y mantenimiento técnico por precios leales para los clientes.",
+  "construction_page_reason_title": "Las ventajas de colaboración con nosotros:",
+  "construction_page_reason_one": "La ejecución de todo tipo de obras generales de construcción dentro de los plazos acordados",
+  "construction_page_reason_two": "El uso únicamente de los materiales europeos de calidad para la construcción",
+  "construction_page_reason_three": "La ejecución de obras solo por los obreros y técnicos calificados",
+  "construction_page_paragrapgh_two": "La tarea principal de nuestro departamento de construcción consiste en demostrar al cliente la alta calidad de ejecución de las obras por un precio óptimo.",
+  "construction_page_paragrapgh_three": "La experiencia de nuestros especialistas no le permitirá dudar en la elección de nuestra compañía.",
+  "construction_page_services_title": "Los servicios que prestamos son:",
+  "construction_page_service_one_title": "Proyección",
+  "construction_page_service_one_text": "Desarrollo de documentos de boceto y documentación laboral para la construcción, renovación, reconstrucción",
+  "construction_page_service_two_title": "Construcción",
+  "construction_page_service_two_text": "Realizamos todo tipo de obras de construcción general: construcción de cimientos, paredes (según la tectología de carcasa, monolito, madera, ladrillo, bloques de construcción), construcción de techos, tejado, decoración de fechadas",
+  "construction_page_service_three_title": "Reparación, decoración",
+  "construction_page_service_three_text": "Las obras se realizan para los complejos residenciales (Edificios de vivienda multifamiliar, casas privadas, mansiones, apartamentos), objetos comerciales (oficinas, centros comerciales, centros de oficinas)"
 }

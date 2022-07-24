@@ -10,18 +10,37 @@
   "title_construction_and_assembly": "Construction and assembly works",
   "title_elevator_selling_installation_and_maintenance": "Sale, installation and maintenance of elevators",
   "title_commercial_facilities_maintenance": "Commercial facilities and residential buildings maintenance",
+
   "about_us_top_text": "«ZAVIISKYI & KABACHEK BUSINESS COMPANY» specializes on client services in the following spheres:",
   "about_us_service_one": "- construction and assembly works;",
   "about_us_service_two": "- elevators installation and maintenance;",
   "about_us_service_three": "- commercial facilities and domestic buildings maintenance.",
   "about_us_last_paragraph": "The payment is taken only for the rendered services, and our qualified specialists will implement all the necessary work within the established timeframe for an affordable price.",
+
   "why_us_reason_one": "After gaining years of experience, our team has decided to start a company in Spain. Now our target is to show our potential clients the full range of our services which are highly demanded nowadays.",
   "why_us_reason_two": "We implement elevator maintenance on the highest level, use up-to-date technology, work with qualified specialists, are reliable and strive to have a long and mutually beneficial cooperation with our partners and clients.",
   "why_us_reason_three": "Our company ensures a personal approach to solving your issues, reliability (our priority is mutually beneficial and long-term cooperation), using up-to-date technology and equipment on the object, implementing the works within the established timeframe.",
+
   "our_experience_title": "During the last five years our company:",
   "our_experience_achievement_one": "Has been servicing more than 1000 elevators in Ukraine",
   "our_experience_achievement_two": "Has been ensuring maintenance of 62 houses as a managing company",
   "our_experience_achievement_three": "Has fulfilled about 325 contracts on elevator equipment repair",
   "our_experience_achievement_four": "Has had more than 500 fulfilled contracts with institutions that are being funded by the national budget of Ukraine",
-  "our_experience_work_demo": "Photos of our work:"
+  "our_experience_work_demo": "Photos of our work:",
+
+  "construction_page_headline": "You need to perform construction and assembly work, but don’t know where to find reliable and quality specialists?",
+  "construction_page_paragrapgh_one": "Our company provides package solution in the sphere of engineering, assembling and technical maintenance with reasonable prices for clients. ",
+  "construction_page_reason_title": "The benefits of cooperating with us are:",
+  "construction_page_reason_one": "The implementation of any common construction works in the established timeframes",
+  "construction_page_reason_two": "Using only quality European materials for construction",
+  "construction_page_reason_three": "Implementing works only by qualified personnel and specialists",
+  "construction_page_paragrapgh_two": "The main task of our engineering department is to show the client the real quality of work implementation for an appropriate price.",
+  "construction_page_paragrapgh_three": "The experience of our specialists will not let you doubt about choosing our company.",
+  "construction_page_services_title": "Services which we specialize on:",
+  "construction_page_service_one_title": "Engineering",
+  "construction_page_service_one_text": "Preparing draft and specification documents for construction, major repairs, and reconstruction",
+  "construction_page_service_two_title": "Construction",
+  "construction_page_service_two_text": "We implement any common construction works: pouring foundation, building walls (by framework or monolithic technology, from sawn-timber, bricks, blocks), installation of flooring, roofing, façade finishing",
+  "construction_page_service_three_title": "Repair works, finishing",
+  "construction_page_service_three_text": "Works are implemented for housing estates (multicompartment buildings, private residences, country houses, flats), commercial facilities (offices, shopping centers and business centers)"
 }
