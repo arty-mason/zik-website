@@ -12,6 +12,7 @@ import { useTranslation } from "react-i18next";
 
 const CommercialText = styled(Typography)({
   marginBottom: "20px",
+  color: theme.palette.secondary.dark,
 });
 
 const AboutUs = () => {
@@ -44,20 +45,10 @@ const AboutUs = () => {
             },
           }}
         >
-          <CommercialText
-            variant="h4"
-            component="h1"
-            textAlign="center"
-            sx={{ color: theme.palette.secondary.dark }}
-          >
+          <CommercialText variant="h4" component="h1" textAlign="center">
             {t("about_us_top_text")}
           </CommercialText>
-          <CommercialText
-            variant="h6"
-            component="p"
-            textAlign="center"
-            sx={{ color: theme.palette.secondary.dark }}
-          >
+          <CommercialText variant="h6" component="p" textAlign="center">
             {t("about_us_service_one")} <br />
             {t("about_us_service_two")} <br />
             {t("about_us_service_three")} <br />
@@ -78,7 +69,6 @@ const AboutUs = () => {
             sx={{
               my: "20px",
               mx: "95px",
-              color: theme.palette.secondary.dark,
             }}
           >
             {t("about_us_last_paragraph")}

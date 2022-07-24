@@ -16,11 +16,12 @@ import instagram from "../img/socialMedia/instagram.svg";
 import facebook from "../img/socialMedia/facebook.svg";
 
 import { usePageTheme } from "../services/page-theme.hook";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
-  const isSmallScreen = useMediaQuery("(max-width:700px)");
+  const isSmallScreen = useMediaQuery("(max-width:900px)");
   const { logoSrc } = usePageTheme();
+  const { t } = useTranslation();
 
   return (
     <Box width="100%">
