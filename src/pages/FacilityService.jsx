@@ -6,8 +6,10 @@ import { theme } from "../config/color-config";
 import { Colors } from "../config/design-config";
 
 import facilities from "../services/facility-services";
+import { useTranslation } from "react-i18next";
 
 const FacilityService = () => {
+  const { t } = useTranslation();
   return (
     <Box
       sx={{
@@ -63,7 +65,7 @@ const FacilityService = () => {
                   textAlign: "center",
                 }}
               >
-                {facility.text}
+                {t(facility.text)}
               </Typography>
             </Box>
             <Box

@@ -70,6 +70,7 @@ const ElevatorInstall = () => {
                   textAlign="center"
                   sx={{
                     px: "2px",
+                    minHeight: "60px",
                   }}
                 >
                   {t(service.name)}
