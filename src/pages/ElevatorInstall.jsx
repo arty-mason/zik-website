@@ -7,8 +7,10 @@ import { theme } from "../config/color-config";
 
 import ElevatorGallery from "../components/ElevatorCarousel";
 import elevatorServices from "../services/elevator-services";
+import { useTranslation } from "react-i18next";
 
 const ElevatorInstall = () => {
+  const { t } = useTranslation();
   return (
     <Container
       container
@@ -35,7 +37,7 @@ const ElevatorInstall = () => {
           textAlign: "center",
         }}
       >
-        Мы предоставляем следующие виды услуг:
+        {t("elevators_page_services_grid_title")}
       </Typography>
       <Grid
         container
@@ -70,7 +72,7 @@ const ElevatorInstall = () => {
                     px: "2px",
                   }}
                 >
-                  {service.name}
+                  {t(service.name)}
                 </Typography>
                 <Box
                   sx={{

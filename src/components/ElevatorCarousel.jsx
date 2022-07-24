@@ -11,8 +11,10 @@ import carouselBase from "../services/elevator-carousel";
 
 import { theme } from "../config/color-config";
 import { Colors } from "../config/design-config";
+import { useTranslation } from "react-i18next";
 
 const ElevatorGallery = () => {
+  const { t } = useTranslation();
   return (
     <Carousel autoPlay infiniteLoop>
       {carouselBase.map((slide) => {
@@ -33,7 +35,7 @@ const ElevatorGallery = () => {
               variant="p"
               component="h6"
               sx={{
-                minHeight: "80px",
+                minHeight: "60px",
                 mt: "20px",
                 mb: "10px",
                 px: "40px",
@@ -42,7 +44,7 @@ const ElevatorGallery = () => {
                 textAlign: "center",
               }}
             >
-              {slide.text}
+              {t(slide.text)}
             </Typography>
             <Box
               sx={{

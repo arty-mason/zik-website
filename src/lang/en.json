@@ -42,5 +42,19 @@
   "construction_page_service_two_title": "Construction",
   "construction_page_service_two_text": "We implement any common construction works: pouring foundation, building walls (by framework or monolithic technology, from sawn-timber, bricks, blocks), installation of flooring, roofing, façade finishing",
   "construction_page_service_three_title": "Repair works, finishing",
-  "construction_page_service_three_text": "Works are implemented for housing estates (multicompartment buildings, private residences, country houses, flats), commercial facilities (offices, shopping centers and business centers)"
+  "construction_page_service_three_text": "Works are implemented for housing estates (multicompartment buildings, private residences, country houses, flats), commercial facilities (offices, shopping centers and business centers)",
+
+  "elevators_page_carousel_text_one": "Our company is a reliable partner and helper in the matter of installation, maintenance, modernization and automatization of elevators, freight elevators, escalators and travolators. ",
+  "elevators_page_carousel_text_two": "Like any high-tech equipment which is subject to tear-and-wear, elevators and hoisting machines require constant technical maintenance, and further on – repairing and modernization.",
+  "elevators_page_carousel_text_three": "We supply spare and complementary parts for elevators and other hoisting machines from different manufacturing plants for an affordable price.",
+  "elevators_page_carousel_text_four": "Our team is disciplined, and it follows the client's timeframes.",
+  "elevators_page_carousel_text_five": "We provide 24 hour service, affordable price, using certified tools and cooperation with European manufacturers of elevator equipment. ",
+  "elevators_page_carousel_text_six": "Our company guarantees quality and safety.",
+  "elevators_page_services_grid_title": "We provide the following types of service:",
+  "elevators_page_service_one": "Selling elevators, engineering elevator equipment",
+  "elevators_page_service_two": "Installing elevators and other hoisting machines",
+  "elevators_page_service_three": "Full modernization of an elevator",
+  "elevators_page_service_four": "Automatization and building management systems",
+  "elevators_page_service_five": "Package technical maintenance",
+  "elevators_page_service_six": "Selling spare parts and complementary parts"
 }

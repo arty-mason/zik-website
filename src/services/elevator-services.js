@@ -8,37 +8,37 @@ import gridParts from "../img/elevatorPage/grid/gridParts.jpg"
 const elevatorServices = [
   {
     id: `1`,
-    name: `Продажа лифтов, проектирование лифтового оборудования`,
+    name: `elevators_page_service_one`,
     alt: `Designing elevators`,
     img: gridProjecting,
   },
   {
     id: `2`,
-    name: `Монтаж лифтов и других подъемных механизмов`,
+    name: `elevators_page_service_two`,
     alt: `Elevator Installation`,
     img: gridMounting,
   },
   {
     id: `3`,
-    name: `Полная модернизация лифтов`,
+    name: `elevators_page_service_three`,
     alt: `Elevator Modernization`,
     img: gridModernize,
   },
   {
     id: `4`,
-    name: `Автоматизация и диспетчеризация`,
+    name: `elevators_page_service_four`,
     alt: `Elevator Automatization`,
     img: gridMonitoring,
   },
   {
     id: `5`,
-    name: `Комплексное техническое обслуживание`,
+    name: `elevators_page_service_five`,
     alt: `Elevator Service`,
     img: gridServicing,
   },
   {
     id: `6`,
-    name: `Продажа запчастей и комплектующих`,
+    name: `elevators_page_service_six`,
     alt: `Elevator Parts`,
     img: gridParts,
   },
