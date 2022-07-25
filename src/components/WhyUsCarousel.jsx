@@ -33,7 +33,6 @@ const Swing = () => {
             }}
           >
             <Typography
-              variant="h5"
               component="h1"
               sx={{
                 background: `linear-gradient(to top, ${theme.palette.secondary.main}, ${theme.palette.secondary.dark})`,
@@ -41,6 +40,7 @@ const Swing = () => {
                 backgroundClip: `text`,
                 paddingBottom: "10px",
                 minHeight: "140px",
+                fontSize: { lg: "25px", md: "21px", sm: "18px", xs: "10px" },
               }}
             >
               {t(reason.text)}
@@ -51,8 +51,8 @@ const Swing = () => {
                 backgroundSize: "cover",
                 borderRadius: "50px",
                 border: `5px outset ${Colors.Grey.ultraLight}`,
-                height: "500px",
-                width: "700px",
+                height: { lg: "500px", md: "400px", sm: "250px", xs: "80px" },
+                width: { lg: "700px", md: "500px", sm: "350px", xs: "200px" },
                 mb: "20px",
               }}
             />
