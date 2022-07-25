@@ -40,48 +40,55 @@ const Footer = () => {
         <Button>
           <img src={logoSrc} alt="Zik Logo" style={{ height: 80 }} />
         </Button>
-        {isSmallScreen ? (
+        {/*   {isSmallScreen ? (
           <Box sx={{ marginTop: "20px" }}>Small screen</Box>
-        ) : (
-          <>
+        ) : ( */}
+        <>
+          <Box>
             <Box>
-              <Box>
-                <Typography
-                  variant="h6"
-                  component="h6"
-                  textAlign="center"
-                  textTransform="uppercase"
-                >
-                  {t("label_footer_info")}
-                </Typography>
-                <Divider color="black" />
-              </Box>
-              <Box sx={{ display: "flex" }}>
-                <LeftPopper />
-              </Box>
+              <Typography
+                variant="h6"
+                component="h6"
+                textAlign="center"
+                textTransform="uppercase"
+              >
+                {t("label_footer_info")}
+              </Typography>
+              <Divider color="black" />
             </Box>
-            <Box display="flex" justifyContent="space-between" width="100px">
-              <Button href="">
-                <CardMedia
-                  component="img"
-                  src={instagram}
-                  objectFit="scale-down"
-                  width="50px"
-                  height="50px"
-                />
-              </Button>
-              <Button href="">
-                <CardMedia
-                  component="img"
-                  src={facebook}
-                  objectFit="scale-down"
-                  width="50px"
-                  height="50px"
-                />
-              </Button>
+            <Box sx={{ display: "flex" }}>
+              <LeftPopper />
             </Box>
-          </>
-        )}
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              width: "100px",
+            }}
+          >
+            <Button href="">
+              <CardMedia
+                component="img"
+                src={instagram}
+                objectFit="scale-down"
+                width="50px"
+                height="50px"
+              />
+            </Button>
+            <Button href="">
+              <CardMedia
+                component="img"
+                src={facebook}
+                objectFit="scale-down"
+                width="50px"
+                height="50px"
+              />
+            </Button>
+          </Box>
+        </>
+        {/* )} */}
       </Paper>
     </Box>
   );

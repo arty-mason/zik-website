@@ -37,10 +37,6 @@ const NavBar = () => {
       position="fixed"
       sx={{
         backgroundColor: "white",
-        borderRadius: `10px`,
-        top: "4px",
-        left: "4px",
-        right: "4px",
       }}
     >
       <Toolbar
@@ -58,7 +54,7 @@ const NavBar = () => {
         <Box
           sx={{
             display: "flex",
-            width: "200px",
+            width: { md: "200px", xs: "none" },
             cursor: "pointer",
           }}
           onClick={() => setOpen(true)}
@@ -71,13 +67,13 @@ const NavBar = () => {
               },
             }}
           >
-            <MenuIcon />
+            <MenuIcon width="35px" height="35px" />
           </IconButton>
           <Typography
             sx={{
               color: colors.primary,
               fontSize: "25px",
-              display: { sm: "block", xs: "none" },
+              display: { md: "block", xs: "none" },
               marginLeft: "10px",
               marginTop: "3px",
               textTransform: "uppercase",
@@ -98,17 +94,23 @@ const NavBar = () => {
         >
           <img src={logoSrc} alt="Zik logo" height="70px" />
         </Button>
-        <Box sx={{ display: "flex", alignItems: "center", width: "250px" }}>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            width: { md: "200px", xs: "none" },
+          }}
+        >
           <a style={{ textDecoration: "none" }} href="tel:+34 666 399 550">
             <Typography
               color={colors.primary}
               sx={{
+                display: { md: "block", xs: "none" },
                 "&:hover": {
                   color: colors.secondary,
                   textDecoration: "underline",
                 },
               }}
-              right="100px"
             >
               +34 666 399 550
             </Typography>

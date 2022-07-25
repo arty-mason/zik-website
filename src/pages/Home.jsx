@@ -41,32 +41,18 @@ const Home = () => {
                 component={Link}
                 to={page.to}
                 sx={{
-                  px: {
-                    xl: "20px",
-                    lg: "25px",
-                    md: "30px",
-                    sm: "35px ",
-                    xs: "40px",
-                  },
-                  py: {
-                    xl: "20px",
-                    lg: "25px",
-                    md: "30px",
-                    sm: "35px ",
-                    xs: "40px",
-                  },
                   width: {
                     xl: "350px",
                     lg: "325px",
                     md: "300px",
                     sm: "350px ",
-                    xs: "300px",
+                    xs: "250px",
                   },
                   height: {
-                    lg: "70px",
-                    md: "80px",
-                    sm: "90px ",
-                    xs: "100px",
+                    lg: "65px",
+                    md: "60px",
+                    sm: "55px ",
+                    xs: "50px",
                   },
                   borderRadius: "17px",
                   background: `linear-gradient(to bottom, ${theme.palette.primary.main}, ${Colors.Grey.main})`,
@@ -117,9 +103,9 @@ const Home = () => {
             <Box
               sx={{
                 display: "flex",
-                alignItems: "flex-end",
+                alignItems: "flex-start",
                 justifyContent: "center",
-                minHeight: "75px",
+                minHeight: { xs: "90px", lg: "none" },
               }}
             >
               <Typography
@@ -128,59 +114,83 @@ const Home = () => {
                 color={page.color}
                 textAlign="center"
                 m="10px"
-                mb="15px"
+                mb="5px"
                 minHeight="45px"
+                sx={{
+                  width: {
+                    xl: "350px",
+                    lg: "325px",
+                    md: "300px",
+                    sm: "350px ",
+                    xs: "250px",
+                  },
+                  height: {
+                    lg: "65px",
+                    md: "60px",
+                    sm: "55px ",
+                    xs: "50px",
+                  },
+                }}
               >
                 {t(page.name)}
               </Typography>
             </Box>
-            <Link to={page.to}>
-              <Card
-                ///Importing ListItem to separate links into lines
-                sx={{
-                  position: "relative",
-                  borderRadius: "15px",
-                  boxShadow: `1px 1px 7px ${page.color}`,
-                  mb: "20px",
-                  height: {
-                    xl: "360px",
-                    lg: "320px",
-                    md: "250px",
-                    sm: "450px ",
-                    xs: "250px",
-                  },
-                  background: `url(${page.background})`,
-                  backgroundSize: "cover",
-                  "&:hover": {
-                    cursor: "pointer",
-                    boxShadow: `3px 3px 21px ${page.color}`,
-                  },
-                }}
-              >
-                <Box
+            <Box display="flex" justifyContent="center">
+              <Link to={page.to}>
+                <Card
+                  ///Importing ListItem to separate links into lines
                   sx={{
-                    position: "absolute",
-                    bottom: -290,
-                    right: -230,
-                    width: 400,
-                    height: 400,
-                    borderRadius: 200,
-                    background: "#FFFFFF",
+                    position: "relative",
+                    borderRadius: "15px",
+                    boxShadow: `1px 1px 7px ${page.color}`,
+                    mb: { xs: "40px", md: "20px" },
+                    height: {
+                      xl: "360px",
+                      lg: "320px",
+                      md: "250px",
+                      sm: "350px ",
+                      xs: "250px",
+                    },
+                    width: {
+                      xl: "360px",
+                      lg: "320px",
+                      md: "250px",
+                      sm: "350px ",
+                      xs: "250px",
+                    },
+                    background: `url(${page.background})`,
+                    backgroundSize: "cover",
+                    "&:hover": {
+                      cursor: "pointer",
+                      boxShadow: `3px 3px 21px ${page.color}`,
+                    },
                   }}
-                />
-                <img
-                  src={page.img}
-                  alt="Logo"
-                  objectFit="scale-down"
-                  style={{
-                    position: "absolute",
-                    bottom: 15,
-                    right: 15,
-                    width: 80,
-                  }}
-                />
-              </Card>
-            </Link>
+                >
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      bottom: -290,
+                      right: -230,
+                      width: 400,
+                      height: 400,
+                      borderRadius: 200,
+                      background: "#FFFFFF",
+                    }}
+                  />
+                  <img
+                    src={page.img}
+                    alt="Logo"
+                    objectFit="scale-down"
+                    style={{
+                      position: "absolute",
+                      bottom: 15,
+                      right: 15,
+                      width: 80,
+                    }}
+                  />
+                </Card>
+              </Link>
+            </Box>
           </Box>
         ))}
       </Box>
