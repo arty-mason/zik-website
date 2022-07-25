@@ -48,13 +48,13 @@ const NavBar = () => {
           justifyContent: "space-between",
           alignItems: "center",
           py: "5px",
-          px: "30px",
         }}
       >
         <Box
           sx={{
             display: "flex",
-            width: { md: "200px", xs: "none" },
+            pl: "15px",
+            width: { md: "200px", xs: "50px" },
             cursor: "pointer",
           }}
           onClick={() => setOpen(true)}
@@ -91,6 +91,9 @@ const NavBar = () => {
           color="inherit"
           component={Link}
           to="/home"
+          /*    sx={{
+            ml: { xs: "none", md: "30px" },
+          }} */
         >
           <img src={logoSrc} alt="Zik logo" height="70px" />
         </Button>

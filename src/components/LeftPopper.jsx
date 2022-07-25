@@ -26,7 +26,7 @@ const LeftPopper = () => {
   const { t } = useTranslation();
 
   return (
-    <Box sx={{ width: 500 }}>
+    <Box sx={{ width: { sm: "500px", xs: "100%" } }}>
       {footerContent.map((content) => {
         return (
           <Box>

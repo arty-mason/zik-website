@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Popover, Typography, Button } from "@mui/material";
+import { Popover, Typography, Button, Box } from "@mui/material";
 import LanguageIcon from "@mui/icons-material/LanguageOutlined";
 import { usePageTheme } from "../services/page-theme.hook";
 
@@ -21,7 +21,7 @@ export default function BasicPopover(props) {
   const { colors } = usePageTheme();
 
   return (
-    <div>
+    <Box>
       <Button aria-describedby={id} onClick={handleClick} width="30px">
         <LanguageIcon
           sx={{
@@ -55,6 +55,6 @@ export default function BasicPopover(props) {
           {props.children}
         </Typography>
       </Popover>
-    </div>
+    </Box>
   );
 }

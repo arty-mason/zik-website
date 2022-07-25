@@ -19,53 +19,55 @@ import { usePageTheme } from "../services/page-theme.hook";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
-  const isSmallScreen = useMediaQuery("(max-width:900px)");
   const { logoSrc } = usePageTheme();
   const { t } = useTranslation();
 
+  const isSmallScreen = useMediaQuery("(max-width:900px)");
+
   return (
-    <Box width="100%">
-      <Paper
-        elevation={20}
-        sx={{
-          position: "relative",
-          px: "40px",
-          borderRadius: "15px",
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-          flexDirection: isSmallScreen ? "column" : "row",
-        }}
-      >
-        <Button>
-          <img src={logoSrc} alt="Zik Logo" style={{ height: 80 }} />
-        </Button>
-        {/*   {isSmallScreen ? (
-          <Box sx={{ marginTop: "20px" }}>Small screen</Box>
-        ) : ( */}
+    <Paper
+      elevation={20}
+      sx={{
+        position: "relative",
+        px: { md: "40px", sx: "none" },
+        borderRadius: "15px",
+        display: "flex",
+        justifyContent: { md: "space-around", xs: "center" },
+        alignItems: { sm: "center", xs: "normal" },
+        flexDirection: isSmallScreen ? "column" : "row",
+      }}
+    >
+      <Button>
+        <img src={logoSrc} alt="Zik Logo" style={{ height: 80 }} />
+      </Button>
+
+      <Box>
+        <Box>
+          <Typography
+            variant="h6"
+            component="h6"
+            textAlign="center"
+            textTransform="uppercase"
+          >
+            {t("label_footer_info")}
+          </Typography>
+          <Divider color="black" />
+        </Box>
+        <Box sx={{ display: "flex" }}>
+          <LeftPopper />
+        </Box>
+      </Box>
+      {isSmallScreen ? (
+        <Box />
+      ) : (
         <>
-          <Box>
-            <Box>
-              <Typography
-                variant="h6"
-                component="h6"
-                textAlign="center"
-                textTransform="uppercase"
-              >
-                {t("label_footer_info")}
-              </Typography>
-              <Divider color="black" />
-            </Box>
-            <Box sx={{ display: "flex" }}>
-              <LeftPopper />
-            </Box>
-          </Box>
           <Box
             sx={{
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              width: "100px",
+              width: { lg: "80px" },
+              mr: { lg: "40px", md: "20px" },
             }}
           >
             <Button href="">
@@ -88,9 +90,8 @@ const Footer = () => {
             </Button>
           </Box>
         </>
-        {/* )} */}
-      </Paper>
-    </Box>
+      )}
+    </Paper>
   );
 };
 
