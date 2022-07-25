@@ -1,11 +1,12 @@
 import React from "react";
 /* import "animate.css"; */
 
-import { Box, CardMedia, Container, Paper, Typography } from "@mui/material";
+import { Box, CardMedia, Paper, Typography } from "@mui/material";
 
 import aboutUs from "../img/aboutUs/aboutUs.jpg";
 
 import { theme } from "../config/color-config";
+import { Colors } from "../config/design-config";
 
 import styled from "@emotion/styled";
 import { useTranslation } from "react-i18next";
@@ -18,64 +19,76 @@ const CommercialText = styled(Typography)({
 const AboutUs = () => {
   const { t } = useTranslation();
   return (
-    <Container>
-      <Box
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-        marginBottom="20px"
+    <Box
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+      marginBottom="20px"
+    >
+      <Paper
+        elevation={15}
+        sx={{
+          borderRadius: 15,
+          display: "flex",
+          flexWrap: "wrap",
+          flexDirection: "column",
+          alignItems: "center",
+          my: "20px",
+          p: "30px",
+          width: { lg: "800px", md: "600px", sm: "400px", xs: "250px" },
+          background: "#eceff1",
+          border: `3px outset ${theme.palette.primary.main}`,
+          "&:hover": {
+            background: `linear-gradient(to right,  ${theme.palette.primary.dark}, ${theme.palette.primary.light})`,
+            color: "white",
+            border: "none",
+          },
+        }}
       >
-        <Paper
-          elevation={15}
+        <CommercialText
+          component="h1"
           sx={{
-            borderRadius: 15,
-            display: "flex",
-            flexWrap: "wrap",
-            flexDirection: "column",
-            alignItems: "center",
-            my: "20px",
-            p: "30px",
-            width: "70%",
-            background: "#eceff1",
-            border: `3px outset ${theme.palette.primary.main}`,
-            "&:hover": {
-              background: `linear-gradient(to right,  ${theme.palette.primary.dark}, ${theme.palette.primary.light})`,
-              color: "white",
-              border: "none",
-            },
+            textAlign: "center",
+            fontSize: { lg: "30px", md: "25px", sm: "20px", xs: "15px" },
           }}
         >
-          <CommercialText variant="h4" component="h1" textAlign="center">
-            {t("about_us_top_text")}
-          </CommercialText>
-          <CommercialText variant="h6" component="p" textAlign="center">
-            {t("about_us_service_one")} <br />
-            {t("about_us_service_two")} <br />
-            {t("about_us_service_three")} <br />
-          </CommercialText>
-          <CardMedia
-            component="img"
-            src={aboutUs}
-            sx={{
-              borderRadius: 5,
-              objectFit: "scale-down",
-              width: "80%",
-            }}
-          />
-          <CommercialText
-            variant="h6"
-            component="p"
-            textAlign="justify"
-            sx={{
-              my: "20px",
-              mx: "95px",
-            }}
-          >
-            {t("about_us_last_paragraph")}
-          </CommercialText>
-        </Paper>
-      </Box>
-    </Container>
+          {t("about_us_top_text")}
+        </CommercialText>
+        <CommercialText
+          component="p"
+          sx={{
+            textAlign: "center",
+            fontSize: { lg: "25px", md: "20px", sm: "16px", xs: "12px" },
+          }}
+        >
+          {t("about_us_service_one")} <br />
+          {t("about_us_service_two")} <br />
+          {t("about_us_service_three")} <br />
+        </CommercialText>
+        <CardMedia
+          component="img"
+          src={aboutUs}
+          sx={{
+            objectFit: "scale-down",
+            width: { lg: "600px", md: "400px", sm: "300px", xs: "250px" },
+            borderRadius: 5,
+            border: `2px solid ${Colors.Grey.ultraLight}`,
+          }}
+        />
+        <CommercialText
+          variant="h6"
+          component="p"
+          textAlign="justify"
+          sx={{
+            fontSize: { lg: "25px", md: "20px", sm: "16px", xs: "12px" },
+            my: "20px",
+            mx: "5px",
+          }}
+        >
+          {t("about_us_last_paragraph")}
+        </CommercialText>
+      </Paper>
+    </Box>
   );
 };
 
