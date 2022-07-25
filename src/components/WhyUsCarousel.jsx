@@ -14,9 +14,12 @@ import { useTranslation } from "react-i18next";
 
 const Swing = () => {
   const [t] = useTranslation();
+
   return (
     <Carousel autoPlay infiniteLoop>
       {reasons.map((reason) => {
+        const IconComponent = reason.icon;
+
         return (
           <Box
             key={reason.id}
@@ -25,8 +28,8 @@ const Swing = () => {
               flexdirection: "column",
               flexWrap: "wrap",
               alignItems: "center",
-              justifyContent: "center",
-              px: "50px",
+              justifyContent: "space-around",
+              px: { lg: "50px", md: "40px", sm: "20px", xs: "20px" },
               pt: "30px",
               pb: "40px",
               background: `linear-gradient(to bottom,  ${theme.palette.primary.dark}, white)`,
@@ -40,7 +43,7 @@ const Swing = () => {
                 backgroundClip: `text`,
                 paddingBottom: "10px",
                 minHeight: "140px",
-                fontSize: { lg: "25px", md: "21px", sm: "18px", xs: "10px" },
+                fontSize: { lg: "25px", md: "21px", sm: "18px", xs: "13px" },
               }}
             >
               {t(reason.text)}
@@ -50,10 +53,19 @@ const Swing = () => {
                 background: `url(${reason.img})`,
                 backgroundSize: "cover",
                 borderRadius: "50px",
+                display: { sm: "block", xs: "none" },
                 border: `5px outset ${Colors.Grey.ultraLight}`,
-                height: { lg: "500px", md: "400px", sm: "250px", xs: "80px" },
-                width: { lg: "700px", md: "500px", sm: "350px", xs: "200px" },
+                height: { lg: "500px", md: "350px", sm: "250px" },
+                width: { lg: "700px", md: "500px", sm: "400px" },
                 mb: "20px",
+              }}
+            />
+            <IconComponent
+              sx={{
+                display: { xs: "block", sm: "none" },
+                color: Colors.Grey.main,
+                width: "45px",
+                height: "45px",
               }}
             />
           </Box>
