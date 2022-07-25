@@ -13,7 +13,8 @@ import { useTranslation } from "react-i18next";
 
 const CommercialText = styled(Typography)({
   marginBottom: "20px",
-  color: theme.palette.secondary.dark,
+  color: theme.palette.secondary.main,
+  textShadow: "2px 2px 2px black",
 });
 
 const AboutUs = () => {

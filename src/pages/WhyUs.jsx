@@ -1,8 +1,9 @@
 import React from "react";
 
-import { Box, Container, Paper } from "@mui/material";
+import { Box, Container } from "@mui/material";
 
 import Swing from "../components/WhyUsCarousel";
+import { Colors } from "../config/design-config";
 
 const WhyUs = () => {
   return (
@@ -10,18 +11,12 @@ const WhyUs = () => {
       <Box
         elevation={10}
         sx={{
-          my: "50px",
-          mx: "65px",
+          mb: "40px",
+          mx: { lg: "80px", md: "60px", sm: "40px", xs: "20px" },
+          border: { xs: "none", sm: `3px inset ${Colors.Grey.ultraLight}` },
         }}
       >
-        <Paper
-          elevation={20}
-          sx={{
-            borderRadius: "15px",
-          }}
-        >
-          <Swing />
-        </Paper>
+        <Swing />
       </Box>
     </Container>
   );
