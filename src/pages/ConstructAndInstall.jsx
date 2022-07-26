@@ -1,13 +1,6 @@
 import React from "react";
 
-import {
-  Box,
-  Card,
-  CardMedia,
-  Container,
-  Paper,
-  Typography,
-} from "@mui/material";
+import { Box, Card, CardMedia, Paper, Typography } from "@mui/material";
 
 import TextField from "../shared/text-field";
 import servicesTypes from "../services/construct-services";
@@ -17,45 +10,50 @@ import { Colors } from "../config/design-config";
 
 import constructionAdvantage from "../services/construction-content";
 import { useTranslation } from "react-i18next";
-/* 
-import { styled } from "@mui/system";
 
-const ConstrText = styled(Typography)({
-  my: "20px",
-  textAlign: "center",
-  mx: "5%",
-  background: `linear-gradient(30deg,  ${Colors.Red.dark}, ${theme.palette.secondary.dark})`,
-  textFillColor: `transparent`,
-  backgroundClip: `text`,
-}); 
-*/
 const ConstructAndInstall = () => {
   const { t } = useTranslation();
   return (
     <Box>
-      <Container container justifyContent="center">
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          maxWidth: "1920px",
+        }}
+      >
         <Paper
           elevation={15}
           sx={{
             padding: "10px",
             borderRadius: "25px",
             display: "flex",
+            maxWidth: {
+              xl: "1200px",
+              lg: "1000px",
+              md: "750px",
+              sm: "470px",
+              xs: "240px",
+            },
             borderBottom: `10px outset ${Colors.Red.light}`,
             borderRight: `10px inset ${theme.palette.secondary.main}`,
           }}
         >
-          <Box
-            sx={{
-              my: "35px",
-            }}
-          >
+          <Box>
             <Typography
-              variant="h4"
               component="h1"
               sx={{
-                my: "20px",
                 textAlign: "center",
-                mx: "5%",
+                my: "20px",
+                mx: "20px",
+                fontSize: {
+                  xl: "30px",
+                  lg: "37px",
+                  md: "24px",
+                  sm: "21px",
+                  xs: "18px",
+                },
                 background: `linear-gradient(30deg,  ${Colors.Red.dark}, ${theme.palette.secondary.dark})`,
                 textFillColor: `transparent`,
                 backgroundClip: `text`,
@@ -64,11 +62,16 @@ const ConstructAndInstall = () => {
               {t("construction_page_headline")}
             </Typography>
             <Typography
-              variant="h5"
-              component="h1"
+              component="p"
               sx={{
-                my: "20px",
-                mx: "5%",
+                fontSize: {
+                  xl: "27px",
+                  lg: "24px",
+                  md: "21px",
+                  sm: "18px",
+                  xs: "15px",
+                },
+                m: "20px",
                 textAlign: "center",
                 background: `linear-gradient(30deg,  ${Colors.Red.dark}, ${theme.palette.secondary.dark})`,
                 textFillColor: `transparent`,
@@ -78,11 +81,16 @@ const ConstructAndInstall = () => {
               {t("construction_page_paragrapgh_one")}
             </Typography>
             <Typography
-              variant="h4"
-              component="h1"
+              component="h2"
               sx={{
-                mt: "20px",
-                mb: "40px",
+                fontSize: {
+                  xl: "30px",
+                  lg: "37px",
+                  md: "24px",
+                  sm: "21px",
+                  xs: "18px",
+                },
+                my: "15px",
                 textAlign: "center",
                 background: `linear-gradient(30deg,  ${Colors.Red.dark}, ${theme.palette.secondary.dark})`,
                 textFillColor: `transparent`,
@@ -95,58 +103,71 @@ const ConstructAndInstall = () => {
               sx={{
                 display: "flex",
                 justifyContent: "space-around",
+                alignItems: "center",
+                flexDirection: { xs: "column", md: "row" },
               }}
             >
               {constructionAdvantage.map((paragraph) => {
                 const IconComponent = paragraph.advantageIcon;
                 return (
-                  <Box
+                  <Card
                     key={paragraph.id}
+                    elevation={10}
                     sx={{
-                      width: "25%",
-                      mx: "5px",
+                      width: {
+                        xl: "300px",
+                        lg: "250px",
+                        md: "200px",
+                        sm: "300px",
+                        xs: "200px",
+                      },
+                      height: {
+                        md: "300px",
+                        sm: "220px",
+                        xs: "200px",
+                      },
+
+                      my: "10px",
+                      borderRadius: "20px",
+                      background: `linear-gradient(to bottom, ${theme.palette.secondary.main}, ${Colors.Red.main})`,
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      "&:hover": {
+                        animation: `pulse 2s linear infinite`,
+                      },
                     }}
                   >
-                    <Card
-                      elevation={10}
+                    <Typography
                       sx={{
-                        height: "300px",
-                        borderRadius: "20px",
-                        background: `linear-gradient(to bottom, ${theme.palette.secondary.main}, ${Colors.Red.main})`,
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        "&:hover": {
-                          animation: `pulse 2s linear infinite`,
+                        color: "white",
+                        my: "20px",
+                        px: "10px",
+                        fontSize: {
+                          xl: "24px",
+                          lg: "21px",
+                          md: "18px",
+                          sm: "15px",
+                          xs: "12px",
                         },
+                        textAlign: "center",
                       }}
                     >
-                      <Typography
-                        sx={{
-                          color: "white",
-                          my: "20px",
-                          px: "10px",
-                          fontSize: "18px",
-                          textAlign: "center",
-                        }}
-                      >
-                        {t(paragraph.advantageText)}
-                      </Typography>
-                      <IconComponent
-                        sx={{
-                          height: "100px",
-                          width: "100px",
-                          color: "white",
-                        }}
-                      />
-                    </Card>
-                  </Box>
+                      {t(paragraph.advantageText)}
+                    </Typography>
+                    <IconComponent
+                      sx={{
+                        height: "100px",
+                        width: "100px",
+                        color: "white",
+                      }}
+                    />
+                  </Card>
                 );
               })}
             </Box>
             <Typography
-              variant="h5"
               component="h1"
               sx={{
                 background: `linear-gradient(30deg,  ${Colors.Red.dark}, ${theme.palette.secondary.dark})`,
@@ -155,6 +176,13 @@ const ConstructAndInstall = () => {
                 my: "30px",
                 mx: "5%",
                 textAlign: "center",
+                fontSize: {
+                  xl: "27px",
+                  lg: "24px",
+                  md: "21px",
+                  sm: "18px",
+                  xs: "15px",
+                },
               }}
             >
               {t("construction_page_paragrapgh_two")}
@@ -163,23 +191,32 @@ const ConstructAndInstall = () => {
             </Typography>
           </Box>
         </Paper>
-      </Container>
-      <TextField
-        variant="h2"
+      </Box>
+      <Typography
         component="h1"
         sx={{
           textAlign: "center",
           marginTop: "40px",
           color: Colors.Red.main,
+          fontSize: {
+            xl: "50px",
+            lg: "45px",
+            md: "40px",
+            sm: "35px",
+            xs: "23px",
+          },
         }}
       >
         {t("construction_page_services_title")}
-      </TextField>
-      <Container
+      </Typography>
+      <Box
         sx={{
           display: "flex",
           justifyContent: "space-around",
+          alignItems: "center",
           padding: "10px",
+          mx: "20px",
+          flexDirection: { xs: "column", md: "row" },
         }}
       >
         {servicesTypes.map((service) => {
@@ -192,15 +229,14 @@ const ConstructAndInstall = () => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                justifyContent: "space-evenly",
-                width: "100%",
-                height: "500px",
-                marginRight: "50px",
+                justifyContent: "space-between",
+                width: { lg: "250px", md: "200px", sm: "400px", xs: "270px" },
+                height: { lg: "500px", md: "400px", sm: "400px", xs: "270px" },
                 borderRadius: "20px",
                 boxShadow: "5px",
-                my: "50px",
-                px: "20px",
-                py: "15px",
+                my: "30px",
+                px: "30px",
+                py: "35px",
                 "&:hover": {
                   transform: "scale(1.08)",
                 },
@@ -209,41 +245,57 @@ const ConstructAndInstall = () => {
               <TextField
                 sx={{
                   color: "white",
-                  fontSize: "30px",
+                  fontSize: {
+                    xl: "25px",
+                    lg: "23px",
+                    md: "18px",
+                    sm: "25px",
+                    xs: "16px",
+                  },
                   minHeight: "50px",
                 }}
               >
                 {t(service.serviceName)}
               </TextField>
-              <Box
+
+              <Typography
                 sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  minHeight: "175px",
-                  my: "1%",
+                  textAlign: "center",
+                  color: "white",
+                  fontSize: {
+                    xl: "16px",
+                    lg: "16px",
+                    md: "13px",
+                    sm: "16px",
+                    xs: "12px",
+                  },
                 }}
               >
-                <TextField
-                  sx={{
-                    color: "white",
-                  }}
-                >
-                  {t(service.serviceDescription)}
-                </TextField>
-              </Box>
+                {t(service.serviceDescription)}
+              </Typography>
               <CardMedia
                 component="img"
                 src={service.img}
                 sx={{
-                  height: "250px",
-                  objectFit: "scale-down",
+                  width: {
+                    lg: "250px",
+                    md: "220px",
+                    sm: "300px",
+                    xs: "220px",
+                  },
+                  height: {
+                    lg: "200px",
+                    md: "150px",
+                    sm: "200px",
+                    xs: "125px",
+                  },
+                  objectFit: "cover",
                 }}
               />
             </Card>
           );
         })}
-      </Container>
+      </Box>
     </Box>
   );
 };
