@@ -26,7 +26,6 @@ const ElevatorGallery = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-
               background: `linear-gradient(to bottom, ${theme.palette.primary.dark}, white )`,
               borderRadius: "22px",
             }}

@@ -9,6 +9,7 @@ import { topNav } from "../services/menu-top-nav";
 import { theme } from "../config/color-config";
 import { Colors } from "../config/design-config";
 import { useTranslation } from "react-i18next";
+import { CommonStyles } from "../shared/styles";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -41,13 +42,7 @@ const Home = () => {
                 component={Link}
                 to={page.to}
                 sx={{
-                  width: {
-                    xl: "350px",
-                    lg: "325px",
-                    md: "300px",
-                    sm: "350px ",
-                    xs: "250px",
-                  },
+                  width: CommonStyles.AdaptiveButton.width,
                   height: {
                     lg: "65px",
                     md: "60px",
@@ -117,19 +112,8 @@ const Home = () => {
                 mb="5px"
                 minHeight="45px"
                 sx={{
-                  width: {
-                    xl: "350px",
-                    lg: "325px",
-                    md: "300px",
-                    sm: "350px ",
-                    xs: "250px",
-                  },
-                  height: {
-                    lg: "65px",
-                    md: "60px",
-                    sm: "55px ",
-                    xs: "50px",
-                  },
+                  width: CommonStyles.AdaptiveButton.width,
+                  height: CommonStyles.AdaptiveButton.height,
                 }}
               >
                 {t(page.name)}
