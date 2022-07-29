@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Paper, Typography } from "@mui/material";
+import { Box, Grid, Paper, Typography } from "@mui/material";
 
 import { theme } from "../config/color-config";
 import { Colors } from "../config/design-config";
@@ -11,77 +11,85 @@ import { useTranslation } from "react-i18next";
 const FacilityService = () => {
   const { t } = useTranslation();
   return (
-    <Box
-      id="test123"
+    <Grid
+      container
+      spacing={1}
+      alignItems="center"
+      justifyContent="space-between"
       sx={{
-        display: "flex",
-        justifycontent: "space-between",
-        /*  flexdirection: { sx: "row", md: "column" }, */
+        flexdirection: { sx: "row", md: "column" },
         alignItems: "center",
-        /* ml: "15px", */
         mb: "20px",
       }}
     >
       {facilities.map((facility) => {
         return (
-          <Paper
-            key={facility.id}
-            elevation={15}
-            marginTop="50px"
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              p: "30px",
-              mx: "10px",
-              width: "320px",
-              justifyContent: "space-around",
-              borderRadius: "15px",
-              background: `linear-gradient(-130deg, ${Colors.Green.main}, black)`,
-              "&:hover": {
-                background: `linear-gradient(-130deg, ${Colors.Green.dark}, ${theme.palette.primary.main})`,
-                boxShadow: `inset 0 0 5px 5px ${theme.palette.secondary.main}`,
-              },
-            }}
-          >
-            <Box
-              elevation={10}
+          <Grid item lg={3} md={6} sm={6}>
+            <Paper
+              key={facility.id}
+              elevation={15}
+              marginTop="50px"
               sx={{
-                m: "5px",
-                py: "10px",
-                px: "5px",
-                border: `3px outset ${Colors.Grey.ultraLight}`,
-                borderRadius: "15px",
                 display: "flex",
+                flexDirection: "column",
                 alignItems: "center",
-                minHeight: "260px",
+                p: "20px",
+                mx: "10px",
+                justifyContent: "space-around",
+                borderRadius: "15px",
+                height: { lg: "650px" },
+                background: `linear-gradient(-130deg, ${Colors.Green.main}, black)`,
+                "&:hover": {
+                  background: `linear-gradient(-130deg, ${Colors.Green.dark}, ${theme.palette.primary.main})`,
+                  boxShadow: `inset 0 0 5px 5px ${theme.palette.secondary.main}`,
+                },
               }}
             >
-              <Typography
-                variant="p"
+              <Box
+                elevation={10}
                 sx={{
-                  fontSize: "20px",
-                  color: "white",
-                  textAlign: "center",
+                  m: "5px",
+                  py: "10px",
+                  px: "5px",
+                  border: `3px outset ${Colors.Grey.ultraLight}`,
+                  borderRadius: "15px",
+                  display: "flex",
+                  alignItems: "center",
+                  minHeight: "270px",
                 }}
               >
-                {t(facility.text)}
-              </Typography>
-            </Box>
-            <Box
-              sx={{
-                background: `url(${facility.img})`,
-                backgroundSize: "cover",
-                height: "280px",
-                width: "280px",
-                p: "10px",
-                mt: "20px",
-              }}
-            />
-          </Paper>
+                <Typography
+                  variant="p"
+                  sx={{
+                    fontSize: "20px",
+                    color: "white",
+                    textAlign: "center",
+                  }}
+                >
+                  {t(facility.text)}
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  background: `url(${facility.img})`,
+                  backgroundSize: "cover",
+                  borderRadius: "20px",
+                  height: {
+                    xl: "300px",
+                    lg: "230px",
+                    sm: "250px",
+                    xs: "200px",
+                  },
+                  width: { xl: "300px", lg: "230px", sm: "250px", xs: "200px" },
+                  p: "10px",
+                  mt: "20px",
+                }}
+              />
+            </Paper>
+          </Grid>
         );
       })}
-    </Box>
+    </Grid>
   );
 };
 
