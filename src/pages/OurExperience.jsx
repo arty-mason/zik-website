@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Paper, Typography } from "@mui/material";
+import { Box, Container, Paper, Typography } from "@mui/material";
 
 import { theme } from "../config/color-config";
 import { Colors } from "../config/design-config";
@@ -86,7 +86,16 @@ const Experience = () => {
           );
         })}
       </Box>
-      <ExperienceGallery />
+      <Container
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          maxWidth: { lg: "800px", md: "700px", sm: "500px", xs: "250px" },
+        }}
+      >
+        <ExperienceGallery />
+      </Container>
     </Box>
   );
 };
