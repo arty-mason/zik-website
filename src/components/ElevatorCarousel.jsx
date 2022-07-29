@@ -16,50 +16,62 @@ import { useTranslation } from "react-i18next";
 const ElevatorGallery = () => {
   const { t } = useTranslation();
   return (
-    <Carousel autoPlay infiniteLoop>
-      {carouselBase.map((slide) => {
-        return (
-          <Box
-            key={slide.id}
-            sx={{
-              py: "40px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              background: `linear-gradient(to bottom, ${theme.palette.primary.dark}, white )`,
-              borderRadius: "22px",
-            }}
-          >
-            <Typography
-              variant="p"
-              component="h6"
-              sx={{
-                minHeight: "60px",
-                mt: "20px",
-                mb: "10px",
-                px: "40px",
-                color: theme.palette.secondary.main,
-                fontSize: "22px",
-                textAlign: "center",
-              }}
-            >
-              {t(slide.text)}
-            </Typography>
-            <Box
-              sx={{
-                background: `url(${slide.img})`,
-                backgroundSize: "cover",
-                borderRadius: "50px",
-                border: `5px outset ${Colors.Grey.ultraLight}`,
-                height: "500px",
-                width: "700px",
-                mb: "20px",
-              }}
-            />
-          </Box>
-        );
-      })}
-    </Carousel>
+    <Box
+      sx={{
+        maxWidth: { lg: "1000px", md: "800px", sm: "600px", xs: "300px" },
+      }}
+    >
+      <Carousel autoPlay infiniteLoop>
+        {carouselBase.map((slide) => {
+          return (
+            <Box key={slide.id}>
+              <Typography
+                variant="p"
+                sx={{
+                  px: "10px",
+                  fontSize: { lg: "22px", md: "20px", sm: "18px", xs: "15px" },
+                  color: theme.palette.secondary.main,
+                  textAlign: "center",
+                }}
+              >
+                {t(slide.text)}
+              </Typography>
+              <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                flexDirection="column"
+                sx={{
+                  mb: "10px",
+                }}
+              >
+                <Box
+                  sx={{
+                    background: `url(${slide.img})`,
+                    backgroundSize: "cover",
+                    borderRadius: "50px",
+                    border: `5px outset ${Colors.Grey.ultraLight}`,
+                    height: {
+                      lg: "600px",
+                      md: "480px",
+                      sm: "300px",
+                      xs: "190px",
+                    },
+                    width: {
+                      lg: "800px",
+                      md: "640px",
+                      sm: "400px",
+                      xs: "250px",
+                    },
+                    m: "20px",
+                  }}
+                />
+              </Box>
+            </Box>
+          );
+        })}
+      </Carousel>
+    </Box>
   );
 };
 

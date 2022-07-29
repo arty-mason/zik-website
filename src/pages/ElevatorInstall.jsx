@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Card, Container, Grid, Paper, Typography } from "@mui/material";
+import { Box, Card, Grid, Paper, Typography } from "@mui/material";
 // Importing the additional components from MUI
 
 import { theme } from "../config/color-config";
@@ -13,11 +13,11 @@ const ElevatorInstall = () => {
   const { t } = useTranslation();
   return (
     <Box
-      /*       display="flex"
-      justifyContent="center"
-      alignItems="center" */
       sx={{
-        /* maxWidth: { lg: "1200px", md: "700px", sm: "500px", xs: "250px" }, */
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
         my: "50px",
       }}
     >
@@ -25,12 +25,15 @@ const ElevatorInstall = () => {
         elevation={12}
         sx={{
           borderRadius: "25px",
+          py: "30px",
+          display: "flex",
+          flexDirection: "column",
+          background: `linear-gradient(to bottom, ${theme.palette.primary.dark}, white )`,
         }}
       >
         <ElevatorGallery />
       </Paper>
       <Typography
-        variant="h3"
         component="h4"
         sx={{
           minHeight: "80px",
@@ -45,11 +48,14 @@ const ElevatorInstall = () => {
         container
         spacing={3}
         alignItems="center"
-        justifyContent="space-around"
+        justifyContent="center"
+        sx={{
+          maxWidth: { lg: "1200px", md: "800px", sm: "600px", xs: "300px" },
+        }}
       >
         {elevatorServices.map((service) => {
           return (
-            <Grid key={service.id} item lg={4} md={6} sm={8} xs={10}>
+            <Grid key={service.id} item lg={4} md={6} sm={8}>
               <Card
                 sx={{
                   p: "10px",
