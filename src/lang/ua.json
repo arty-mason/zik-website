@@ -1,8 +1,12 @@
 {
   "label_navbar_menu": "Меню",
-  "label_footer_info": "Інформація",
-  "button_footer_contacts": "Контакти",
+
+  "label_footer_contacts": "Контакти",
   "button_footer_reviews": "Відгук",
+  "label_footer_info": "Інформація",
+  "content_footer_adress": "Адреса",
+  "label_footer_social_media": "Наші соціальні мережі",
+
   "button_homepage_about": "Про нас",
   "button_homepage_why_us": "Чому ми",
   "button_submenu_services": "Послуги",

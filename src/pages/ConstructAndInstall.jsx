@@ -20,7 +20,7 @@ const ConstructAndInstall = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          maxWidth: "1920px",
+          /*   maxWidth: "1920px", */
         }}
       >
         <Paper

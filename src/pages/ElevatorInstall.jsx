@@ -12,10 +12,12 @@ import { useTranslation } from "react-i18next";
 const ElevatorInstall = () => {
   const { t } = useTranslation();
   return (
-    <Container
-      container
+    <Box
+      /*       display="flex"
       justifyContent="center"
+      alignItems="center" */
       sx={{
+        /* maxWidth: { lg: "1200px", md: "700px", sm: "500px", xs: "250px" }, */
         my: "50px",
       }}
     >
@@ -89,7 +91,7 @@ const ElevatorInstall = () => {
           );
         })}
       </Grid>
-    </Container>
+    </Box>
   );
 };
 

@@ -17,6 +17,9 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import Popover from "./Popover";
 import languages from "../services/languages";
 
+import instagram from "../img/socialMedia/instagram.svg";
+import facebook from "../img/socialMedia/facebook.svg";
+
 import { BurgerMenuLinks } from "./BurgerMenuLinks";
 import { usePageTheme } from "../services/page-theme.hook";
 import { Link } from "react-router-dom";
@@ -91,9 +94,6 @@ const NavBar = () => {
           color="inherit"
           component={Link}
           to="/home"
-          /*    sx={{
-            ml: { xs: "none", md: "30px" },
-          }} */
         >
           <img src={logoSrc} alt="Zik logo" height="70px" />
         </Button>
@@ -172,6 +172,68 @@ const NavBar = () => {
         ///The divider line
         />
         <BurgerMenuLinks onMenuItemClicked={() => setOpen(false)} />
+        <Box
+          sx={{
+            display: {
+              md: "none",
+              xs: "flex",
+            },
+
+            position: "fixed",
+            bottom: "10px",
+            left: "5px",
+            width: "5px",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              alignItems: "center",
+              width: "150px",
+            }}
+          >
+            <Typography
+              component="h6"
+              textAlign="center"
+              textTransform="uppercase"
+              sx={{
+                width: "150px",
+                fontSize: "13px",
+              }}
+            >
+              <b> {t("label_footer_social_media")}</b>
+            </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-evenly",
+                alignItems: "center",
+                width: "150px",
+              }}
+            >
+              <Button href="">
+                <img
+                  src={instagram}
+                  alt="Instagram"
+                  objectFit="cover"
+                  width="30px"
+                  height="35px"
+                />
+              </Button>
+              <Button href="">
+                <img
+                  src={facebook}
+                  alt="Facebook"
+                  objectFit="cover"
+                  width="30px"
+                  height="30px"
+                />
+              </Button>
+            </Box>
+          </Box>
+        </Box>
       </SwipeableDrawer>
     </AppBar>
   );

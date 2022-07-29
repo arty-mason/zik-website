@@ -1,12 +1,17 @@
 {
   "label_navbar_menu": "Menu",
-  "label_footer_info": "Information",
-  "button_footer_contacts": "Contact us",
+
+  "label_footer_contacts": "Contact us",
   "button_footer_reviews": "Feedback",
+  "label_footer_info": "Information",
+  "content_footer_adress": "Addresss",
+  "label_footer_social_media": "Our social media",
+
   "button_homepage_about": "Who we are",
   "button_homepage_why_us": "Why us",
   "button_submenu_services": "Services",
   "button_homepage_our_experience": "Our experience",
+
   "title_construction_and_assembly": "Construction and assembly works",
   "title_elevator_selling_installation_and_maintenance": "Sale, installation and maintenance of elevators",
   "title_commercial_facilities_maintenance": "Commercial facilities and residential buildings maintenance",

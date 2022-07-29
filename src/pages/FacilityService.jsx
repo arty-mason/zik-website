@@ -12,13 +12,13 @@ const FacilityService = () => {
   const { t } = useTranslation();
   return (
     <Box
+      id="test123"
       sx={{
-        maxWidth: "1550px",
         display: "flex",
-        justifycontent: "space-around",
-        flexdirection: { sx: "row", md: "column" },
+        justifycontent: "space-between",
+        /*  flexdirection: { sx: "row", md: "column" }, */
         alignItems: "center",
-        ml: "15px",
+        /* ml: "15px", */
         mb: "20px",
       }}
     >

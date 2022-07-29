@@ -1,13 +1,28 @@
+import BusinessIcon from '@mui/icons-material/Business';
+import CallIcon from '@mui/icons-material/Call';
+import MailIcon from '@mui/icons-material/Mail';
+
 export const footerContent = [
   {
     id: `1`,
-    name: `button_footer_contacts`,
-    info: `Tel: +34 666 3999 550, E-mail: zik.businessco@gmail.com,
-    Adress: C/ Remedio, 38-B, 46500 Sagunto, Valencia`,
+    info: `Calle Remedio, 38, Sagunto, Valencia, 46500`,
+    icon: BusinessIcon,
   },
   {
     id: `2`,
-    name: `button_footer_reviews`,
-    info: `To be continued ...`,
+    info: `+34-666-399-550`,
+    icon: CallIcon,
+  },
+  {
+    id: `3`,
+    info: `zik.business@gmail.com`,
+    icon: MailIcon,
   }
 ];
+
+
+
+/*  
+button_footer_reviews
+button_footer_contacts
+*/

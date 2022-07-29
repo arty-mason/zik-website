@@ -19,7 +19,7 @@ const Wrapper = (props) => {
         <Box
           component="main"
           sx={{
-            maxWidth: "1920px",
+            /*   maxWidth: "1920px", */
             marginTop: "120px",
           }}
         >

@@ -1,8 +1,12 @@
 {
   "label_navbar_menu": "Menú",
-  "label_footer_info": "Información",
-  "button_footer_contacts": "Contacto",
+
+  "label_footer_contacts": "Contacto",
   "button_footer_reviews": "Dictamenes",
+  "content_footer_adress": "Dirección",
+  "label_footer_info": "Información",
+  "label_footer_social_media": "Nuestras redes sociales",
+
   "button_homepage_about": "Quiénes somos",
   "button_homepage_why_us": "Por qué nos eligen",
   "button_submenu_services": "Servicios",
