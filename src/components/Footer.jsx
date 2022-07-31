@@ -11,6 +11,7 @@ import facebook from "../img/socialMedia/facebook.svg";
 import { usePageTheme } from "../services/page-theme.hook";
 import { useTranslation } from "react-i18next";
 import { footerContent } from "../services/footer-content";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const { logoSrc } = usePageTheme();
@@ -31,7 +32,7 @@ const Footer = () => {
         flexDirection: isSmallScreen ? "column" : "row",
       }}
     >
-      <Button>
+      <Button component={Link} to="/home">
         <img src={logoSrc} alt="Zik Logo" style={{ height: 80 }} />
       </Button>
       <Box>
@@ -40,10 +41,16 @@ const Footer = () => {
           component="h6"
           textAlign="center"
           textTransform="uppercase"
+          marginTop="5px"
         >
           {t("label_footer_contacts")}
         </Typography>
-        <Divider color="black" />
+        <Divider
+          color="black"
+          sx={{
+            my: "7px",
+          }}
+        />
         <Box
           sx={{
             display: "flex",
@@ -52,7 +59,6 @@ const Footer = () => {
             alignItems: "flex-start",
           }}
         >
-          {/*   <LeftPopper /> */}
           {footerContent.map((content) => {
             const IconComponent = content.icon;
             return (

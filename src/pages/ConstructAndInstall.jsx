@@ -11,16 +11,24 @@ import { Colors } from "../config/design-config";
 import constructionAdvantage from "../services/construction-content";
 import { useTranslation } from "react-i18next";
 
+import pageBackground from "../img/constructionPage/mainBackground/pageBackground.png";
+
 const ConstructAndInstall = () => {
   const { t } = useTranslation();
   return (
-    <Box>
+    <Box
+      sx={
+        {
+          /*    background: `url(${pageBackground})`,
+        backgroundSize: "cover", */
+        }
+      }
+    >
       <Box
         sx={{
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          /*   maxWidth: "1920px", */
         }}
       >
         <Paper

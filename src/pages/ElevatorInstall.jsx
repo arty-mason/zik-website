@@ -40,6 +40,13 @@ const ElevatorInstall = () => {
           my: "30px",
           color: theme.palette.secondary.dark,
           textAlign: "center",
+          fontSize: {
+            xl: "50px",
+            lg: "45px",
+            md: "40px",
+            sm: "35px",
+            xs: "30px",
+          },
         }}
       >
         {t("elevators_page_services_grid_title")}
