@@ -17,12 +17,10 @@ const ConstructAndInstall = () => {
   const { t } = useTranslation();
   return (
     <Box
-      sx={
-        {
-          /*    background: `url(${pageBackground})`,
-        backgroundSize: "cover", */
-        }
-      }
+      sx={{
+        background: `url(${pageBackground})`,
+        backgroundSize: "cover",
+      }}
     >
       <Box
         sx={{

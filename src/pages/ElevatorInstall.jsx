@@ -8,6 +8,7 @@ import { theme } from "../config/color-config";
 import ElevatorGallery from "../components/ElevatorCarousel";
 import elevatorServices from "../services/elevator-services";
 import { useTranslation } from "react-i18next";
+import elevatorsBackground from "../img/elevatorPage/mainBackground/elevatorsBackground.png";
 
 const ElevatorInstall = () => {
   const { t } = useTranslation();
@@ -19,6 +20,8 @@ const ElevatorInstall = () => {
         alignItems: "center",
         flexDirection: "column",
         my: "50px",
+        background: `url(${elevatorsBackground})`,
+        backgroundSize: "cover",
       }}
     >
       <Paper

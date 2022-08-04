@@ -7,6 +7,7 @@ import { Colors } from "../config/design-config";
 
 import facilities from "../services/facility-services";
 import { useTranslation } from "react-i18next";
+import facilityBackground from "../img/facilityPage/mainBackground/facilityBackground.png";
 
 const FacilityService = () => {
   const { t } = useTranslation();
@@ -20,6 +21,8 @@ const FacilityService = () => {
         flexdirection: { sx: "row", md: "column" },
         alignItems: "center",
         mb: "20px",
+        background: `url(${facilityBackground})`,
+        backgroundSize: "cover",
       }}
     >
       {facilities.map((facility) => {
