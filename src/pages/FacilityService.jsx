@@ -11,15 +11,15 @@ import facilityBackground from "../img/facilityPage/mainBackground/facilityBackg
 
 const FacilityService = () => {
   const { t } = useTranslation();
+
   return (
-    <Grid
-      container
-      spacing={1}
-      alignItems="center"
-      justifyContent="space-between"
+    <Box
       sx={{
-        flexdirection: { sx: "row", md: "column" },
+        display: "flex",
         alignItems: "center",
+        justifyContent: "space-around",
+        flexdirection: { lg: "column" },
+        flexWrap: { lg: "noWrap", xs: "wrap" },
         mb: "20px",
         background: `url(${facilityBackground})`,
         backgroundSize: "cover",
@@ -27,72 +27,94 @@ const FacilityService = () => {
     >
       {facilities.map((facility) => {
         return (
-          <Grid item lg={3} md={6} sm={6}>
-            <Paper
-              key={facility.id}
-              elevation={15}
-              marginTop="50px"
+          <Paper
+            key={facility.id}
+            elevation={15}
+            marginTop="50px"
+            sx={{
+              my: { lg: "none", xs: "20px" },
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              p: "20px",
+              mx: "10px",
+              justifyContent: "space-around",
+              borderRadius: "15px",
+              height: { xl: "600px", lg: "500px", md: "400px", xs: "400px" },
+              width: {
+                xl: "300px",
+                lg: "250px",
+                md: "340px",
+                xs: "250px",
+              },
+              background: `linear-gradient(-130deg, ${Colors.Green.main}, black)`,
+              "&:hover": {
+                background: `linear-gradient(-130deg, ${Colors.Green.dark}, ${theme.palette.primary.main})`,
+                boxShadow: `inset 0 0 5px 5px ${theme.palette.secondary.dark}`,
+              },
+            }}
+          >
+            <Box
+              elevation={10}
               sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                p: "20px",
-                mx: "10px",
-                justifyContent: "space-around",
+                m: "5px",
+                py: "10px",
+                px: "5px",
+                border: `3px outset ${Colors.Grey.ultraLight}`,
                 borderRadius: "15px",
-                height: { lg: "650px" },
-                background: `linear-gradient(-130deg, ${Colors.Green.main}, black)`,
-                "&:hover": {
-                  background: `linear-gradient(-130deg, ${Colors.Green.dark}, ${theme.palette.primary.main})`,
-                  boxShadow: `inset 0 0 5px 5px ${theme.palette.secondary.main}`,
+                display: "flex",
+                alignItems: "center",
+                minHeight: {
+                  xl: "220px",
+                  lg: "180px",
+                  md: "150px",
+                  sm: "130px",
+                  xs: "170px",
                 },
               }}
             >
-              <Box
-                elevation={10}
+              <Typography
+                variant="p"
                 sx={{
-                  m: "5px",
-                  py: "10px",
-                  px: "5px",
-                  border: `3px outset ${Colors.Grey.ultraLight}`,
-                  borderRadius: "15px",
-                  display: "flex",
-                  alignItems: "center",
-                  minHeight: "270px",
+                  fontSize: {
+                    xl: "20px",
+                    lg: "16px",
+                    md: "18px",
+                    xs: "15px",
+                  },
+                  color: "white",
+                  textAlign: "center",
                 }}
               >
-                <Typography
-                  variant="p"
-                  sx={{
-                    fontSize: "20px",
-                    color: "white",
-                    textAlign: "center",
-                  }}
-                >
-                  {t(facility.text)}
-                </Typography>
-              </Box>
-              <Box
-                sx={{
-                  background: `url(${facility.img})`,
-                  backgroundSize: "cover",
-                  borderRadius: "20px",
-                  height: {
-                    xl: "300px",
-                    lg: "230px",
-                    sm: "250px",
-                    xs: "200px",
-                  },
-                  width: { xl: "300px", lg: "230px", sm: "250px", xs: "200px" },
-                  p: "10px",
-                  mt: "20px",
-                }}
-              />
-            </Paper>
-          </Grid>
+                {t(facility.text)}
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                background: `url(${facility.img})`,
+                backgroundSize: "cover",
+                borderRadius: "20px",
+                height: {
+                  xl: "300px",
+                  lg: "260px",
+                  md: "230px",
+                  sm: "170px",
+                  xs: "150px",
+                },
+                width: {
+                  xl: "300px",
+                  lg: "220px",
+                  md: "300px",
+                  xs: "220px",
+                },
+                p: "10px",
+                mt: "20px",
+              }}
+            />
+          </Paper>
         );
       })}
-    </Grid>
+    </Box>
   );
 };
 
