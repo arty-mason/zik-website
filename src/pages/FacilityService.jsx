@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Grid, Paper, Typography } from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 
 import { theme } from "../config/color-config";
 import { Colors } from "../config/design-config";
@@ -80,7 +80,7 @@ const FacilityService = () => {
                     xl: "20px",
                     lg: "16px",
                     md: "18px",
-                    xs: "15px",
+                    xs: "16px",
                   },
                   color: "white",
                   textAlign: "center",

@@ -1,6 +1,13 @@
 import React from "react";
 
-import { Box, Card, CardMedia, Paper, Typography } from "@mui/material";
+import {
+  Box,
+  Card,
+  CardMedia,
+  Paper,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 
 import TextField from "../shared/text-field";
 import servicesTypes from "../services/construct-services";
@@ -15,6 +22,7 @@ import pageBackground from "../img/constructionPage/mainBackground/pageBackgroun
 
 const ConstructAndInstall = () => {
   const { t } = useTranslation();
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
   return (
     <Box
       sx={{
@@ -30,7 +38,7 @@ const ConstructAndInstall = () => {
         }}
       >
         <Paper
-          elevation={15}
+          elevation={isSmallScreen ? 0 : 15}
           sx={{
             padding: "10px",
             borderRadius: "25px",
@@ -39,11 +47,14 @@ const ConstructAndInstall = () => {
               xl: "1200px",
               lg: "1000px",
               md: "750px",
-              sm: "470px",
-              xs: "240px",
+              sm: "500px",
             },
-            borderBottom: `10px outset ${Colors.Red.light}`,
-            borderRight: `10px inset ${theme.palette.secondary.main}`,
+            borderBottom: isSmallScreen
+              ? "none"
+              : `10px outset ${Colors.Red.light}`,
+            borderRight: isSmallScreen
+              ? "none"
+              : `10px inset ${theme.palette.secondary.main}`,
           }}
         >
           <Box>
@@ -125,11 +136,11 @@ const ConstructAndInstall = () => {
                         lg: "250px",
                         md: "200px",
                         sm: "300px",
-                        xs: "200px",
+                        xs: "310px",
                       },
                       height: {
                         md: "300px",
-                        sm: "220px",
+                        sm: "230px",
                         xs: "200px",
                       },
 
@@ -155,7 +166,7 @@ const ConstructAndInstall = () => {
                           lg: "21px",
                           md: "18px",
                           sm: "15px",
-                          xs: "12px",
+                          xs: "14px",
                         },
                         textAlign: "center",
                       }}
