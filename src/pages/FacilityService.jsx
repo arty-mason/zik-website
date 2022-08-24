@@ -68,7 +68,6 @@ const FacilityService = () => {
                   xl: "220px",
                   lg: "180px",
                   md: "150px",
-                  sm: "130px",
                   xs: "170px",
                 },
               }}
