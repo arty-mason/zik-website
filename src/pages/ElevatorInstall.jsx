@@ -153,7 +153,7 @@ const ElevatorInstall = () => {
           </Typography>
           <Box
             sx={{
-              background: `url(${sanelLogo.img})`,
+              background: `url(${sanelLogo})`,
               backgroundSize: "cover",
               display: "flex",
               borderRadius: "15px",
