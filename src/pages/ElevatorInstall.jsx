@@ -124,8 +124,8 @@ const ElevatorInstall = () => {
             xl: "1400px",
             lg: "1000px",
             md: "750px",
-            sm: "300px",
-            xs: "200px",
+            sm: "500px",
+            xs: "300px",
           },
           height: {
             xl: "470px",
@@ -140,7 +140,8 @@ const ElevatorInstall = () => {
           id="heading"
           sx={{
             pt: "20px",
-            px: "12px",
+            px: "50px",
+            pb: " 5px",
             fontSize: {
               xl: "32px",
               lg: "28px",
@@ -226,11 +227,12 @@ const ElevatorInstall = () => {
                   sx={{
                     height: {
                       xl: "75px",
-                      lg: "40px",
+                      lg: "50px",
                       md: "35px",
                       sm: "45px",
                       xs: "50px",
                     },
+                    borderRadius: "10px",
                   }}
                 >
                   <Typography
