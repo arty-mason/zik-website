@@ -6,10 +6,10 @@ import { theme } from "../config/color-config";
 
 import ElevatorGallery from "../components/ElevatorCarousel";
 import elevatorServices from "../services/elevator-services";
+import { elevatorDocs } from "../services/catalogues-cerificates";
+
 import { useTranslation } from "react-i18next";
 import elevatorsBackground from "../img/elevatorPage/mainBackground/elevatorsBackground.png";
-
-import sanelLogo from "../img/elevatorPage/sanelLogo.jpg";
 
 const ElevatorInstall = () => {
   const { t } = useTranslation();
@@ -108,109 +108,152 @@ const ElevatorInstall = () => {
           );
         })}
       </Grid>
-      <Box
+
+      <Paper
+        id="main-column"
+        elevation={12}
         sx={{
           my: "50px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "space-evenly",
+          background: `linear-gradient(to bottom, ${theme.palette.primary.dark}, lightgray)`,
+          borderRadius: "20px",
+          width: {
+            xl: "1400px",
+            lg: "1000px",
+            md: "750px",
+            sm: "300px",
+            xs: "200px",
+          },
+          height: {
+            xl: "470px",
+            lg: "650px",
+            md: "875px",
+            sm: "1500px",
+            xs: "1200px",
+          },
         }}
       >
-        <Paper
-          elevation={12}
+        <Typography
+          id="heading"
           sx={{
-            height: {
-              xl: "450px",
-              lg: "400px",
-              md: "370px",
-              sm: "350px",
-              xs: "250px",
+            pt: "20px",
+            px: "12px",
+            fontSize: {
+              xl: "32px",
+              lg: "28px",
+              md: "25px",
+              sm: "22px",
+              xs: "17px",
             },
-            width: {
-              xl: "500px",
-              lg: "470px",
-              md: "430px",
-              sm: "375px",
-              xs: "320px",
-            },
-            background: `linear-gradient(to bottom, ${theme.palette.primary.dark}, lightgray)`,
-            borderRadius: "20px",
+            textAlign: "center",
+            color: "white",
           }}
         >
-          <Typography
-            sx={{
-              pt: "20px",
-              px: "12px",
-              fontSize: {
-                xl: "32px",
-                lg: "28px",
-                md: "25px",
-                sm: "22px",
-                xs: "17px",
-              },
-              textAlign: "center",
-              color: "white",
-            }}
-          >
-            {t("elevators_page_catalogue_text")}
-          </Typography>
-          <Box
-            sx={{
-              background: `url(${sanelLogo})`,
-              backgroundSize: "cover",
-              display: "flex",
-              borderRadius: "15px",
-              height: {
-                xl: "250px",
-                lg: "220px",
-                md: "200px",
-                sm: "170px",
-                xs: "130px",
-              },
-              width: {
-                xl: "250px",
-                lg: "220px",
-                md: "200px",
-                sm: "170px",
-                xs: "130px",
-              },
-            }}
-          />
-          {/*     <img
-            src={sanelLogo.img}
-            alt="Sanel Logo"
-            width="200px"
-            height="200px"
-          /> */}
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Button
-              variant="contained"
-              onClick={() => {
-                window.open(process.env.PUBLIC_URL + "SanelKatalog.pdf");
-              }}
-            >
-              <Typography
+          {t("elevators_page_catalogue_text")}
+        </Typography>
+        <Grid
+          container
+          id="flex-row"
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexWrap: "wrap",
+          }}
+        >
+          {elevatorDocs.map((doc) => {
+            return (
+              <Grid
+                item
+                xl={2}
+                lg={3}
+                md={4}
+                xs={6}
+                key={doc.id}
+                id="flex-column"
                 sx={{
-                  textAlign: "center",
-                  color: "white",
-                  fontSize: {
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "flex-start",
+                  alignItems: "center",
+                  height: {
+                    xl: "330px",
+                    lg: "300px",
+                    md: "270px",
+                    sm: "250px",
+                    xs: "220px",
+                  },
+                  mx: {
                     xl: "20px",
-                    lg: "18px",
-                    md: "16px",
-                    sm: "14px",
-                    xs: "12px",
+                    lg: "17px",
+                    md: "14px",
+                    sm: "11px",
+                    xs: "7px",
                   },
                 }}
               >
-                {t("elevators_page_catalogue_download")}
-              </Typography>
-            </Button>
-          </Box>
-        </Paper>
-      </Box>
+                <Box
+                  sx={{
+                    background: `url(${doc.img})`,
+                    backgroundSize: "cover",
+                    borderRadius: "15px",
+                    mb: "10px",
+                    height: {
+                      xl: "250px",
+                      lg: "220px",
+                      md: "200px",
+                      sm: "170px",
+                      xs: "130px",
+                    },
+                    width: {
+                      xl: "250px",
+                      lg: "220px",
+                      md: "200px",
+                      sm: "170px",
+                      xs: "130px",
+                    },
+                  }}
+                />
+
+                <Button
+                  variant="contained"
+                  onClick={() => {
+                    window.open(process.env.PUBLIC_URL + doc.docPath);
+                  }}
+                  sx={{
+                    height: {
+                      xl: "75px",
+                      lg: "40px",
+                      md: "35px",
+                      sm: "45px",
+                      xs: "50px",
+                    },
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      textAlign: "center",
+                      color: "white",
+                      fontSize: {
+                        xl: "20px",
+                        lg: "18px",
+                        md: "16px",
+                        sm: "14px",
+                        xs: "12px",
+                      },
+                    }}
+                  >
+                    {t(doc.buttonText)}
+                  </Typography>
+                </Button>
+              </Grid>
+            );
+          })}
+        </Grid>
+      </Paper>
     </Box>
   );
 };
