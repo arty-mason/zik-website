@@ -40,7 +40,7 @@ const FacilityService = () => {
               mx: "10px",
               justifyContent: "space-around",
               borderRadius: "15px",
-              height: { xl: "600px", lg: "500px", md: "400px", xs: "400px" },
+              minHeight: { xl: "600px", lg: "500px", md: "400px", xs: "400px" },
               width: {
                 xl: "300px",
                 lg: "250px",
@@ -58,7 +58,6 @@ const FacilityService = () => {
               elevation={10}
               sx={{
                 m: "5px",
-
                 border: `3px outset ${Colors.Grey.ultraLight}`,
                 borderRadius: "15px",
                 display: "flex",
