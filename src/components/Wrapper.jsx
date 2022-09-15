@@ -1,8 +1,14 @@
 import { Box } from "@mui/material";
-import React from "react";
+import { useLocation } from "react-router-dom";
+import React, { useLayoutEffect } from "react";
 
 const Wrapper = (props) => {
   const { renderHeader, renderFooter, children } = props;
+
+  const location = useLocation();
+  useLayoutEffect(() => {
+    document.documentElement.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <Box
@@ -26,7 +32,7 @@ const Wrapper = (props) => {
           {children}
         </Box>
       </Box>
-      {renderHeader && renderFooter()}
+      {renderFooter && renderFooter()}
     </Box>
   );
 };

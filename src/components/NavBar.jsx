@@ -213,7 +213,7 @@ const NavBar = () => {
                 width: "150px",
               }}
             >
-              <Button href="">
+              <Button href="https://www.instagram.com/mejor.servicio.de.limpieza/?r=nametag">
                 <img
                   src={instagram}
                   alt="Instagram"
@@ -222,7 +222,7 @@ const NavBar = () => {
                   height="35px"
                 />
               </Button>
-              <Button href="">
+              <Button href="https://www.facebook.com/profile.php?id=100083217857529">
                 <img
                   src={facebook}
                   alt="Facebook"
