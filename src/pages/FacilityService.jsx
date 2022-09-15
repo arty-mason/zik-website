@@ -58,8 +58,7 @@ const FacilityService = () => {
               elevation={10}
               sx={{
                 m: "5px",
-                py: "10px",
-                px: "5px",
+
                 border: `3px outset ${Colors.Grey.ultraLight}`,
                 borderRadius: "15px",
                 display: "flex",
@@ -81,6 +80,8 @@ const FacilityService = () => {
                     md: "18px",
                     xs: "16px",
                   },
+                  my: "15px",
+                  mx: "10px",
                   color: "white",
                   textAlign: "center",
                 }}

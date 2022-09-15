@@ -21,7 +21,7 @@ const ElevatorGallery = () => {
         maxWidth: { lg: "1000px", md: "800px", sm: "600px", xs: "300px" },
       }}
     >
-      <Carousel autoPlay infiniteLoop>
+      <Carousel autoPlay infiniteLoop showStatus={false}>
         {carouselBase.map((slide) => {
           return (
             <Box key={slide.id}>

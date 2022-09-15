@@ -30,7 +30,7 @@ const ExperienceGallery = () => {
       >
         {t("our_experience_work_demo")}
       </Typography>
-      <Carousel autoPlay infiniteLoop>
+      <Carousel autoPlay infiniteLoop showStatus={false}>
         {workPhotos.map((photo) => {
           return (
             <Box>

@@ -62,7 +62,7 @@ const Swing = () => {
           })}
         </>
       ) : (
-        <Carousel autoPlay infiniteLoop>
+        <Carousel autoPlay infiniteLoop showStatus={false}>
           {reasons.map((reason) => {
             return (
               <Box
