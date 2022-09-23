@@ -1,7 +1,7 @@
 TODO:
 
 "About us" block
-Leave the background color of the information block as blue (main), removing hovering effect
+Leave the background color of the information block as blue (main), removing hovering effect - ✓
 
 "Why us" block
 1. Make sure to have fixed minimum height for elements for resolutions lower than medium (less than 900px width)

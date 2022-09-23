@@ -15,6 +15,7 @@ const CommercialText = styled(Typography)({
   marginBottom: "20px",
   color: theme.palette.secondary.main,
   textShadow: "2px 2px 2px black",
+  textAlign: "center",
 });
 
 const AboutUs = () => {
@@ -36,20 +37,20 @@ const AboutUs = () => {
           alignItems: "center",
           my: "20px",
           p: "30px",
-          width: { lg: "800px", md: "600px", sm: "400px", xs: "250px" },
-          background: "#eceff1",
-          border: `3px outset ${theme.palette.primary.main}`,
-          "&:hover": {
-            background: `linear-gradient(to right,  ${theme.palette.primary.dark}, ${theme.palette.primary.light})`,
-            color: "white",
-            border: "none",
+          width: {
+            xl: "1050px",
+            lg: "900px",
+            md: "750px",
+            sm: "500px",
+            xs: "275px",
           },
+          background: `linear-gradient(to right,  ${theme.palette.primary.dark}, ${theme.palette.primary.light})`,
+          border: `3px outset ${theme.palette.primary.main}`,
         }}
       >
         <CommercialText
           component="h1"
           sx={{
-            textAlign: "center",
             fontSize: { lg: "30px", md: "25px", sm: "20px", xs: "15px" },
           }}
         >
@@ -58,7 +59,6 @@ const AboutUs = () => {
         <CommercialText
           component="p"
           sx={{
-            textAlign: "center",
             fontSize: { lg: "25px", md: "20px", sm: "16px", xs: "12px" },
           }}
         >
@@ -79,7 +79,6 @@ const AboutUs = () => {
         <CommercialText
           variant="h6"
           component="p"
-          textAlign="justify"
           sx={{
             fontSize: { lg: "25px", md: "20px", sm: "16px", xs: "12px" },
             my: "20px",
