@@ -20,7 +20,8 @@ const ElevatorInstall = () => {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
-        my: "50px",
+        my: "-50px",
+        py: "50px",
         background: `url(${elevatorsBackground})`,
         backgroundSize: "cover",
       }}

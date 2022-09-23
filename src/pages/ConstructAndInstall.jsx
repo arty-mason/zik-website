@@ -28,6 +28,8 @@ const ConstructAndInstall = () => {
       sx={{
         background: `url(${pageBackground})`,
         backgroundSize: "cover",
+        mt: "-50px",
+        pt: "50px",
       }}
     >
       <Box

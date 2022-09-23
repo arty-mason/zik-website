@@ -20,7 +20,8 @@ const FacilityService = () => {
         justifyContent: "space-around",
         flexdirection: { lg: "column" },
         flexWrap: { lg: "noWrap", xs: "wrap" },
-        mb: "20px",
+        my: "-30px",
+        py: "30px",
         background: `url(${facilityBackground})`,
         backgroundSize: "cover",
       }}

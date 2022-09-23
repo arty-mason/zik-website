@@ -1,15 +1,29 @@
 TODO:
 
-Продумать абзацы в коммерческом предложении и в подпунктах "Почему выбирают нас" + отступы между текстом и картинкой
+"About us" block
+Leave the background color of the information block as blue (main), removing hovering effect
 
-Подогнать шрифт друг под друга
+"Why us" block
+1. Make sure to have fixed minimum height for elements for resolutions lower than medium (less than 900px width)
+2. Do the same for lower resolutions (less than 600px width) as the content is different
 
+"Our experience" block
+1. Make sure to have fixed minimum height for all elements on the page (special attention to top text & cards)
+2. Recongfigre the gallery(either increase whole block width or the picture width, or transform into static gallery)
+3. Remove gallery background on smaller resolutions (optional)
 
-DONE:
+"Construction" block
+1. Increase minimum height for the text in "paper" blocks on the top
+2. Add bottom padding for icons not to "stick" to the paper bottom
+3. Increase minimum height for the the text in services for the text not to "stick" to the bottom
+4. Increase the pictures' resolution (optional)
 
-Хэдер - больше расстоянния между разделами - ✓
-Сделать визуальное разделение кнопок в навигационной панели - ✓
-Расширить блок с текстом про опыт - ✓
-Подогнать 3й блок под 2й блок - ✓
+"Elevators" block
+1. Have minimum height for all the elements in the gallery (absent at the moment)
+2. Adapt the certificates & the catalogue to make them look prettier
+3. Remove the background for catalogues & the certificate (optional)
+4. Make the catalogues & the certificate as separate blocks with individual background (strongly recommended)
+5. Increase the catalogues' thumbnails resolution (strongly recommended)
 
-Деплой
+"Maintenance" block
+Have minimum height for all the cards (absent at the moment)
