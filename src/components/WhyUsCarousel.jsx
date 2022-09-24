@@ -37,19 +37,28 @@ const Swing = () => {
                   borderRadius: "25px",
                 }}
               >
-                <Typography
-                  component="h1"
+                <Box
                   sx={{
-                    textAlign: "center",
-                    color: theme.palette.secondary.main,
-                    textShadow: "2px 2px 2px black",
-                    paddingBottom: "10px",
-                    minHeight: "140px",
-                    fontSize: "15px",
+                    display: "flex",
+                    minHeight: "160px",
+                    justifyContent: "center",
+                    alignItems: "center",
                   }}
                 >
-                  {t(reason.text)}
-                </Typography>
+                  <Typography
+                    component="h1"
+                    sx={{
+                      textAlign: "center",
+                      color: theme.palette.secondary.main,
+                      textShadow: "2px 2px 2px black",
+                      paddingBottom: "10px",
+
+                      fontSize: "15px",
+                    }}
+                  >
+                    {t(reason.text)}
+                  </Typography>
+                </Box>
                 <IconComponent
                   sx={{
                     color: Colors.Grey.main,
@@ -79,23 +88,32 @@ const Swing = () => {
                   background: `linear-gradient(to bottom,  ${theme.palette.primary.dark}, white)`,
                 }}
               >
-                <Typography
-                  component="h1"
+                <Box
                   sx={{
-                    background: `linear-gradient(to top, ${theme.palette.secondary.main}, ${theme.palette.secondary.dark})`,
-                    textFillColor: `transparent`,
-                    backgroundClip: `text`,
-                    paddingBottom: "10px",
-                    minHeight: "140px",
-                    fontSize: {
-                      lg: "25px",
-                      md: "21px",
-                      sm: "18px",
-                    },
+                    display: "flex",
+                    minHeight: "160px",
+                    justifyContent: "center",
+                    alignItems: "center",
                   }}
                 >
-                  {t(reason.text)}
-                </Typography>
+                  <Typography
+                    component="h1"
+                    sx={{
+                      background: `linear-gradient(to top, ${theme.palette.secondary.main}, ${theme.palette.secondary.dark})`,
+                      textFillColor: `transparent`,
+                      backgroundClip: `text`,
+                      paddingBottom: "10px",
+
+                      fontSize: {
+                        lg: "25px",
+                        md: "21px",
+                        sm: "18px",
+                      },
+                    }}
+                  >
+                    {t(reason.text)}
+                  </Typography>
+                </Box>
                 <Box
                   sx={{
                     background: `url(${reason.img})`,
