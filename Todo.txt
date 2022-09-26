@@ -4,18 +4,17 @@ TODO:
 Leave the background color of the information block as blue (main), removing hovering effect - ✓
 
 "Why us" block
-1. Make sure to have fixed minimum height for elements for resolutions lower than medium (less than 900px width)
-2. Do the same for lower resolutions (less than 600px width) as the content is different
+1. Make sure to have fixed minimum height for elements for resolutions lower than medium (less than 900px width) 
+2. Do the same for lower resolutions (less than 600px width) as the content is different 
 
 "Our experience" block
-1. Make sure to have fixed minimum height for all elements on the page (special attention to top text & cards)
-2. Recongfigre the gallery (either increase whole block width or the picture width, or transform into static gallery)
-3. Remove gallery background on smaller resolutions (optional)
+1. Make sure to have fixed minimum height for all elements on the page (special attention to top text & cards) ✓
+2. Reconfigure the gallery (either increase whole block width or the picture width, or transform into static gallery) ✓
 
 "Construction" block
-1. Increase minimum height for the text in "paper" blocks on the top
-2. Add bottom padding for icons not to "stick" to the paper bottom
-3. Increase minimum height for the the text in services for the text not to "stick" to the bottom
+1. Increase minimum height for the text in "paper" blocks on the top ✓
+2. Add bottom padding for icons not to "stick" to the paper bottom ✓
+3. Increase minimum height for the the text in services for the text not to "stick" to the bottom ✓
 4. Increase the pictures' resolution (optional)
 
 "Elevators" block

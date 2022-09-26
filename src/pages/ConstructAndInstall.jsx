@@ -152,7 +152,7 @@ const ConstructAndInstall = () => {
                       display: "flex",
                       flexDirection: "column",
                       alignItems: "center",
-                      justifyContent: "space-between",
+                      justifyContent: "center",
                       "&:hover": {
                         animation: `pulse 2s linear infinite`,
                       },
@@ -271,12 +271,11 @@ const ConstructAndInstall = () => {
                     sm: "25px",
                     xs: "16px",
                   },
-                  minHeight: "50px",
+                  minHeight: "30px",
                 }}
               >
                 {t(service.serviceName)}
               </TextField>
-
               <Typography
                 sx={{
                   textAlign: "center",
@@ -288,6 +287,7 @@ const ConstructAndInstall = () => {
                     sm: "16px",
                     xs: "12px",
                   },
+                  pb: "5px",
                 }}
               >
                 {t(service.serviceDescription)}
@@ -304,11 +304,12 @@ const ConstructAndInstall = () => {
                   },
                   height: {
                     lg: "200px",
-                    md: "150px",
+                    md: "145px",
                     sm: "200px",
                     xs: "125px",
                   },
                   objectFit: "cover",
+                  pb: "15px",
                 }}
               />
             </Card>
