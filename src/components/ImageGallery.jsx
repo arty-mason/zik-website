@@ -16,8 +16,7 @@ const ExperienceGallery = () => {
         my: "40px",
         background: `linear-gradient(to top, ${theme.palette.primary.dark}, ${Colors.Grey.light})`,
         borderRadius: "22px",
-        py: "30px",
-        px: { lg: "150px", md: "100px", sm: "75px", xs: "50px" },
+        p: "10px",
       }}
     >
       <Typography
@@ -30,7 +29,7 @@ const ExperienceGallery = () => {
       >
         {t("our_experience_work_demo")}
       </Typography>
-      <Carousel autoPlay infiniteLoop showStatus={false}>
+      <Carousel autoPlay autoFocus infiniteLoop showStatus={false}>
         {workPhotos.map((photo) => {
           return (
             <Box>
@@ -40,19 +39,19 @@ const ExperienceGallery = () => {
                   background: `url(${photo.img})`,
                   backgroundSize: "cover",
                   height: {
-                    lg: "800px",
-                    md: "700px",
-                    sm: "600px",
-                    xs: "250px",
+                    xl: "1100px",
+                    lg: "1000px",
+                    md: "800px",
+                    sm: "700px",
+                    xs: "320px",
                   },
                   width: {
-                    lg: "600px",
-                    md: "500px",
+                    xl: "750px",
+                    lg: "800px",
+                    md: "650px",
                     sm: "500px",
-                    xs: "150px",
+                    xs: "220px",
                   },
-                  border: `5px outset ${Colors.Grey.ultraLight}`,
-                  borderRadius: "7px",
                 }}
               />
             </Box>

@@ -46,9 +46,9 @@ const Experience = () => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                justifyContent: "space-around",
-                height: { lg: "350px", md: "300px", sm: "180px", xs: "150px" },
-                width: { lg: "250px", md: "200px", sm: "280px", xs: "240px" },
+                justifyContent: "space-between",
+                height: { lg: "350px", md: "300px", sm: "210px", xs: "170px" },
+                width: { lg: "250px", md: "200px", sm: "320px", xs: "250px" },
                 mx: "5px",
                 mb: "30px",
                 py: "20px",
@@ -63,12 +63,18 @@ const Experience = () => {
             >
               <Typography
                 sx={{
-                  px: { lg: "20px", md: "15px", sm: "20px", xs: "10px" },
-                  py: { lg: "20px", md: "15px", sm: "20px", xs: "5px" },
+                  px: "10px",
+                  py: "5px",
+                  minHeight: {
+                    xl: "200px",
+                    lg: "10px",
+                    md: "15px",
+                    sm: "20px",
+                    xs: "10px",
+                  },
                   fontSize: { lg: "16px", sm: "14px", xs: "11px" },
                   color: Colors.Grey.ultraLight,
                   textAlign: "center",
-                  minHeight: { md: "100px", sm: "80px", xs: "50px" },
                   mb: "20px",
                 }}
               >

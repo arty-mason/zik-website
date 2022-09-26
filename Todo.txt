@@ -9,7 +9,7 @@ Leave the background color of the information block as blue (main), removing hov
 
 "Our experience" block
 1. Make sure to have fixed minimum height for all elements on the page (special attention to top text & cards)
-2. Recongfigre the gallery(either increase whole block width or the picture width, or transform into static gallery)
+2. Recongfigre the gallery (either increase whole block width or the picture width, or transform into static gallery)
 3. Remove gallery background on smaller resolutions (optional)
 
 "Construction" block
